@@ -66,7 +66,7 @@ class ViewController: UIViewController{
 #### example1
 <img src="doc_imgs/example1.png" />
 
-```swift
+```
 HStackView {
     ZStackView {
         ImageView()
