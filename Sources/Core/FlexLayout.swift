@@ -35,9 +35,7 @@ public protocol FlexLayout {
     func top(_ top: CGFloat) -> Self
     func right(_ right: CGFloat) -> Self
     func bottom(_ bottom: CGFloat) -> Self
-    /// 对应left
     func leading(_ start: CGFloat) -> Self
-    /// right
     func trailing(_ end: CGFloat) -> Self
 
     func width(_ width: CGFloat) -> Self
@@ -64,7 +62,7 @@ public protocol FlexLayout {
 
     func wrap(_ wrap: WrapType) -> Self
 
-    //    func direction(_ direction: YGDirection) -> Self
+    //func direction(_ direction: YGDirection) -> Self
     func inherit() -> Self
     func ltr() -> Self
     func rtl() -> Self
@@ -76,17 +74,18 @@ public protocol FlexLayout {
     func grow(_ grow: CGFloat) -> Self
     func shrink(_ shrink: CGFloat) -> Self
     func basis(_ basis: CGFloat) -> Self
+    func expanded() -> Self
+    
 
     // 属性
     var yoga: YGLayout { get }
-
+    
     var direction: FlexDirection { get }
 
     func applyLayout(preservingOrigin: Bool)
-
     func applyLayout(mode: LayoutMode, preservingOrigin: Bool)
+    
     var intrinsicSize: CGSize { get }
-
     func sizeThatFits(with: CGSize) -> CGSize
 
     var numberOfChildren: UInt {
@@ -329,6 +328,11 @@ public extension FlexLayout {
         yoga.flex = flex
         return self
     }
+    
+    @discardableResult func expanded() -> Self {
+        yoga.flex = 1
+        return self
+    }
 
     @discardableResult func grow(_ grow: CGFloat) -> Self {
         yoga.flexGrow = grow
@@ -444,7 +448,7 @@ public enum FEdge: Int8 {
     case vertical
 }
 
-/**
+/**主轴方向
  */
 public enum FlexDirection {
     /// Default value. The flexible items are displayed vertically, as a column.
@@ -466,7 +470,7 @@ public enum FlexDirection {
     }
 }
 
-/*
+/* 主轴方向布局方式
  * Default value: start
  */
 public enum MainAxisAlignment {
@@ -495,7 +499,7 @@ public enum MainAxisAlignment {
     }
 }
 
-/*
+/* 次轴方向布局方式
  * Default value:stretch
  */
 public enum CrossAxisAlignment {
@@ -524,7 +528,7 @@ public enum CrossAxisAlignment {
     }
 }
 
-/**
+/**次轴方向多行布局方式
  */
 public enum AlignContent {
     /// Default value. Lines stretch to take up the remaining space
@@ -632,7 +636,7 @@ public enum PositionType {
 }
 
 /**
- Defines how the `layout(mode:)` method layout its flex items.
+ Defines how the `applyLayout(mode:)` method layout its flex items.
  */
 public enum LayoutMode {
     /// This is the default mode when no parameter is specified. Children are layouted **inside** the container's size (width and height).

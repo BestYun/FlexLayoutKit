@@ -10,10 +10,12 @@
 		64901A50DA833E3136A956D3 /* Pods_FlexUIKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB9C11AD4EC06D09DC69505 /* Pods_FlexUIKitExample.framework */; };
 		AE7DE1802AC2CF8100FE6170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DE17F2AC2CF8100FE6170 /* AppDelegate.swift */; };
 		AE7DE1822AC2CF8100FE6170 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DE1812AC2CF8100FE6170 /* SceneDelegate.swift */; };
-		AE7DE1842AC2CF8100FE6170 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DE1832AC2CF8100FE6170 /* ViewController.swift */; };
+		AE7DE1842AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DE1832AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift */; };
 		AE7DE1872AC2CF8100FE6170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7DE1852AC2CF8100FE6170 /* Main.storyboard */; };
 		AE7DE1892AC2CF8300FE6170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7DE1882AC2CF8300FE6170 /* Assets.xcassets */; };
 		AE7DE18C2AC2CF8300FE6170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7DE18A2AC2CF8300FE6170 /* LaunchScreen.storyboard */; };
+		AEE670342AC52BA7009622DE /* LivePreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE670322AC52BA7009622DE /* LivePreViewController.swift */; };
+		AEE670352AC52BA7009622DE /* LivePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE670332AC52BA7009622DE /* LivePreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +24,13 @@
 		AE7DE17C2AC2CF8100FE6170 /* FlexUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7DE17F2AC2CF8100FE6170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7DE1812AC2CF8100FE6170 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE7DE1832AC2CF8100FE6170 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE7DE1832AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloFlexUIKitViewController.swift; sourceTree = "<group>"; };
 		AE7DE1862AC2CF8100FE6170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE7DE1882AC2CF8300FE6170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE7DE18B2AC2CF8300FE6170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE7DE18D2AC2CF8300FE6170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEE670322AC52BA7009622DE /* LivePreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePreViewController.swift; sourceTree = "<group>"; };
+		AEE670332AC52BA7009622DE /* LivePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePreview.swift; sourceTree = "<group>"; };
 		D9517D6EA190252659A2BD31 /* Pods-FlexUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexUIKitExample.debug.xcconfig"; path = "Target Support Files/Pods-FlexUIKitExample/Pods-FlexUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +52,6 @@
 				D9517D6EA190252659A2BD31 /* Pods-FlexUIKitExample.debug.xcconfig */,
 				2B7D867FEC9EE277E68D9159 /* Pods-FlexUIKitExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +84,25 @@
 		AE7DE17E2AC2CF8100FE6170 /* FlexUIKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				AEE670312AC52BA7009622DE /* preview */,
 				AE7DE17F2AC2CF8100FE6170 /* AppDelegate.swift */,
 				AE7DE1812AC2CF8100FE6170 /* SceneDelegate.swift */,
-				AE7DE1832AC2CF8100FE6170 /* ViewController.swift */,
+				AE7DE1832AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift */,
 				AE7DE1852AC2CF8100FE6170 /* Main.storyboard */,
 				AE7DE1882AC2CF8300FE6170 /* Assets.xcassets */,
 				AE7DE18A2AC2CF8300FE6170 /* LaunchScreen.storyboard */,
 				AE7DE18D2AC2CF8300FE6170 /* Info.plist */,
 			);
 			path = FlexUIKitExample;
+			sourceTree = "<group>";
+		};
+		AEE670312AC52BA7009622DE /* preview */ = {
+			isa = PBXGroup;
+			children = (
+				AEE670322AC52BA7009622DE /* LivePreViewController.swift */,
+				AEE670332AC52BA7009622DE /* LivePreview.swift */,
+			);
+			path = preview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7DE1842AC2CF8100FE6170 /* ViewController.swift in Sources */,
+				AEE670342AC52BA7009622DE /* LivePreViewController.swift in Sources */,
+				AE7DE1842AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift in Sources */,
 				AE7DE1802AC2CF8100FE6170 /* AppDelegate.swift in Sources */,
+				AEE670352AC52BA7009622DE /* LivePreview.swift in Sources */,
 				AE7DE1822AC2CF8100FE6170 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

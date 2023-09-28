@@ -85,9 +85,15 @@ public extension Text {
         font = UIFont.boldSystemFont(ofSize: fontSize)
         return self
     }
+    
+    @discardableResult
+    func medium(_ fontSize: CGFloat) -> Self {
+        font = .systemFont(ofSize: fontSize, weight: .medium)
+        return self
+    }
 
     @discardableResult
-    func fontSize(_ fontSize: CGFloat, weight: UIFont.Weight?) -> Self {
+    func fontSize(_ fontSize: CGFloat, weight: UIFont.Weight? = nil) -> Self {
         if let weight = weight {
             font = .systemFont(ofSize: fontSize, weight: weight)
 
@@ -97,7 +103,7 @@ public extension Text {
 
         return self
     }
-
+    
     @discardableResult
     func textAlignment(_ textAlignment: NSTextAlignment) -> Self {
         self.textAlignment = textAlignment

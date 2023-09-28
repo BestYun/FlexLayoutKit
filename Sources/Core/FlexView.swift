@@ -81,16 +81,17 @@ public class Wrap: FlexContainerView {
     }
 }
 
-// MARK: - 类似SwiftUI
+// MARK: - 类似SwiftUI和Flutter
 
 public typealias HStackView = Row
 public typealias VStackView = Column
+public typealias ZStackView = Stack
 
-public class ZStackView: FlexContainerView {
+public class Stack: FlexContainerView {
     override public init(direction: FlexDirection = .column, mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, @FlexViewBuilder subviews: () -> [UIView]) {
         let subviews = subviews()
         subviews.forEach { itemView in
-            itemView.yoga.position(.absolute)
+            itemView.flex.position(.absolute)
         }
 
         let block = {
@@ -98,7 +99,7 @@ public class ZStackView: FlexContainerView {
         }
         super.init(direction: direction, mainAxis: mainAxis, crossAxis: crossAxis, subviews: block)
 
-        yoga.position(.relative)
+        flex.position(.relative)
     }
 
     @available(*, unavailable)
@@ -109,46 +110,3 @@ public class ZStackView: FlexContainerView {
 
 extension FlexContainerView: FlexViewChain {}
 extension FlexContainerView: FlexLayout {}
-
-public class Positioned {
-    var left: CGFloat?
-    var top: CGFloat?
-    var right: CGFloat?
-    var bottom: CGFloat?
-    var height: CGFloat?
-    var width: CGFloat?
-    let child: UIView
-
-    init(left: CGFloat? = nil, top: CGFloat? = nil, right: CGFloat? = nil, bottom: CGFloat? = nil, height: CGFloat? = nil, width: CGFloat? = nil, child: UIView) {
-        self.left = left
-        self.top = top
-        self.right = right
-        self.bottom = bottom
-        self.height = height
-        self.width = width
-        self.child = child
-
-        if let left = left {
-            child.flex.left(left)
-        }
-
-        if let top = top {
-            child.flex.top(top)
-        }
-
-        if let right = right {
-            child.flex.right(right)
-        }
-
-        if let bottom = bottom {
-            child.flex.bottom(bottom)
-        }
-
-        if let height = height {
-            child.flex.size(height: height)
-        }
-        if let width = width {
-            child.flex.size(width: width)
-        }
-    }
-}

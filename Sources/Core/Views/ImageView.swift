@@ -9,7 +9,7 @@
 import UIKit
 
 public class ImageView: UIImageView {
-    override public init(frame: CGRect) {
+    override public init(frame: CGRect = .zero) {
         super.init(frame: frame)
         enabled(true)
         
