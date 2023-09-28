@@ -19,6 +19,7 @@ public protocol FlexViewChain {
 
     func borderWidth(_ borderWidth: CGFloat) -> Self
     func borderColor(_ borderColor: UIColor?) -> Self
+    func border(color: UIColor ,width: CGFloat) -> Self
     func shadowColor(_ shadowColor: UIColor?) -> Self
     func shadowOpacity(_ shadowOpacity: Float) -> Self
     func shadowOffset(_ shadowOffset: CGSize) -> Self
@@ -80,6 +81,14 @@ public extension FlexViewChain where Self: UIView {
     @discardableResult
     func borderColor(_ borderColor: UIColor?) -> Self {
         layer.borderColor = borderColor?.cgColor
+        return self
+    }
+    
+
+    @discardableResult
+    func border(color: UIColor ,width: CGFloat) -> Self {
+        layer.borderColor = color.cgColor
+        layer.borderWidth = width
         return self
     }
 
