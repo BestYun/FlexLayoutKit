@@ -24,11 +24,19 @@ public protocol FlexLayout {
     func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Self
 
     func margin(_ margin: CGFloat) -> Self
+    
     func margin(_ edge: FEdge, _ length: CGFloat) -> Self
     func margin(_ edge: [FEdge], _ length: CGFloat) -> Self
     func margin(_ insets: UIEdgeInsets) -> Self
     @available(iOS 11.0, *)
     func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Self
+    
+    ///gap 设置行和列之间的间隙（gutter）大小。它是 rowGap 和 columnGap 的简写形式。
+    func gap(_ gap: CGFloat) -> Self
+    ///rowGap 设置元素行之间的间隙（gutter）大小。
+    func rowGap(_ gap: CGFloat) -> Self
+    ///columnGap 设置元素列之间的间隙（gutter）大小。
+    func columnGap(_ gap: CGFloat) -> Self
 
     // 结合position或者ZStack
     func left(_ left: CGFloat) -> Self
@@ -417,6 +425,25 @@ public extension FlexLayout {
     func markDirty() {
         yoga.markDirty()
     }
+    
+    @discardableResult
+    func gap(_ gap: CGFloat) -> Self {
+        yoga.gap = gap
+        return self
+    }
+    
+    @discardableResult
+    func rowGap(_ gap: CGFloat) -> Self {
+        yoga.rowGap = gap
+        return self
+    }
+    
+    @discardableResult
+    func columnGap(_ gap: CGFloat) -> Self {
+        yoga.columnGap = gap
+        return self
+    }
+
 }
 
 public extension FlexLayout where Self: YGLayout {
@@ -429,6 +456,7 @@ public extension FlexLayout where Self: YGLayout {
 /// 实现协议
 /// YGLayout拥有链式功能
 extension YGLayout: FlexLayout {
+    
     public var yoga: YGLayout {
         return self
     }

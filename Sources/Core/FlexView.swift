@@ -15,7 +15,11 @@ public class FlexContainerView: UIView {
         flex.enabled(true)
     }
 
-    public init(direction: FlexDirection = .column, mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, @FlexViewBuilder subviews: () -> [UIView]) {
+    public init(direction: FlexDirection = .column,
+                mainAxis: MainAxisAlignment = .start,
+                crossAxis: CrossAxisAlignment = .stretch,
+                @FlexViewBuilder subviews: () -> [UIView])
+    {
         super.init(frame: .zero)
         flex.enabled(true)
             .direction(direction)
@@ -45,7 +49,10 @@ public class FlexContainerView: UIView {
 }
 
 public class Row: FlexContainerView {
-    public init(mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, @FlexViewBuilder subviews: () -> [UIView]) {
+    public init(mainAxis: MainAxisAlignment = .start,
+                crossAxis: CrossAxisAlignment = .stretch,
+                @FlexViewBuilder subviews: () -> [UIView])
+    {
         super.init(direction: .row, mainAxis: mainAxis, crossAxis: crossAxis, subviews: subviews)
     }
 
@@ -56,7 +63,10 @@ public class Row: FlexContainerView {
 }
 
 public class Column: FlexContainerView {
-    public init(mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, @FlexViewBuilder subviews: () -> [UIView]) {
+    public init(mainAxis: MainAxisAlignment = .start,
+                crossAxis: CrossAxisAlignment = .stretch,
+                @FlexViewBuilder subviews: () -> [UIView])
+    {
         super.init(direction: .column, mainAxis: mainAxis, crossAxis: crossAxis, subviews: subviews)
     }
 
@@ -70,9 +80,22 @@ public class Wrap: FlexContainerView {
     /// MainAxisAlignment: 主轴方向
     /// runAlignment: 次轴方向->针对行整体布局 对应:alignContent
     /// crossAxis:次轴方法->每一行中的item布局,每项高度或者宽度不一样时就有效果
-    public init(direction: FlexDirection = .row, mainAxis: MainAxisAlignment = .start, runAlignment: AlignContent = .start, crossAxis: WrapCrossAlignment = .start, @FlexViewBuilder subviews: () -> [UIView]) {
+    public init(direction: FlexDirection = .row,
+                mainAxis: MainAxisAlignment = .start,
+                runAlignment: AlignContent = .start,
+                crossAxis: WrapCrossAlignment = .start,
+                rowGap: CGFloat = 0,
+                columnGap: CGFloat = 0,
+                gap: CGFloat = 0,
+                @FlexViewBuilder subviews: () -> [UIView])
+    {
         super.init(direction: direction, mainAxis: mainAxis, crossAxis: crossAxis.crossAxis, subviews: subviews)
         flex.wrap(.wrap).alignContent(runAlignment)
+        if gap == 0 {
+            flex.rowGap(rowGap).columnGap(columnGap)
+        } else {
+            flex.gap(gap)
+        }
     }
 
     @available(*, unavailable)
@@ -88,7 +111,11 @@ public typealias VStackView = Column
 public typealias ZStackView = Stack
 
 public class Stack: FlexContainerView {
-    override public init(direction: FlexDirection = .column, mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, @FlexViewBuilder subviews: () -> [UIView]) {
+    override public init(direction: FlexDirection = .column,
+                         mainAxis: MainAxisAlignment = .start,
+                         crossAxis: CrossAxisAlignment = .stretch,
+                         @FlexViewBuilder subviews: () -> [UIView])
+    {
         let subviews = subviews()
         subviews.forEach { itemView in
             itemView.flex.position(.absolute)
