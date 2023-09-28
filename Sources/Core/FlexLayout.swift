@@ -31,6 +31,11 @@ public protocol FlexLayout {
     @available(iOS 11.0, *)
     func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Self
     
+    func borderWidth(_ all: CGFloat) -> Self
+    func borderWidth(_ edge: FEdge, _ length: CGFloat) -> Self
+    
+
+    
     ///gap 设置行和列之间的间隙（gutter）大小。它是 rowGap 和 columnGap 的简写形式。
     func gap(_ gap: CGFloat) -> Self
     ///rowGap 设置元素行之间的间隙（gutter）大小。
@@ -225,6 +230,37 @@ public extension FlexLayout {
 
         return self
     }
+    
+  
+    
+    @discardableResult func borderWidth(_ all: CGFloat) -> Self {
+        yoga.borderWidth = all
+        return self
+    }
+
+    
+    @discardableResult func borderWidth(_ edge: FEdge, _ length: CGFloat) -> Self {
+        switch edge {
+        case .all: yoga.borderWidth = length
+        case .left: yoga.borderLeftWidth = length
+        case .leading: yoga.borderStartWidth = length
+        case .top: yoga.borderTopWidth = length
+        case .bottom: yoga.borderBottomWidth = length
+        case .right: yoga.borderRightWidth = length
+        case .trailing: yoga.borderEndWidth = length
+            
+        case .horizontal:
+            yoga.borderLeftWidth = length
+            yoga.borderRightWidth = length
+        
+        case .vertical:
+            yoga.borderTopWidth = length
+            yoga.borderBottomWidth = length
+
+        }
+        return self
+    }
+
 
     @discardableResult func left(_ left: CGFloat) -> Self {
         yoga.left = YGValue(left)

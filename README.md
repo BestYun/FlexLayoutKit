@@ -111,7 +111,7 @@ HStackView {
 ```
 
 ### Documentation
-
+https://reactnative.cn/docs/flexbox
 
 ### Modifier chain 链式语法
 ```swift

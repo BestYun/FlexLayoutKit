@@ -25,10 +25,11 @@ public struct FViewChainWrapper<Subject> {
             return FViewChainWrapper(subject)
         }
     }
-//    @discardableResult
-//    public func apply() -> Subject{
-//        return view
-//    }
+    @discardableResult
+    public func apply(subject:(Subject)->Void) -> Subject{
+        subject(view)
+        return view
+    }
 }
 
 public protocol FViewChainWrapperCompatible {

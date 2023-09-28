@@ -86,9 +86,20 @@ class ExampleGap:UIView {
         
         let body = Wrap(gap:10){
             for _ in 0...50 {
-                UIView().flex.size(20).modifier.backgroundColor(.orange).view
+                UILabel()
+                    .flex.size(60)
+                    .borderWidth(5)
+                    .modifier.backgroundColor(.orange).view
+                    .apply {
+                        $0.layer.borderWidth = 5
+                        $0.layer.borderColor = UIColor.red.cgColor
+//                        let border = CALayer()
+//                        border.frame = CGRectMake(0, 60 - 10, 60, 10)
+//                        border.backgroundColor = UIColor.red.cgColor
+//                        $0.layer.addSublayer(border)
+                    }
             }
-        }.backgroundColor(.blue)
+        }
         
         flex.addItem(body)
         
