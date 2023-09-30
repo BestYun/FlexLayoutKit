@@ -104,12 +104,9 @@ public class Wrap: FlexContainerView {
     }
 }
 
-// MARK: - 类似SwiftUI和Flutter
-
-public typealias HStackView = Row
-public typealias VStackView = Column
-public typealias ZStackView = Stack
-
+/**
+ * 必须设置宽高
+ */
 public class Stack: FlexContainerView {
     override public init(direction: FlexDirection = .column,
                          mainAxis: MainAxisAlignment = .start,
@@ -134,6 +131,12 @@ public class Stack: FlexContainerView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+// MARK: - 类似SwiftUI和Flutter
+public typealias HStackView = Row
+public typealias VStackView = Column
+public typealias ZStackView = Stack
+
 
 extension FlexContainerView: FlexViewChain {}
 extension FlexContainerView: FlexLayout {}

@@ -690,11 +690,14 @@ public enum PositionType {
     case relative
     /// Positioned absolutely in regards to its container. The item is positionned using properties top, bottom, left, right, start, end.
     case absolute
+    
+    case `static`
 
     var yogaValue: YGPositionType {
         switch self {
         case .relative: return YGPositionType.relative
         case .absolute: return YGPositionType.absolute
+        case .`static`: return YGPositionType.static
         }
     }
 }

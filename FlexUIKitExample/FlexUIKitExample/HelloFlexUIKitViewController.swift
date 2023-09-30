@@ -12,6 +12,11 @@ class HelloFlexUIKitViewController: FlexBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("---")
+        
+        print(YGPositionType.static.rawValue)
+        print(YGPositionType.relative.rawValue)
+        print(YGPositionType.absolute.rawValue)
+        print(YGPositionType.static)
     }
 
     override func bodyView() -> UIView {
@@ -29,6 +34,7 @@ class Example: UIView {
                 .left(0)
                 .bottom(0)
                 .size(width: 50, height: 50)
+                
            
             Text("1")
                 .fontSize(12)
@@ -68,7 +74,11 @@ class Example: UIView {
         
         flex.addItems {
             body
-            ExampleGap()
+            
+            ZStackExample().flex.margin(.top,100).view
+            
+            UIView().flex.size(100).margin(.top,10)
+                .modifier.backgroundColor(.orange).view
         }
     }
     
@@ -108,4 +118,39 @@ class ExampleGap:UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+
+class ZStackExample: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+        backgroundColor = .purple
+        flex.enabled(true)
+            .position(.relative)
+            .direction(.row)
+            .addItems {
+            
+                Text("left").left(10).top(10).backgroundColor(.orange).position(.relative)
+                
+                UIView().flex
+                        .width(100)
+                        .height(20)
+                        .top(0)
+                        .left(20)
+                        .position(.relative)
+                        .modifier.backgroundColor(.red).view
+
+                
+                Text("right").left(10).top(0).backgroundColor(.gray).position(.relative)
+
+            }
+        
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }

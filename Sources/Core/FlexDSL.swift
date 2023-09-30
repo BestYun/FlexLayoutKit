@@ -7,7 +7,6 @@
 
 
 import UIKit
-//import YogaKit
 
 public protocol FlexDSLProtocol {}
 
@@ -20,7 +19,7 @@ public extension FlexDSLProtocol where Self: UIView {
 extension UIView: FlexDSLProtocol {}
 
 public struct FlexDSL<BaseView: UIView> {
-    let view: BaseView
+    public let view: BaseView
     init(view: BaseView) {
         self.view = view
         view.yoga.isEnabled = true
@@ -41,17 +40,20 @@ public extension FlexDSL {
         self(view)
         return view
     }
-
-    func addItems(@FlexViewBuilder subviews: () -> [UIView]) {
+    @discardableResult
+    func addItems(@FlexViewBuilder subviews: () -> [UIView])-> BaseView  {
         subviews().forEach { item in
             item.yoga.enabled(true)
             self.view.addSubview(item)
         }
+        return view
     }
-
-    func addItem(_ itemView: UIView) {
+    @discardableResult
+    func addItem(_ itemView: UIView) -> BaseView {
         itemView.yoga.enabled(true)
         view.addSubview(itemView)
+        return view
+
     }
 }
 

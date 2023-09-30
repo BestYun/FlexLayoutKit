@@ -16,6 +16,7 @@
 		AE7DE18C2AC2CF8300FE6170 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7DE18A2AC2CF8300FE6170 /* LaunchScreen.storyboard */; };
 		AEE670342AC52BA7009622DE /* LivePreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE670322AC52BA7009622DE /* LivePreViewController.swift */; };
 		AEE670352AC52BA7009622DE /* LivePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE670332AC52BA7009622DE /* LivePreview.swift */; };
+		AEE670382AC57750009622DE /* ZStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE670372AC57750009622DE /* ZStackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		AE7DE18D2AC2CF8300FE6170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEE670322AC52BA7009622DE /* LivePreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePreViewController.swift; sourceTree = "<group>"; };
 		AEE670332AC52BA7009622DE /* LivePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePreview.swift; sourceTree = "<group>"; };
+		AEE670372AC57750009622DE /* ZStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackViewController.swift; sourceTree = "<group>"; };
 		D9517D6EA190252659A2BD31 /* Pods-FlexUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexUIKitExample.debug.xcconfig"; path = "Target Support Files/Pods-FlexUIKitExample/Pods-FlexUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 		AE7DE17E2AC2CF8100FE6170 /* FlexUIKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				AEE670362AC576DE009622DE /* Controller */,
 				AEE670312AC52BA7009622DE /* preview */,
 				AE7DE17F2AC2CF8100FE6170 /* AppDelegate.swift */,
 				AE7DE1812AC2CF8100FE6170 /* SceneDelegate.swift */,
@@ -103,6 +106,14 @@
 				AEE670332AC52BA7009622DE /* LivePreview.swift */,
 			);
 			path = preview;
+			sourceTree = "<group>";
+		};
+		AEE670362AC576DE009622DE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEE670372AC57750009622DE /* ZStackViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 			files = (
 				AEE670342AC52BA7009622DE /* LivePreViewController.swift in Sources */,
 				AE7DE1842AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift in Sources */,
+				AEE670382AC57750009622DE /* ZStackViewController.swift in Sources */,
 				AE7DE1802AC2CF8100FE6170 /* AppDelegate.swift in Sources */,
 				AEE670352AC52BA7009622DE /* LivePreview.swift in Sources */,
 				AE7DE1822AC2CF8100FE6170 /* SceneDelegate.swift in Sources */,
