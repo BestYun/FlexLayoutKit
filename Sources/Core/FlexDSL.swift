@@ -43,7 +43,7 @@ public extension FlexDSL {
     @discardableResult
     func addItems(@FlexViewBuilder subviews: () -> [UIView])-> BaseView  {
         subviews().forEach { item in
-            item.yoga.enabled(true)
+            item.flex.enabled(true)
             self.view.addSubview(item)
         }
         return view

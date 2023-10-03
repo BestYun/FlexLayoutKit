@@ -12,20 +12,24 @@ class HelloFlexUIKitViewController: FlexBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("---")
-        
-        print(YGPositionType.static.rawValue)
-        print(YGPositionType.relative.rawValue)
-        print(YGPositionType.absolute.rawValue)
-        print(YGPositionType.static)
+
     }
 
     override func bodyView() -> UIView {
-        return Example()
+        return VScrollView {
+            Example()
+            
+            Button("collectionview")
+                .margin(.top,10)
+                .margin(.left,10)
+                .onTap {
+                    self.present(CollectionViewControllerDemo(), animated: true)
+                }.backgroundColor(.orange)
+        }.contentInsetAdjustmentBehavior(.never)
     }
 }
 
 class Example: UIView {
-    
     lazy var body = HStackView {
         ZStackView {
             ImageView()
@@ -35,7 +39,6 @@ class Example: UIView {
                 .bottom(0)
                 .size(width: 50, height: 50)
                 
-           
             Text("1")
                 .fontSize(12)
                 .textColor(.white)
@@ -64,7 +67,6 @@ class Example: UIView {
         .height(50)
         .expanded()
         .margin(.top, 8)
-        
     }
     .padding(.horizontal, 15)
     .margin(.top, 100)
@@ -74,28 +76,21 @@ class Example: UIView {
         
         flex.addItems {
             body
-            
-            ZStackExample().flex.margin(.top,100).view
-            
-            UIView().flex.size(100).margin(.top,10)
-                .modifier.backgroundColor(.orange).view
         }
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
-
-class ExampleGap:UIView {
-    
+class ExampleGap: UIView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        let body = Wrap(gap:10){
-            for _ in 0...50 {
+        let body = Wrap(gap: 10) {
+            for _ in 0 ... 50 {
                 UILabel()
                     .flex.size(60)
                     .borderWidth(5)
@@ -112,17 +107,15 @@ class ExampleGap:UIView {
         }
         
         flex.addItem(body)
-        
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
-
 class ZStackExample: UIView {
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         backgroundColor = .purple
@@ -130,27 +123,22 @@ class ZStackExample: UIView {
             .position(.relative)
             .direction(.row)
             .addItems {
-            
                 Text("left").left(10).top(10).backgroundColor(.orange).position(.relative)
                 
                 UIView().flex
-                        .width(100)
-                        .height(20)
-                        .top(0)
-                        .left(20)
-                        .position(.relative)
-                        .modifier.backgroundColor(.red).view
+                    .width(100)
+                    .height(20)
+                    .top(0)
+                    .left(20)
+                    .position(.relative)
+                    .modifier.backgroundColor(.red).view
 
-                
                 Text("right").left(10).top(0).backgroundColor(.gray).position(.relative)
-
             }
-        
-        
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

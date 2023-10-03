@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 /// 动态高度
-public class TableCell: UITableViewCell {
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+open class TableCell: UITableViewCell {
+    override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.flex.direction(.column).addItems {
             bodyView()
@@ -18,16 +18,16 @@ public class TableCell: UITableViewCell {
     }
 
     @available(*, unavailable)
-    required init?(coder _: NSCoder) {
+    required  public init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // 定义view
-    public func bodyView() -> UIView {
+    open func bodyView() -> UIView {
         fatalError("bodyView has not been implemented")
     }
 
-    override public func layoutSubviews() {
+    open override  func layoutSubviews() {
         super.layoutSubviews()
         contentView.flex.applyLayout(mode: .adjustHeight)
     }
@@ -37,9 +37,9 @@ public class TableCell: UITableViewCell {
  * 动态计算高度
  *
  */
-public class TableDynamicCell: TableCell {
+open class TableDynamicCell: TableCell {
     /// 重写这个方法,计算高度
-    override public func sizeThatFits(_: CGSize) -> CGSize {
+    override open func sizeThatFits(_: CGSize) -> CGSize {
         // 重新这个方法UITableViewCell->sizeThatFits,然后再调用applyLayout方法计算高度
         // tableView.estimatedRowHeight = 60 需要预估计高度
         // 同时配置tableView.rowHeight = UITableView.automaticDimension或者代理重新

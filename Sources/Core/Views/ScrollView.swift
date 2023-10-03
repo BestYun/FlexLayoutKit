@@ -7,7 +7,6 @@
 
 import UIKit
 
-/// 切换横竖屏有问题
 public class ScrollView: UIScrollView {
     public var contentView = UIView()
 
@@ -39,7 +38,6 @@ public class ScrollView: UIScrollView {
         }
 
         addSubview(contentView)
-        contentView.backgroundColor = .gray
     }
 
     @available(*, unavailable)
