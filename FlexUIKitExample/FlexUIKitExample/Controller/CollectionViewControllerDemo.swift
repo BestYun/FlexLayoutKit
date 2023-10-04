@@ -22,14 +22,18 @@ class CollectionViewControllerDemo: FlexBaseViewController,UICollectionViewDeleg
         
         let size = (UIScreen.main.bounds.size.width - 10 * 3)/3
         
-        layout.itemSize = CGSize(width: size, height: size)
+//        layout.itemSize = CGSize(width: size, height: size)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 5
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 //        layout.scrollDirection = .horizontal
         
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        
+        
         self.collectionView!.register(FCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         return collectionView
@@ -51,17 +55,18 @@ class CollectionViewControllerDemo: FlexBaseViewController,UICollectionViewDeleg
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 10
+        return 1000
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FCollectionCell
     
-        cell.text.text = "text \(indexPath.row)"
+        cell.text = "text \(indexPath.row*1000)"
         
     
         return cell
     }
+    
 
     // MARK: UICollectionViewDelegate
 
@@ -97,10 +102,16 @@ class CollectionViewControllerDemo: FlexBaseViewController,UICollectionViewDeleg
 }
 
 
-private class FCollectionCell: CollectionCell {
+private class FCollectionCell: CollectionDynamicCell {
     
+    var text: String? {
+        didSet {
+            textLabel.flex.markDirty()
+            textLabel.text = text
+        }
+    }
     
-    let text = UILabel().apply { 
+    let textLabel = UILabel().apply {
         
         $0.text = "text----"
         $0.font = .systemFont(ofSize: 18)
@@ -112,7 +123,7 @@ private class FCollectionCell: CollectionCell {
         contentView.backgroundColor = .darkGray
     }
     override func bodyView() -> UIView {
-        return text.flex.margin(.top,10).margin(.left,5).view
+        return textLabel.flex.margin(.top,10).margin(.left,5).view
     }
     
     

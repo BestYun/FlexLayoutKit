@@ -11,6 +11,7 @@ open class FlexBaseViewController: UIViewController{
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         view.flex.addItems {
             bodyView()
         }

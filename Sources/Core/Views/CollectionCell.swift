@@ -31,3 +31,23 @@ open class CollectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+
+open class CollectionDynamicCell: CollectionCell {
+    
+    open override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        
+        
+        layoutAttributes.size = self.contentView.flex.intrinsicSize
+        
+        return layoutAttributes
+    }
+//    
+//    
+//    open override var intrinsicContentSize: CGSize {
+//        return self.contentView.flex.intrinsicSize
+//    }
+    
+    
+}
+
