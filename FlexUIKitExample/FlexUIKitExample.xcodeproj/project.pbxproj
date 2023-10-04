@@ -11,6 +11,7 @@
 		AE1BA79E2ACC17190025A3CA /* CollectionViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1BA79D2ACC17190025A3CA /* CollectionViewControllerDemo.swift */; };
 		AE4792D92ACD5E5900127366 /* TableFixedHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */; };
 		AE4792DB2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792DA2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift */; };
+		AE4792DD2ACD665100127366 /* TableDynamicHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792DC2ACD665100127366 /* TableDynamicHeightCellViewController.swift */; };
 		AE7DE1802AC2CF8100FE6170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DE17F2AC2CF8100FE6170 /* AppDelegate.swift */; };
 		AE7DE1822AC2CF8100FE6170 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DE1812AC2CF8100FE6170 /* SceneDelegate.swift */; };
 		AE7DE1842AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7DE1832AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift */; };
@@ -29,6 +30,7 @@
 		AE1BA79D2ACC17190025A3CA /* CollectionViewControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerDemo.swift; sourceTree = "<group>"; };
 		AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController.swift; sourceTree = "<group>"; };
 		AE4792DA2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController2.swift; sourceTree = "<group>"; };
+		AE4792DC2ACD665100127366 /* TableDynamicHeightCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDynamicHeightCellViewController.swift; sourceTree = "<group>"; };
 		AE7DE17C2AC2CF8100FE6170 /* FlexUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7DE17F2AC2CF8100FE6170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7DE1812AC2CF8100FE6170 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				AE1BA79D2ACC17190025A3CA /* CollectionViewControllerDemo.swift */,
 				AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */,
 				AE4792DA2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift */,
+				AE4792DC2ACD665100127366 /* TableDynamicHeightCellViewController.swift */,
 				AE7DE1832AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift */,
 			);
 			path = Controller;
@@ -247,6 +250,7 @@
 				AE1BA79E2ACC17190025A3CA /* CollectionViewControllerDemo.swift in Sources */,
 				AEE670342AC52BA7009622DE /* LivePreViewController.swift in Sources */,
 				AE7DE1842AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift in Sources */,
+				AE4792DD2ACD665100127366 /* TableDynamicHeightCellViewController.swift in Sources */,
 				AEE670382AC57750009622DE /* ZStackViewController.swift in Sources */,
 				AE7DE1802AC2CF8100FE6170 /* AppDelegate.swift in Sources */,
 				AEE670352AC52BA7009622DE /* LivePreview.swift in Sources */,

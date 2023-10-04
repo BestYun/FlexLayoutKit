@@ -14,6 +14,7 @@ class MainViewController: FlexBaseViewController {
     let viewControllers = [HelloFlexUIKitViewController.self,
                            TableFixedHeightCellViewController.self,
                            TableFixedHeightCellViewController2.self,
+                           TableDynamicHeightCellViewController.self,
                            CollectionViewControllerDemo.self,
 
                            
@@ -21,6 +22,7 @@ class MainViewController: FlexBaseViewController {
     let titles = ["Hello FlexBoxUIKit",
                   "UITableViewCell 固定高度",
                   "UITableViewCell 固定高度2",
+                  "UITableViewCell 动态高度",
                   "CollectionView"
     ]
     
@@ -66,7 +68,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
 }
 
-
+///
 private class CellItem: TableCell {
     
    @UState var title: String?
@@ -80,15 +82,3 @@ private class CellItem: TableCell {
     
 }
 
-private class CellDynamicItem: TableDynamicCell {
-    
-   @UState var title: String?
-     
-    override func bodyView() -> UIView {
-        return HStackView {
-            Text($title).textColor(.black).expanded()
-            Text("test hStack").textColor(.black)
-        }.padding(60)
-    }
-    
-}
