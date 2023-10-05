@@ -16,16 +16,7 @@ class HelloFlexUIKitViewController: FlexBaseViewController {
     }
 
     override func bodyView() -> UIView {
-        return VScrollView {
-            Example()
-            
-            Button("collectionview")
-                .margin(.top,10)
-                .margin(.left,10)
-                .onTap {
-                    self.present(CollectionViewControllerDemo(), animated: true)
-                }.backgroundColor(.orange)
-        }.contentInsetAdjustmentBehavior(.never)
+        return Example()
     }
 }
 

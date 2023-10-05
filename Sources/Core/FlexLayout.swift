@@ -1,14 +1,11 @@
 //
 //  FlexLayout.swift
-//  FlexKit
 //
 //  Created by yun on 2023/8/2.
 //
 
 import Foundation
-//import YogaKit
 
-/// 共有属性
 public protocol FlexLayout {
     func isIncludedInLayout(_ isIncludedInLayout: Bool) -> Self
     func enabled(_ isEnabled: Bool) -> Self

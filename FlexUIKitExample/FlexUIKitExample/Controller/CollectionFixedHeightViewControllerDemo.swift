@@ -5,13 +5,19 @@
 //  Created by yun on 2023/10/3.
 //
 
-import UIKit
 import FlexUIKit
+import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewControllerDemo: FlexBaseViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+private let width = (UIScreen.main.bounds.size.width - 10 * 2) / 3
 
+/// 固定宽高
+class CollectionFixedHeightViewControllerDemo: FlexBaseViewController,
+    UICollectionViewDelegate,
+    UICollectionViewDataSource
+                                               
+{
     var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,90 +26,51 @@ class CollectionViewControllerDemo: FlexBaseViewController,UICollectionViewDeleg
     override func bodyView() -> UIView {
         let layout = UICollectionViewFlowLayout()
         
-        let size = (UIScreen.main.bounds.size.width - 10 * 3)/3
-        
-//        layout.itemSize = CGSize(width: size, height: size)
+        layout.itemSize = CGSize(width: width, height: width)
         layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 5
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-//        layout.scrollDirection = .horizontal
-        
+        layout.minimumInteritemSpacing = 10 // 水平方向间距
+
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        
-        
+                
         self.collectionView!.register(FCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         return collectionView
             .flex
-            .margin(.horizontal,0)
-            .margin(.top,0)
+            .margin(.horizontal, 0)
+            .margin(.top, 0)
             .expanded()
             .view
     }
-
-
+    
     // MARK: UICollectionViewDataSource
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
         return 1000
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FCollectionCell
-    
-        cell.text = "text \(indexPath.row*1000)"
         
-    
+        cell.text = "text \(indexPath.row * 1000)"
+                
         return cell
     }
     
-
     // MARK: UICollectionViewDelegate
 
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("did selected item \(indexPath)")
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
 
-
-private class FCollectionCell: CollectionDynamicCell {
-    
+private class FCollectionCell: CollectionCell {
     var text: String? {
         didSet {
             textLabel.flex.markDirty()
@@ -112,23 +79,23 @@ private class FCollectionCell: CollectionDynamicCell {
     }
     
     let textLabel = UILabel().apply {
-        
         $0.text = "text----"
         $0.font = .systemFont(ofSize: 18)
         $0.textColor = .orange
+        $0.backgroundColor = .blue
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .darkGray
     }
+
     override func bodyView() -> UIView {
-        return textLabel.flex.margin(.top,10).margin(.left,5).view
+        return textLabel.flex.expanded().view
     }
     
-    
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }

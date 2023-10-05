@@ -15,15 +15,16 @@ class MainViewController: FlexBaseViewController {
                            TableFixedHeightCellViewController.self,
                            TableFixedHeightCellViewController2.self,
                            TableDynamicHeightCellViewController.self,
-                           CollectionViewControllerDemo.self,
-
-                           
+                           CollectionFixedHeightViewControllerDemo.self,
+                           CollectionDynamicHeightViewControllerDemo.self,
     ]
+    
     let titles = ["Hello FlexBoxUIKit",
                   "UITableViewCell 固定高度",
                   "UITableViewCell 固定高度2",
                   "UITableViewCell 动态高度",
-                  "CollectionView"
+                  "UICollectionViewCell 固定高度",
+                  "UICollectionViewCell 动态高度"
     ]
     
     override func viewDidLoad() {

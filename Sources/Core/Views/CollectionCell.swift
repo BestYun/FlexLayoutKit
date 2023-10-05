@@ -35,19 +35,23 @@ open class CollectionCell: UICollectionViewCell {
 
 open class CollectionDynamicCell: CollectionCell {
     
-    open override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        
-        
-        layoutAttributes.size = self.contentView.flex.intrinsicSize
-        
-        return layoutAttributes
-    }
-//    
-//    
+//    open override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+//
+//        layoutAttributes.size = self.intrinsicContentSize
+//
+//        return layoutAttributes
+//    }
+//
 //    open override var intrinsicContentSize: CGSize {
 //        return self.contentView.flex.intrinsicSize
 //    }
     
+    
+    open override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority _: UILayoutPriority, verticalFittingPriority _: UILayoutPriority) -> CGSize {
+            let size = contentView.flex.sizeThatFits(with: CGSize(width: targetSize.width, height: CGFloat.nan))
+        print(size)
+            return size
+        }
     
 }
 
