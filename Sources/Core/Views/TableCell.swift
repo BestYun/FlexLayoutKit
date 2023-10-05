@@ -19,9 +19,7 @@ open class TableCell: UITableViewCell {
             .addItems {
                 ///拉伸宽度
                 bodyView().flex.expanded().view
-                
             }
-        print(contentView.bounds)
     }
 
     @available(*, unavailable)
@@ -53,7 +51,6 @@ open class TableDynamicCell: UITableViewCell {
             .addItems {
                 bodyView()
             }
-        print(contentView.bounds)
     }
     
     required public init?(coder: NSCoder) {
@@ -71,15 +68,10 @@ open class TableDynamicCell: UITableViewCell {
         super.layoutSubviews()
         contentView.flex.applyLayout(mode: .adjustHeight)
     }
-    
     /// 重写这个方法,计算高度
-    override open func sizeThatFits(_: CGSize) -> CGSize {
-        // 重新这个方法UITableViewCell->sizeThatFits,然后再调用applyLayout方法计算高度
-        // tableView.estimatedRowHeight = 60 需要预估计高度
-        // 同时配置tableView.rowHeight = UITableView.automaticDimension或者代理重新
+    open override func sizeThatFits(_ size: CGSize) -> CGSize {
         contentView.flex.applyLayout(mode: .adjustHeight)
         return contentView.frame.size
     }
-
 
 }

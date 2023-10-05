@@ -19,16 +19,35 @@ class CollectionDynamicHeightViewControllerDemo: FlexBaseViewController,
     UICollectionViewDelegateFlowLayout
 {
     var collectionView: UICollectionView!
+    
+    var data = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 0...100 {
+            
+            let randomString = NSUUID().uuidString
+
+            let max = Int.random(in: 10 ... 200)
+            var content = "start \(i) \(randomString) === "
+            var temp: [String] = []
+            for _ in 0 ... max {
+                temp.append("内容")
+            }
+            content = content + "\(temp.joined()) end==="
+            data.append(content)
+        }
+    
+        
     }
     
     override func bodyView() -> UIView {
         let layout = UICollectionViewFlowLayout()
         
-        layout.itemSize = CGSize(width: width, height: width)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
+        layout.estimatedItemSize = CGSize(width: width, height: width)
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
@@ -51,13 +70,13 @@ class CollectionDynamicHeightViewControllerDemo: FlexBaseViewController,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1000
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FCollectionCell
         
-        cell.text = "text \(indexPath.row * 1000)"
+        cell.text = data[indexPath.row]
                 
         return cell
     }
@@ -72,13 +91,13 @@ class CollectionDynamicHeightViewControllerDemo: FlexBaseViewController,
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = CGFloat(arc4random_uniform(150) + 50)
-            
+
         print("width = \(width) height = \(height)")
         return CGSize(width: width, height: height)
     }
 }
 
-private class FCollectionCell: CollectionCell {
+private class FCollectionCell: CollectionDynamicCell {
     var text: String? {
         didSet {
             textLabel.flex.markDirty()
@@ -91,11 +110,13 @@ private class FCollectionCell: CollectionCell {
         $0.font = .systemFont(ofSize: 18)
         $0.textColor = .orange
         $0.backgroundColor = .blue
+        $0.numberOfLines = 0
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .darkGray
+        
     }
 
     override func bodyView() -> UIView {

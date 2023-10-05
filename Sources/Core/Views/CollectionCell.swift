@@ -34,24 +34,18 @@ open class CollectionCell: UICollectionViewCell {
 
 
 open class CollectionDynamicCell: CollectionCell {
-    
+    /// 重写这个方法,计算高度
+
 //    open override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+//        contentView.flex.applyLayout(mode: .adjustHeight)
 //
-//        layoutAttributes.size = self.intrinsicContentSize
-//
+//        layoutAttributes.size = contentView.frame.size
+//        print("preferredLayoutAttributesFitting = \(contentView.frame.size)")
 //        return layoutAttributes
 //    }
-//
-//    open override var intrinsicContentSize: CGSize {
-//        return self.contentView.flex.intrinsicSize
-//    }
+
     
     
-    open override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority _: UILayoutPriority, verticalFittingPriority _: UILayoutPriority) -> CGSize {
-            let size = contentView.flex.sizeThatFits(with: CGSize(width: targetSize.width, height: CGFloat.nan))
-        print(size)
-            return size
-        }
-    
+
 }
 

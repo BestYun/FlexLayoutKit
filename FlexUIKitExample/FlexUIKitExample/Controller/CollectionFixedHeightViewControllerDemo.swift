@@ -29,10 +29,12 @@ class CollectionFixedHeightViewControllerDemo: FlexBaseViewController,
         layout.itemSize = CGSize(width: width, height: width)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10 // 水平方向间距
+        layout.scrollDirection = .horizontal
 
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isPagingEnabled = true
                 
         self.collectionView!.register(FCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
@@ -58,7 +60,7 @@ class CollectionFixedHeightViewControllerDemo: FlexBaseViewController,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FCollectionCell
         
-        cell.text = "text \(indexPath.row * 1000)"
+        cell.text = "text \(indexPath.row)"
                 
         return cell
     }

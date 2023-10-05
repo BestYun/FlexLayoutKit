@@ -7,21 +7,29 @@
 
 import UIKit
 
-open class FlexBaseViewController: UIViewController{
-    
-    open override func viewDidLoad() {
+open class FlexBaseViewController: UIViewController {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.flex.addItems {
             bodyView()
         }
     }
-    
-    open override func viewDidLayoutSubviews() {
+
+    override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         view.flex.applyLayout()
     }
-    
+
+    override open func viewWillTransition(
+        to size: CGSize,
+        with coordinator: UIViewControllerTransitionCoordinator)
+    {
+        super.viewWillTransition(to: size, with: coordinator)
+        // 屏幕旋转
+        view.flex.size(size).applyLayout()
+    }
+
     open func bodyView() -> UIView {
         fatalError("bodyView has not been implemented")
     }
