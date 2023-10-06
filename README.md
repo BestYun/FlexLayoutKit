@@ -1,4 +1,4 @@
-# FlexUIKit
+# FlexBoxUIKit
 
 ![Swift](https://img.shields.io/badge/Swift-5.4-orange.svg)
 [![CocoaPods](http://img.shields.io/cocoapods/v/FlexBoxUIKit.svg)](https://cocoapods.org/pods/FlexBoxUIKit)
@@ -15,13 +15,13 @@
 ---
 #### Cocoapods
 ```
-pod 'FlexUIKit', :git => 'https://github.com/BestYun/FlexBoxUIKit.git', :tag => '0.0.1'
+pod 'FlexBoxUIKit', :git => 'https://github.com/BestYun/FlexBoxUIKit.git', :tag => '0.0.1'
 ```
 
 ### Usage 用法
 #### Quick Start 快速开始
 ```swift
-import FlexUIKit  //1.导入FlexUIKit
+import FlexBoxUIKit  //1.导入FlexBoxUIKit
 import UIKit
 
 //2.继承FlexBaseViewController
@@ -33,7 +33,7 @@ class ViewController: FlexBaseViewController
     //3.重写bodyView
     override func bodyView() -> UIView {
         return HStackView(mainAxis: .center, crossAxis: .center) {
-            Text("Hello FlexUIKit")
+            Text("Hello FlexBoxUIKit")
         }
         .flex(1)
     }
@@ -43,14 +43,14 @@ class ViewController: FlexBaseViewController
 
 or
 ```swift
-import FlexUIKit
+import FlexBoxUIKit
 
 class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         view.flex.mainAxis(.center).crossAxis(.center).addItems {
             HStackView(mainAxis: .center, crossAxis: .center) {
-                Text("Hello FlexUIKit")
+                Text("Hello FlexBoxUIKit")
             }
         }
     }
@@ -180,4 +180,4 @@ https://github.com/josercc/SwiftTableViewGroup
 
 ## License
 
-**FlexUIKit** is under MIT license. See the [LICENSE](LICENSE) file for more info.
+**FlexBoxUIKit** is under MIT license. See the [LICENSE](LICENSE) file for more info.
