@@ -91,9 +91,10 @@ class CollectionDynamicHeightViewControllerDemo: FlexBaseViewController,
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = CGFloat(arc4random_uniform(150) + 50)
-
-        print("width = \(width) height = \(height)")
-        return CGSize(width: width, height: height)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let size = cell.contentView.flex.sizeThatFits(with: CGSize(width: width, height: CGFloat.nan))
+//        print("width = \(width) height = \(height)")
+        return  size//CGSize(width: width, height: height)
     }
 }
 

@@ -36,13 +36,13 @@ open class CollectionCell: UICollectionViewCell {
 open class CollectionDynamicCell: CollectionCell {
     /// 重写这个方法,计算高度
 
-//    open override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-//        contentView.flex.applyLayout(mode: .adjustHeight)
-//
-//        layoutAttributes.size = contentView.frame.size
-//        print("preferredLayoutAttributesFitting = \(contentView.frame.size)")
-//        return layoutAttributes
-//    }
+    open override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        contentView.flex.applyLayout()
+
+        layoutAttributes.size = contentView.frame.size
+        print("preferredLayoutAttributesFitting = \(contentView.frame.size)")
+        return layoutAttributes
+    }
 
     
     

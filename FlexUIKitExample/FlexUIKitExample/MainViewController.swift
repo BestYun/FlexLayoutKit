@@ -17,6 +17,7 @@ class MainViewController: FlexBaseViewController {
                            TableDynamicHeightCellViewController.self,
                            CollectionFixedHeightViewControllerDemo.self,
                            CollectionDynamicHeightViewControllerDemo.self,
+                           WrapViewController.self,
     ]
     
     let titles = ["Hello FlexBoxUIKit",
@@ -24,7 +25,8 @@ class MainViewController: FlexBaseViewController {
                   "UITableViewCell 固定高度2",
                   "UITableViewCell 动态高度",
                   "UICollectionViewCell 固定高度",
-                  "UICollectionViewCell 动态高度"
+                  "UICollectionViewCell 动态高度",
+                  "Wrap",
     ]
     
     override func viewDidLoad() {
