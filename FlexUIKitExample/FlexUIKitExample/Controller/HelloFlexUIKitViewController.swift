@@ -5,7 +5,7 @@
 //  Created by yun on 2023/9/26.
 //
 
-import FlexUIKit
+import FlexBoxUIKit
 import UIKit
 
 class HelloFlexUIKitViewController: FlexBaseViewController {

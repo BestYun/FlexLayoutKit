@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexUIKit
+import FlexBoxUIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

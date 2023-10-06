@@ -32,7 +32,7 @@ struct LivePreViewr_Previews: PreviewProvider {
 #endif
 
 
-import FlexUIKit
+import FlexBoxUIKit
 class CustomView:UIView{
     override init(frame: CGRect) {
         super.init(frame: .zero)

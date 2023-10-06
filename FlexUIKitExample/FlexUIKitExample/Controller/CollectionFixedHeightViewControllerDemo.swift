@@ -5,7 +5,7 @@
 //  Created by yun on 2023/10/3.
 //
 
-import FlexUIKit
+import FlexBoxUIKit
 import UIKit
 
 private let reuseIdentifier = "Cell"

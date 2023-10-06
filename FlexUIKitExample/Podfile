@@ -6,6 +6,6 @@ target 'FlexUIKitExample' do
   use_frameworks!
 
   # Pods for FlexUIKitExample
-  pod "FlexUIKit",:path => "../"
+  pod "FlexBoxUIKit",:path => "../"
   pod "Then"
 end

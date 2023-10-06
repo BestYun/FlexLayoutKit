@@ -1,7 +1,7 @@
 # FlexUIKit
 
 ![Swift](https://img.shields.io/badge/Swift-5.4-orange.svg)
-[![CocoaPods](http://img.shields.io/cocoapods/v/FlexUIKit.svg)](https://cocoapods.org/pods/FlexUIKit)
+[![CocoaPods](http://img.shields.io/cocoapods/v/FlexBoxUIKit.svg)](https://cocoapods.org/pods/FlexBoxUIKit)
 
 
 基于[facebook/yoga](https://github.com/facebook/yoga)实现一个类似swiftui和Flutter的声明式UI框架
@@ -15,7 +15,7 @@
 ---
 #### Cocoapods
 ```
-pod 'FlexUIKit', :git => 'https://github.com/BestYun/FlexUIKit.git', :tag => '0.0.1'
+pod 'FlexUIKit', :git => 'https://github.com/BestYun/FlexBoxUIKit.git', :tag => '0.0.1'
 ```
 
 ### Usage 用法

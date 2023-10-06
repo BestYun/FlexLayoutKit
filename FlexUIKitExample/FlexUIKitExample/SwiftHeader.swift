@@ -8,4 +8,4 @@
 import Foundation
 
 
-@_exported import FlexUIKit
+@_exported import FlexBoxUIKit

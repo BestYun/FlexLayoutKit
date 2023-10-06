@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexUIKit
+import FlexBoxUIKit
 
 ///tableview cell 动态高度
 class TableDynamicHeightCellViewController: FlexBaseViewController {

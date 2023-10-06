@@ -32,8 +32,6 @@ class WrapViewController: FlexBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
     }
     
 

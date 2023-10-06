@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FlexUIKit
+import FlexBoxUIKit
 
 ///tableview cell 固定高度
 class TableFixedHeightCellViewController: FlexBaseViewController {
