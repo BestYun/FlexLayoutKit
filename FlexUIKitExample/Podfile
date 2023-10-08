@@ -8,4 +8,5 @@ target 'FlexUIKitExample' do
   # Pods for FlexUIKitExample
   pod "FlexBoxUIKit",:path => "../"
   pod "Then"
+  pod "Kingfisher"
 end

@@ -18,6 +18,7 @@ class MainViewController: FlexBaseViewController {
                            CollectionFixedHeightViewControllerDemo.self,
                            CollectionDynamicHeightViewControllerDemo.self,
                            WrapViewController.self,
+                           ImageViewController.self,
     ]
     
     let titles = ["Hello FlexBoxUIKit",
@@ -27,6 +28,7 @@ class MainViewController: FlexBaseViewController {
                   "UICollectionViewCell 固定高度",
                   "UICollectionViewCell 动态高度",
                   "Wrap",
+                  "Image",
     ]
     
     override func viewDidLoad() {

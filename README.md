@@ -6,6 +6,23 @@
 
 基于[facebook/yoga](https://github.com/facebook/yoga)实现一个类似swiftui和Flutter的声明式UI框架
 
+### Todo
+* 百分比
+* 代码注释
+* 文档
+    * HStackView  VStackView  ZStackView Column Row Stack
+    * Wrap
+    * ScrollView
+    * Cell
+    * UITableView
+    * UICollectionView
+
+    * margin padding left right top bottom 
+    * flex 属性
+
+* demo
+    * 请求接口后更新数据
+
 ### Requirements
 * iOS 9.0+
 * Xcode 12.5
