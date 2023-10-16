@@ -30,9 +30,7 @@ public protocol FlexLayout {
     
     func borderWidth(_ all: CGFloat) -> Self
     func borderWidth(_ edge: FEdge, _ length: CGFloat) -> Self
-    
-
-    
+        
     ///gap 设置行和列之间的间隙（gutter）大小。它是 rowGap 和 columnGap 的简写形式。
     func gap(_ gap: CGFloat) -> Self
     ///rowGap 设置元素行之间的间隙（gutter）大小。
@@ -59,12 +57,12 @@ public protocol FlexLayout {
     func aspectRatio(_ aspectRatio: CGFloat) -> Self
 
     func direction(_ direction: FlexDirection) -> Self
-    /// 主轴布局
+    /// 主轴布局 -> justifyContent
     func mainAxis(_ mainAxis: MainAxisAlignment) -> Self
-    /// 次轴布局: 针对单行布局
+    /// 次轴布局: 针对单行布局 -> alignItems
     func crossAxis(_ crossAxis: CrossAxisAlignment) -> Self
 
-    /// 次轴布局: 针对多行布局
+    /// 次轴布局: 针对多行布局 -> alignContent
     func alignContent(_ alignContent: AlignContent) -> Self
 
     /// 定位

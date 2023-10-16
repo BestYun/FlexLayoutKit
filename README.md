@@ -8,17 +8,46 @@
 
 ### Todo
 * 百分比
-* 代码注释
+* ImageView
+* flexbox文档
+    * justifyContent
+    * alignContent
+    * alignItems
+    * AlignSelf
+    * flexDirection
+    * direction
+    * flexWrap
+    * position
+
 * 文档
-    * HStackView  VStackView  ZStackView Column Row Stack
+    - UI
+    * HStackView = Row
+    * VStackView = Column
+    * ZStackView = Stack
     * Wrap
+    * Text
+    * ImageView
+    * Space
+    * TextField
+    * TextView
     * ScrollView
-    * Cell
-    * UITableView
-    * UICollectionView
+    * TabCell
+    * TableDynamicCell
+    * CollectionCell
 
     * margin padding left right top bottom 
+    * size width height minWidth
     * flex 属性
+
+    * applyLayout
+    * markDirty
+    * sizeThatFits
+    * numberOfChildren
+    * isIncludedInLayout
+    * enabled
+    * display
+
+
 
 * demo
     * 请求接口后更新数据

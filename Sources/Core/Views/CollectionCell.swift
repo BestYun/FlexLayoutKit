@@ -43,9 +43,5 @@ open class CollectionDynamicCell: CollectionCell {
         print("preferredLayoutAttributesFitting = \(contentView.frame.size)")
         return layoutAttributes
     }
-
-    
-    
-
 }
 
