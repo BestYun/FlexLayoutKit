@@ -8,7 +8,7 @@
 
 ### Todo
 * 百分比
-* ImageView
+* ImageView 网络加载图片
 * flexbox文档
     * justifyContent
     * alignContent
@@ -23,7 +23,7 @@
     - UI
     * HStackView = Row
     * VStackView = Column
-    * ZStackView = Stack
+    * ZStackView = Stack 与Flutter和SwiftUI有差异,需要自己定义好size才有效果
     * Wrap
     * Text
     * ImageView
@@ -46,6 +46,8 @@
     * isIncludedInLayout
     * enabled
     * display
+
+    * 状态State
 
 
 
