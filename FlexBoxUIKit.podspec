@@ -5,20 +5,24 @@ Pod::Spec.new do |spec|
   spec.version      = "0.0.1"
   spec.summary      = "A flexbox of FlexBoxUIKit."
   spec.homepage     = "https://github.com/BestYun/FlexBoxUIKit"
-  spec.license      = "MIT license"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-
-  spec.author             = { "yun" => "lixingyunxing@163.com" }
-
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  spec.author       = { "yun" => "lixingyunxing@163.com" }
   spec.platform     = :ios, "9.0"
   spec.swift_versions = ["5.4"]
   spec.ios.frameworks = 'UIKit'
   spec.module_name = 'FlexBoxUIKit'
   spec.source = {:path =>"."}
+  
+  spec.description = <<-DESC
+                    A flexbox of FlexBoxUIKit
+                   DESC
+  
+  spec.default_subspec = 'Core'
+
   # spec.source       = { :git => "https://github.com/BestYun/FlexBoxUIKit.git", :tag => "#{spec.version}" }
-  spec.source_files = "Sources/**/*.{swift,h,m,mm,cpp,c}"
-  spec.public_header_files = "Sources/yoga/{Yoga,YGEnums,YGMacros,YGValue}.h", "Sources/YogaKit/{YGLayout,UIView+Yoga}.h"
-  spec.private_header_files = 'Sources/YogaKit/YGLayout+Private.h'
+  # spec.source_files = "Sources/**/*.{swift,h,m,mm,cpp,c}"
+  # spec.public_header_files = "Sources/yoga/{Yoga,YGEnums,YGMacros,YGValue}.h", "Sources/YogaKit/{YGLayout,UIView+Yoga}.h"
+  # spec.private_header_files = 'Sources/YogaKit/YGLayout+Private.h'
 
 #  spec.compiler_flags = [
 #       '-fno-omit-frame-pointer',
@@ -58,12 +62,14 @@ Pod::Spec.new do |spec|
 
   # end
 
-  # spec.subspec 'Core' do |ss|
-  #   ss.source_files = 'Sources/Core/**/*.swift'
-  #   ss.dependency 'FlexBoxUIKit/YogaKit'
+  spec.subspec 'Core' do |ss|
+    ss.source_files = "Sources/**/*.{swift,h,m,mm,cpp,c}"
+    ss.public_header_files = "Sources/yoga/{Yoga,YGEnums,YGMacros,YGValue}.h", "Sources/YogaKit/{YGLayout,UIView+Yoga}.h"
+    ss.private_header_files = 'Sources/YogaKit/YGLayout+Private.h'
+  end
+
+  # spec.subspec 'Kingfisher' do |ss|
+  #   ss.dependency 'Kingfisher', '~> 6.3.1'
   # end
-
-
-
 
 end
