@@ -18,7 +18,7 @@ open class FlexBaseViewController: UIViewController {
 
     override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        view.flex.applyLayout()
+        view.flex.applyLayout(preservingOrigin:false)
     }
 
     override open func viewWillTransition(

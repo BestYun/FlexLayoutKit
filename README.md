@@ -6,53 +6,6 @@
 
 基于[facebook/yoga](https://github.com/facebook/yoga)实现一个类似swiftui和Flutter的声明式UI框架
 
-### Todo
-* 百分比
-* ImageView 网络加载图片
-* flexbox文档
-    * justifyContent
-    * alignContent
-    * alignItems
-    * AlignSelf
-    * flexDirection
-    * direction
-    * flexWrap
-    * position
-
-* 文档
-    - UI
-    * HStackView = Row
-    * VStackView = Column
-    * ZStackView = Stack 与Flutter和SwiftUI有差异,需要自己定义好size才有效果
-    * Wrap
-    * Text
-    * ImageView
-    * Space
-    * TextField
-    * TextView
-    * ScrollView
-    * TabCell
-    * TableDynamicCell
-    * CollectionCell
-
-    * margin padding left right top bottom 
-    * size width height minWidth
-    * flex 属性
-
-    * applyLayout
-    * markDirty
-    * sizeThatFits
-    * numberOfChildren
-    * isIncludedInLayout
-    * enabled
-    * display
-
-    * 状态State
-
-
-
-* demo
-    * 请求接口后更新数据
 
 ### Requirements
 * iOS 9.0+
@@ -226,6 +179,54 @@ https://tbfungeek.github.io/2019/11/05/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%B
 TableView
 https://github.com/josercc/SwiftTableViewGroup
 
+### Todo
+* 百分比
+* ImageView 网络加载图片
+* flexbox文档
+    * justifyContent
+    * alignContent
+    * alignItems
+    * AlignSelf
+    * flexDirection
+    * direction
+    * flexWrap
+    * position
+
+* 文档
+    - UI
+    * HStackView = Row
+    * VStackView = Column
+    * ZStackView = Stack 与Flutter和SwiftUI有差异,需要自己定义好size才有效果
+    * Wrap
+    * Text
+    * ImageView
+    * Space
+    * TextField
+    * TextView
+    * ScrollView
+    * TabCell
+    * TableDynamicCell
+    * CollectionCell
+
+    * margin padding left right top bottom 
+    * size width height minWidth
+    * flex 属性
+
+    * applyLayout
+    * markDirty
+    * sizeThatFits
+    * numberOfChildren
+    * isIncludedInLayout
+    * enabled
+    * display
+
+    * 状态State
+
+
+
+* demo
+    * 请求接口后更新数据
+
 ## 可参考的
 * https://github.com/MihaelIsaev/UIKitPlus
 * https://blog.eppz.eu/declarative-uikit-with-10-lines-of-code/
@@ -240,5 +241,4 @@ https://github.com/josercc/SwiftTableViewGroup
 * https://github.com/zhenglibao/FlexLib
 
 ## License
-
 **FlexBoxUIKit** is under MIT license. See the [LICENSE](LICENSE) file for more info.
