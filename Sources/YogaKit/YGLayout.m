@@ -475,21 +475,22 @@ static void YGApplyLayoutToViewHierarchy(UIView* view, BOOL preserveOrigin) {
   }
 
   YGNodeRef node = yoga.node;
-    float left = YGNodeLayoutGetLeft(node);
-    float top = YGNodeLayoutGetTop(node);
+  float left = YGNodeLayoutGetLeft(node);
+  float top = YGNodeLayoutGetTop(node);
+    //防止nan
+  left = isnan(left) ? 0 : left;
+  top = isnan(top) ? 0 : top;
 
-    left = isnan(left) ? 0 : left;
-    top = isnan(top) ? 0 : top;
-
-    const CGPoint topLeft = {
+  const CGPoint topLeft = {
         left,
         top,
-    };
+  };
 
-    float width = YGNodeLayoutGetWidth(node);
-    width = isnan(width) ? 0 : width;
-    float height = YGNodeLayoutGetHeight(node);
-    height = isnan(height) ? 0 : height;
+  float width = YGNodeLayoutGetWidth(node);
+  width = isnan(width) ? 0 : width;
+  float height = YGNodeLayoutGetHeight(node);
+  height = isnan(height) ? 0 : height;
+    
   const CGPoint bottomRight = {
       topLeft.x + width,
       topLeft.y + height,
