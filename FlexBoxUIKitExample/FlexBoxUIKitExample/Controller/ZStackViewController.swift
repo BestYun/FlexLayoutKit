@@ -7,23 +7,32 @@
 
 import UIKit
 
-class ZStackViewController: UIViewController {
+class ZStackViewController: FlexBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func bodyView() -> UIView {
+        return VStackView(mainAxis: .center, crossAxis: .center) {
+            
+            ZStackView {
+                FlexContainerView(mainAxis: .center, crossAxis: .center){
+                    Text("99")
+                }
+                .cornerRadius(15)
+                .backgroundColor(.red)
+                .top(0)
+                .right(0)
+                .size(30)
+            }
+            .size(100)
+            .backgroundColor(.orange)
+            
+        }.expanded()
     }
-    */
 
+     
 }
