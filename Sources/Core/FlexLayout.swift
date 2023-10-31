@@ -5,6 +5,7 @@
 //
 
 import Foundation
+import FlexBoxYogaKit
 
 public protocol FlexLayout {
     func isIncludedInLayout(_ isIncludedInLayout: Bool) -> Self

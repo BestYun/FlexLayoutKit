@@ -11,7 +11,8 @@ Pod::Spec.new do |spec|
   spec.swift_versions = ["5.4"]
   spec.ios.frameworks = 'UIKit'
   spec.module_name = 'FlexBoxUIKit'
-  spec.source = {:path =>"."}
+#  spec.source = {:path =>"."}
+  spec.source       = { :git => "https://github.com/BestYun/FlexBoxUIKit.git", :tag => "#{spec.version}" }
   
   spec.description = <<-DESC
                     A flexbox of FlexBoxUIKit
@@ -19,25 +20,11 @@ Pod::Spec.new do |spec|
   
   spec.default_subspec = 'Core'
 
-  # spec.source       = { :git => "https://github.com/BestYun/FlexBoxUIKit.git", :tag => "#{spec.version}" }
-  # spec.source_files = "Sources/**/*.{swift,h,m,mm,cpp,c}"
-  # spec.public_header_files = "Sources/yoga/{Yoga,YGEnums,YGMacros,YGValue}.h", "Sources/YogaKit/{YGLayout,UIView+Yoga}.h"
-  # spec.private_header_files = 'Sources/YogaKit/YGLayout+Private.h'
-
-
-   spec.subspec 'YogaKit' do |ss|
-     ss.ios.frameworks = 'UIKit'
-     ss.dependency 'FlexBoxYoga', "~> 2.0.0.1"
-     ss.source_files = 'Sources/YogaKit/*.{h,m,swift}'
-     ss.public_header_files = 'Sources/YogaKit/{YGLayout,UIView+Yoga}.h'
-     ss.private_header_files = 'Sources/YogaKit/YGLayout+Private.h'
-   end
 
   spec.subspec 'Core' do |ss|
     ss.source_files = "Sources/Core/**/*.swift"
-#    ss.public_header_files = "Sources/yoga/{Yoga,YGEnums,YGMacros,YGValue}.h", "Sources/YogaKit/{YGLayout,UIView+Yoga}.h"
-#    ss.private_header_files = 'Sources/YogaKit/YGLayout+Private.h'
-    ss.dependency 'FlexBoxUIKit/YogaKit'
+    ss.dependency 'FlexBoxYogaKit', '~> 2.0.0.3'
+    
   end
 
   # spec.subspec 'Kingfisher' do |ss|
