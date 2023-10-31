@@ -16,7 +16,7 @@
 ---
 #### Cocoapods
 ```
-pod 'FlexBoxUIKit', :git => 'https://github.com/BestYun/FlexBoxUIKit.git', :tag => '0.0.1'
+pod 'FlexBoxUIKit', '~> 0.0.2'
 ```
 
 ### Usage 用法
