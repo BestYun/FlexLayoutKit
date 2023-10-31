@@ -38,7 +38,7 @@
 		AE4792DE2ACEAB0A00127366 /* CollectionDynamicHeightViewControllerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDynamicHeightViewControllerDemo.swift; sourceTree = "<group>"; };
 		AE4792E02ACFED1200127366 /* WrapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapViewController.swift; sourceTree = "<group>"; };
 		AE4792E22ACFED5E00127366 /* SwiftHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHeader.swift; sourceTree = "<group>"; };
-		AE7DE17C2AC2CF8100FE6170 /* FlexUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7DE17C2AC2CF8100FE6170 /* FlexBoxUIKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexBoxUIKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7DE17F2AC2CF8100FE6170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7DE1812AC2CF8100FE6170 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AE7DE1832AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloFlexUIKitViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		AE7DE1732AC2CF8100FE6170 = {
 			isa = PBXGroup;
 			children = (
-				AE7DE17E2AC2CF8100FE6170 /* FlexUIKitExample */,
+				AE7DE17E2AC2CF8100FE6170 /* FlexBoxUIKitExample */,
 				AE7DE17D2AC2CF8100FE6170 /* Products */,
 				4D6B5D447847072BEEF99F1D /* Pods */,
 				6090D6BC4A4D28FEA2B7AADB /* Frameworks */,
@@ -96,12 +96,12 @@
 		AE7DE17D2AC2CF8100FE6170 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE7DE17C2AC2CF8100FE6170 /* FlexUIKitExample.app */,
+				AE7DE17C2AC2CF8100FE6170 /* FlexBoxUIKitExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE7DE17E2AC2CF8100FE6170 /* FlexUIKitExample */ = {
+		AE7DE17E2AC2CF8100FE6170 /* FlexBoxUIKitExample */ = {
 			isa = PBXGroup;
 			children = (
 				AEE670362AC576DE009622DE /* Controller */,
@@ -115,7 +115,7 @@
 				AE7DE18D2AC2CF8300FE6170 /* Info.plist */,
 				AE4792E22ACFED5E00127366 /* SwiftHeader.swift */,
 			);
-			path = FlexUIKitExample;
+			path = FlexBoxUIKitExample;
 			sourceTree = "<group>";
 		};
 		AEE670312AC52BA7009622DE /* preview */ = {
@@ -146,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AE7DE17B2AC2CF8100FE6170 /* FlexUIKitExample */ = {
+		AE7DE17B2AC2CF8100FE6170 /* FlexBoxUIKitExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE7DE1902AC2CF8300FE6170 /* Build configuration list for PBXNativeTarget "FlexUIKitExample" */;
+			buildConfigurationList = AE7DE1902AC2CF8300FE6170 /* Build configuration list for PBXNativeTarget "FlexBoxUIKitExample" */;
 			buildPhases = (
 				2BFBE9F935D907B0B0961A72 /* [CP] Check Pods Manifest.lock */,
 				AE7DE1782AC2CF8100FE6170 /* Sources */,
@@ -160,9 +160,9 @@
 			);
 			dependencies = (
 			);
-			name = FlexUIKitExample;
+			name = FlexBoxUIKitExample;
 			productName = FlexUIKitExample;
-			productReference = AE7DE17C2AC2CF8100FE6170 /* FlexUIKitExample.app */;
+			productReference = AE7DE17C2AC2CF8100FE6170 /* FlexBoxUIKitExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AE7DE1772AC2CF8100FE6170 /* Build configuration list for PBXProject "FlexUIKitExample" */;
+			buildConfigurationList = AE7DE1772AC2CF8100FE6170 /* Build configuration list for PBXProject "FlexBoxUIKitExample" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -193,7 +193,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE7DE17B2AC2CF8100FE6170 /* FlexUIKitExample */,
+				AE7DE17B2AC2CF8100FE6170 /* FlexBoxUIKitExample */,
 			);
 		};
 /* End PBXProject section */
@@ -428,7 +428,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +458,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,7 +475,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE7DE1772AC2CF8100FE6170 /* Build configuration list for PBXProject "FlexUIKitExample" */ = {
+		AE7DE1772AC2CF8100FE6170 /* Build configuration list for PBXProject "FlexBoxUIKitExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE7DE18E2AC2CF8300FE6170 /* Debug */,
@@ -484,7 +484,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE7DE1902AC2CF8300FE6170 /* Build configuration list for PBXNativeTarget "FlexUIKitExample" */ = {
+		AE7DE1902AC2CF8300FE6170 /* Build configuration list for PBXNativeTarget "FlexBoxUIKitExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE7DE1912AC2CF8300FE6170 /* Debug */,
