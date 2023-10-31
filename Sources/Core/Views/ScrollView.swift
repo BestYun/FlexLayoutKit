@@ -19,8 +19,8 @@ public class ScrollView: UIScrollView {
 //        }
 
         // 默认不显示滚动条
-        showsVerticalScrollIndicator = false
-        showsHorizontalScrollIndicator = false
+//        showsVerticalScrollIndicator = false
+//        showsHorizontalScrollIndicator = false
         // 这个需要配置
         flex.direction(direction)
 
@@ -47,14 +47,14 @@ public class ScrollView: UIScrollView {
 
     override public func layoutSubviews() {
         super.layoutSubviews()
-        if showsVerticalScrollIndicator || showsHorizontalScrollIndicator {
-            subviews.forEach { item in
-                let typeStr = "\(type(of: item))"
-                if typeStr == "_UIScrollViewScrollIndicator" {
-                    item.flex.isIncludedInLayout(false)
-                }
-            }
-        }
+//        if showsVerticalScrollIndicator || showsHorizontalScrollIndicator {
+//            subviews.forEach { item in
+//                let typeStr = "\(type(of: item))"
+//                if typeStr == "_UIScrollViewScrollIndicator" {
+//                    item.flex.isIncludedInLayout(false)
+//                }
+//            }
+//        }
         let size = contentView.frame.size
         contentSize = CGSize(width: size.width, height: size.height)
     }

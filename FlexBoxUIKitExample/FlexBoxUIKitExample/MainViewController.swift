@@ -19,6 +19,8 @@ class MainViewController: FlexBaseViewController {
                            CollectionDynamicHeightViewControllerDemo.self,
                            WrapViewController.self,
                            ImageViewController.self,
+                           HScrollViewController.self,
+                           VScrollViewController.self,
     ]
     
     let titles = ["Hello FlexBoxUIKit",
@@ -29,6 +31,8 @@ class MainViewController: FlexBaseViewController {
                   "UICollectionViewCell 动态高度",
                   "Wrap",
                   "Image",
+                  "HScrollView",
+                  "VScrollView",
     ]
     
     override func viewDidLoad() {

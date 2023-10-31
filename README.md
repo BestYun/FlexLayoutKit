@@ -186,7 +186,7 @@ https://github.com/josercc/SwiftTableViewGroup
     * justifyContent
     * alignContent
     * alignItems
-    * AlignSelf
+    * alignSelf
     * flexDirection
     * direction
     * flexWrap
