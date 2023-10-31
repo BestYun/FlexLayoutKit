@@ -1,13 +1,12 @@
 
 Pod::Spec.new do |spec|
-
   spec.name         = "FlexBoxUIKit"
-  spec.version      = "0.0.1"
-  spec.summary      = "A flexbox of FlexBoxUIKit."
+  spec.version      = "0.0.2"
+  spec.summary      = "flex layout for iOS powered by yoga"
   spec.homepage     = "https://github.com/BestYun/FlexBoxUIKit"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author       = { "yun" => "lixingyunxing@163.com" }
-  spec.platform     = :ios, "9.0"
+  spec.platform     = :ios, "10.0"
   spec.swift_versions = ["5.4"]
   spec.ios.frameworks = 'UIKit'
   spec.module_name = 'FlexBoxUIKit'
@@ -15,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/BestYun/FlexBoxUIKit.git", :tag => "#{spec.version}" }
   
   spec.description = <<-DESC
-                    A flexbox of FlexBoxUIKit
+  flex layout for iOS powered by yoga. Like SwiftUI.
                    DESC
   
   spec.default_subspec = 'Core'
