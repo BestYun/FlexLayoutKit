@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE7DE1662AC2CE5200FE6170 /* FlexUIKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = AE7DE1652AC2CE5200FE6170 /* FlexUIKit.docc */; };
-		AE7DE1672AC2CE5200FE6170 /* FlexUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AE7DE1642AC2CE5200FE6170 /* FlexUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE7DE1722AC2CF4300FE6170 /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = AE7DE1712AC2CF4300FE6170 /* Sources */; };
+		AEBD543A2AF09BC4004981E1 /* FlexBoxUIKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = AEBD54382AF09BC4004981E1 /* FlexBoxUIKit.docc */; };
+		AEBD543B2AF09BC4004981E1 /* FlexBoxUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AEBD54392AF09BC4004981E1 /* FlexBoxUIKit.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AE7DE1612AC2CE5200FE6170 /* FlexUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE7DE1642AC2CE5200FE6170 /* FlexUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlexUIKit.h; sourceTree = "<group>"; };
-		AE7DE1652AC2CE5200FE6170 /* FlexUIKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FlexUIKit.docc; sourceTree = "<group>"; };
+		AE7DE1612AC2CE5200FE6170 /* FlexBoxUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlexBoxUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7DE1712AC2CF4300FE6170 /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
+		AEBD54382AF09BC4004981E1 /* FlexBoxUIKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FlexBoxUIKit.docc; sourceTree = "<group>"; };
+		AEBD54392AF09BC4004981E1 /* FlexBoxUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexBoxUIKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,8 +33,8 @@
 		AE7DE1572AC2CE5200FE6170 = {
 			isa = PBXGroup;
 			children = (
+				AEBD54372AF09BC4004981E1 /* FlexBoxUIKit */,
 				AE7DE1712AC2CF4300FE6170 /* Sources */,
-				AE7DE1632AC2CE5200FE6170 /* FlexUIKit */,
 				AE7DE1622AC2CE5200FE6170 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -42,18 +42,18 @@
 		AE7DE1622AC2CE5200FE6170 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AE7DE1612AC2CE5200FE6170 /* FlexUIKit.framework */,
+				AE7DE1612AC2CE5200FE6170 /* FlexBoxUIKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AE7DE1632AC2CE5200FE6170 /* FlexUIKit */ = {
+		AEBD54372AF09BC4004981E1 /* FlexBoxUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				AE7DE1642AC2CE5200FE6170 /* FlexUIKit.h */,
-				AE7DE1652AC2CE5200FE6170 /* FlexUIKit.docc */,
+				AEBD54382AF09BC4004981E1 /* FlexBoxUIKit.docc */,
+				AEBD54392AF09BC4004981E1 /* FlexBoxUIKit.h */,
 			);
-			path = FlexUIKit;
+			path = FlexBoxUIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -63,16 +63,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7DE1672AC2CE5200FE6170 /* FlexUIKit.h in Headers */,
+				AEBD543B2AF09BC4004981E1 /* FlexBoxUIKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AE7DE1602AC2CE5200FE6170 /* FlexUIKit */ = {
+		AE7DE1602AC2CE5200FE6170 /* FlexBoxUIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AE7DE16A2AC2CE5200FE6170 /* Build configuration list for PBXNativeTarget "FlexUIKit" */;
+			buildConfigurationList = AE7DE16A2AC2CE5200FE6170 /* Build configuration list for PBXNativeTarget "FlexBoxUIKit" */;
 			buildPhases = (
 				AE7DE15C2AC2CE5200FE6170 /* Headers */,
 				AE7DE15D2AC2CE5200FE6170 /* Sources */,
@@ -83,9 +83,9 @@
 			);
 			dependencies = (
 			);
-			name = FlexUIKit;
+			name = FlexBoxUIKit;
 			productName = FlexUIKit;
-			productReference = AE7DE1612AC2CE5200FE6170 /* FlexUIKit.framework */;
+			productReference = AE7DE1612AC2CE5200FE6170 /* FlexBoxUIKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AE7DE15B2AC2CE5200FE6170 /* Build configuration list for PBXProject "FlexUIKit" */;
+			buildConfigurationList = AE7DE15B2AC2CE5200FE6170 /* Build configuration list for PBXProject "FlexBoxUIKit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AE7DE1602AC2CE5200FE6170 /* FlexUIKit */,
+				AE7DE1602AC2CE5200FE6170 /* FlexBoxUIKit */,
 			);
 		};
 /* End PBXProject section */
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE7DE1662AC2CE5200FE6170 /* FlexUIKit.docc in Sources */,
+				AEBD543A2AF09BC4004981E1 /* FlexBoxUIKit.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +320,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AE7DE15B2AC2CE5200FE6170 /* Build configuration list for PBXProject "FlexUIKit" */ = {
+		AE7DE15B2AC2CE5200FE6170 /* Build configuration list for PBXProject "FlexBoxUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE7DE1682AC2CE5200FE6170 /* Debug */,
@@ -329,7 +329,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AE7DE16A2AC2CE5200FE6170 /* Build configuration list for PBXNativeTarget "FlexUIKit" */ = {
+		AE7DE16A2AC2CE5200FE6170 /* Build configuration list for PBXNativeTarget "FlexBoxUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AE7DE16B2AC2CE5200FE6170 /* Debug */,
