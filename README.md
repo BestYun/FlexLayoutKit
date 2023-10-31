@@ -226,6 +226,19 @@ https://tbfungeek.github.io/2019/11/05/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%B
 TableView
 https://github.com/josercc/SwiftTableViewGroup
 
+## 可参考的
+* https://github.com/MihaelIsaev/UIKitPlus
+* https://blog.eppz.eu/declarative-uikit-with-10-lines-of-code/
+* https://github.com/hmlongco/RxSwiftWidgets 可以参考它的State实现
+* https://tech.youzan.com/-sheng-ming-shi-uikitzai-you-zan-mei-ye-de-shi-jian/
+* https://github.com/sakiyamaK/DeclarativeUIKit
+* https://github.com/hmlongco/Builder/tree/main
+* https://github.com/hainayanda/Draftsman
+* https://github.com/nicklockwood/layout  xml实现布局
+* https://kazaimazai.com/swifty-uikit/
+* https://github.com/KazaiMazai/SwiftyUIKit
+* https://github.com/zhenglibao/FlexLib
+
 ## License
 
 **FlexBoxUIKit** is under MIT license. See the [LICENSE](LICENSE) file for more info.

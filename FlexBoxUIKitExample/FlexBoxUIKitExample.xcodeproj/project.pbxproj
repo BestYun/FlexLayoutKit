@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64901A50DA833E3136A956D3 /* Pods_FlexUIKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB9C11AD4EC06D09DC69505 /* Pods_FlexUIKitExample.framework */; };
+		A5C2DB31163995C0E5466493 /* Pods_FlexBoxUIKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD12A572B7BA0FDAAF39B15 /* Pods_FlexBoxUIKitExample.framework */; };
 		AE1BA79E2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1BA79D2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift */; };
 		AE4792D92ACD5E5900127366 /* TableFixedHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */; };
 		AE4792DB2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792DA2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift */; };
@@ -29,8 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00E552D5839CE8813665966D /* Pods-FlexBoxUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexBoxUIKitExample.debug.xcconfig"; path = "Target Support Files/Pods-FlexBoxUIKitExample/Pods-FlexBoxUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		2B7D867FEC9EE277E68D9159 /* Pods-FlexUIKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexUIKitExample.release.xcconfig"; path = "Target Support Files/Pods-FlexUIKitExample/Pods-FlexUIKitExample.release.xcconfig"; sourceTree = "<group>"; };
-		9AB9C11AD4EC06D09DC69505 /* Pods_FlexUIKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DD12A572B7BA0FDAAF39B15 /* Pods_FlexBoxUIKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexBoxUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1BA79D2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFixedHeightViewControllerDemo.swift; sourceTree = "<group>"; };
 		AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController.swift; sourceTree = "<group>"; };
 		AE4792DA2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController2.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		AEE670322AC52BA7009622DE /* LivePreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePreViewController.swift; sourceTree = "<group>"; };
 		AEE670332AC52BA7009622DE /* LivePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePreview.swift; sourceTree = "<group>"; };
 		AEE670372AC57750009622DE /* ZStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStackViewController.swift; sourceTree = "<group>"; };
+		BBE4A05283AC61297EBCABB8 /* Pods-FlexBoxUIKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexBoxUIKitExample.release.xcconfig"; path = "Target Support Files/Pods-FlexBoxUIKitExample/Pods-FlexBoxUIKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		D9517D6EA190252659A2BD31 /* Pods-FlexUIKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexUIKitExample.debug.xcconfig"; path = "Target Support Files/Pods-FlexUIKitExample/Pods-FlexUIKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64901A50DA833E3136A956D3 /* Pods_FlexUIKitExample.framework in Frameworks */,
+				A5C2DB31163995C0E5466493 /* Pods_FlexBoxUIKitExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +73,8 @@
 			children = (
 				D9517D6EA190252659A2BD31 /* Pods-FlexUIKitExample.debug.xcconfig */,
 				2B7D867FEC9EE277E68D9159 /* Pods-FlexUIKitExample.release.xcconfig */,
+				00E552D5839CE8813665966D /* Pods-FlexBoxUIKitExample.debug.xcconfig */,
+				BBE4A05283AC61297EBCABB8 /* Pods-FlexBoxUIKitExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -78,7 +82,7 @@
 		6090D6BC4A4D28FEA2B7AADB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9AB9C11AD4EC06D09DC69505 /* Pods_FlexUIKitExample.framework */,
+				3DD12A572B7BA0FDAAF39B15 /* Pods_FlexBoxUIKitExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,7 +231,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FlexUIKitExample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FlexBoxUIKitExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -240,15 +244,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlexUIKitExample/Pods-FlexUIKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FlexBoxUIKitExample/Pods-FlexBoxUIKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlexUIKitExample/Pods-FlexUIKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FlexBoxUIKitExample/Pods-FlexBoxUIKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexUIKitExample/Pods-FlexUIKitExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexBoxUIKitExample/Pods-FlexBoxUIKitExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,7 +418,7 @@
 		};
 		AE7DE1912AC2CF8300FE6170 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9517D6EA190252659A2BD31 /* Pods-FlexUIKitExample.debug.xcconfig */;
+			baseConfigurationReference = 00E552D5839CE8813665966D /* Pods-FlexBoxUIKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,13 +426,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FlexUIKitExample/Info.plist;
+				INFOPLIST_FILE = FlexBoxUIKitExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +448,7 @@
 		};
 		AE7DE1922AC2CF8300FE6170 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B7D867FEC9EE277E68D9159 /* Pods-FlexUIKitExample.release.xcconfig */;
+			baseConfigurationReference = BBE4A05283AC61297EBCABB8 /* Pods-FlexBoxUIKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,13 +456,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FlexUIKitExample/Info.plist;
+				INFOPLIST_FILE = FlexBoxUIKitExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
