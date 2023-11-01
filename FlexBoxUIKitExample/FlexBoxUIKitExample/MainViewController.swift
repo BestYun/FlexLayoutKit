@@ -23,6 +23,7 @@ class MainViewController: FlexBaseViewController {
                            VScrollViewController.self,
                            ZStackViewController.self,
                            SizeThatFitViewController.self,
+                           FlexPercentViewController.self,
     ]
     
     let titles = ["Hello FlexBoxUIKit",
@@ -36,7 +37,8 @@ class MainViewController: FlexBaseViewController {
                   "HScrollView",
                   "VScrollView",
                   "ZStackView",
-                  "SizeThatFits"
+                  "SizeThatFits",
+                  "FlexPercent 百分比"
     ]
     
     override func viewDidLoad() {

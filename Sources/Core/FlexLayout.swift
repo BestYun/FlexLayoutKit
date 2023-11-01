@@ -22,7 +22,6 @@ public protocol FlexLayout {
     func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Self
 
     func margin(_ margin: CGFloat) -> Self
-
     func margin(_ edge: FEdge, _ length: CGFloat) -> Self
     func margin(_ edge: [FEdge], _ length: CGFloat) -> Self
     func margin(_ insets: UIEdgeInsets) -> Self
@@ -49,8 +48,13 @@ public protocol FlexLayout {
 
     func width(_ width: CGFloat?) -> Self
     func height(_ height: CGFloat?) -> Self
+    func width(_ percent: FlexPercent) -> Self
+    func height(_ percent: FlexPercent) -> Self
+    
     func size(width: CGFloat?, height: CGFloat?) -> Self
+    func size(width: FlexPercent?, height: FlexPercent?) -> Self
     func size(_ size: CGFloat) -> Self
+    func size(_ percent: FlexPercent) -> Self
     func size(_ size: CGSize) -> Self
     func size(minWidth: CGFloat?, maxWidth: CGFloat?, minHeight: CGFloat?, maxHeight: CGFloat?) -> Self
 
@@ -305,6 +309,27 @@ public extension FlexLayout {
         yoga.height = YGValue(size.height)
         return self
     }
+    
+    func size(width: FlexPercent?, height: FlexPercent?) -> Self {
+        
+        if let width = width {
+            _ = yoga.width(width)
+        }
+        
+        if let height = height {
+            _ = yoga.height(height)
+        }
+        
+        return self
+    }
+    
+    func size(_ percent: FlexPercent) -> Self {
+        _ = yoga.width(percent)
+        _ = yoga.height(percent)
+
+        return self
+    }
+
 
     @discardableResult func size(minWidth: CGFloat? = nil, maxWidth: CGFloat? = nil, minHeight : CGFloat? = nil, maxHeight: CGFloat? = nil) -> Self {
         yoga.minWidth = valueOrUndefined(minWidth)
@@ -318,6 +343,15 @@ public extension FlexLayout {
 //        if let minHeight = minWidth { yoga.minHeight = YGValue(minHeight) }
 //        if let maxHeight = maxHeight { yoga.maxHeight = YGValue(maxHeight) }
 
+        return self
+    }
+    
+    func width(_ percent: FlexPercent) -> Self {
+        yoga.width = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    func height(_ percent: FlexPercent) -> Self {
+        yoga.height = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
 
@@ -743,4 +777,23 @@ public enum FAxis {
             return .column
         }
     }
+}
+
+
+public struct FlexPercent {
+    let value: CGFloat
+}
+
+postfix operator %
+public postfix func % (v: CGFloat) -> FlexPercent {
+    return FlexPercent(value: v)
+}
+
+public postfix func % (v: Int) -> FlexPercent {
+    return FlexPercent(value: CGFloat(v))
+}
+
+prefix operator -
+public prefix func - (p: FlexPercent) -> FlexPercent {
+    return FlexPercent(value: -p.value)
 }

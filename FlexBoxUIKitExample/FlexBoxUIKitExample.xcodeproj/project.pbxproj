@@ -10,6 +10,7 @@
 		A5C2DB31163995C0E5466493 /* Pods_FlexBoxUIKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD12A572B7BA0FDAAF39B15 /* Pods_FlexBoxUIKitExample.framework */; };
 		AE1BA79E2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1BA79D2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift */; };
 		AE4217792AF2195C0011BCCC /* SizeThatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4217782AF2195C0011BCCC /* SizeThatFitViewController.swift */; };
+		AE42177B2AF24B800011BCCC /* FlexPercentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE42177A2AF24B800011BCCC /* FlexPercentViewController.swift */; };
 		AE4792D92ACD5E5900127366 /* TableFixedHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */; };
 		AE4792DB2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792DA2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift */; };
 		AE4792DD2ACD665100127366 /* TableDynamicHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792DC2ACD665100127366 /* TableDynamicHeightCellViewController.swift */; };
@@ -37,6 +38,7 @@
 		3DD12A572B7BA0FDAAF39B15 /* Pods_FlexBoxUIKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexBoxUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1BA79D2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFixedHeightViewControllerDemo.swift; sourceTree = "<group>"; };
 		AE4217782AF2195C0011BCCC /* SizeThatFitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeThatFitViewController.swift; sourceTree = "<group>"; };
+		AE42177A2AF24B800011BCCC /* FlexPercentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexPercentViewController.swift; sourceTree = "<group>"; };
 		AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController.swift; sourceTree = "<group>"; };
 		AE4792DA2ACD61AF00127366 /* TableFixedHeightCellViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController2.swift; sourceTree = "<group>"; };
 		AE4792DC2ACD665100127366 /* TableDynamicHeightCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDynamicHeightCellViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				AEE427CB2AF0D077002362A1 /* VScrollViewController.swift */,
 				AEE427CD2AF0D2BC002362A1 /* HScrollViewController.swift */,
 				AE4217782AF2195C0011BCCC /* SizeThatFitViewController.swift */,
+				AE42177A2AF24B800011BCCC /* FlexPercentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				AE1BA79E2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift in Sources */,
 				AEE670342AC52BA7009622DE /* LivePreViewController.swift in Sources */,
 				AE7DE1842AC2CF8100FE6170 /* HelloFlexUIKitViewController.swift in Sources */,
+				AE42177B2AF24B800011BCCC /* FlexPercentViewController.swift in Sources */,
 				AE4792DD2ACD665100127366 /* TableDynamicHeightCellViewController.swift in Sources */,
 				AEE5BC8D2AD155620003E53C /* ImageViewController.swift in Sources */,
 				AEE427CE2AF0D2BC002362A1 /* HScrollViewController.swift in Sources */,
