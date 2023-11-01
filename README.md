@@ -5,7 +5,7 @@
 
 
 基于[facebook/yoga](https://github.com/facebook/yoga)实现一个类似swiftui和Flutter的声明式UI框架
-
+An iOS flex layout kit based on facebook's Yoga framework.
 
 ### Requirements
 * iOS 9.0+
@@ -239,6 +239,7 @@ https://github.com/josercc/SwiftTableViewGroup
 * https://kazaimazai.com/swifty-uikit/
 * https://github.com/KazaiMazai/SwiftyUIKit
 * https://github.com/zhenglibao/FlexLib
+* https://github.com/layoutBox/FlexLayout
 
 ## License
 **FlexBoxUIKit** is under MIT license. See the [LICENSE](LICENSE) file for more info.

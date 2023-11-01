@@ -72,6 +72,12 @@ open class TableDynamicCell: UITableViewCell {
     open override func sizeThatFits(_ size: CGSize) -> CGSize {
         contentView.flex.applyLayout(mode: .adjustHeight)
         return contentView.frame.size
-    }
+     }
+    
+// 或者重写这个方法
+//    open override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+//        let newSize = contentView.flex.sizeThatFits(with: CGSize(width: targetSize.width, height: CGFloat.nan))
+//        return newSize
+//    }
 
 }
