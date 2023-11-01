@@ -24,6 +24,15 @@ class FlexPercentViewController: FlexBaseViewController {
             Text("FlexPercent2").backgroundColor(.blue).size(20%).margin(.top,10)
             Text("FlexPercent3").backgroundColor(.yellow).size(width: 20%, height: 20%).margin(.top,10)
             Text("FlexPercent4").backgroundColor(.gray).size(width: 20%, height: 20%).margin(.top,10%)
+            FlexContainerView{
+                Text("FlexPercent4").backgroundColor(.brown)
+            }
+            .backgroundColor(.gray)
+            .size(width: 50%, height: 20%)
+            .margin(.top,10%)
+            .padding(10%)
+//            .padding(.left,10%)
+//            .padding(.top,10%)
 
         }.expanded()
     }

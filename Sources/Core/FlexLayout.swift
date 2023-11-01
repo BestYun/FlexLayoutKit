@@ -17,6 +17,11 @@ public protocol FlexLayout {
     func padding(_ padding: CGFloat) -> Self
     func padding(_ edge: FEdge, _ length: CGFloat) -> Self
     func padding(_ edge: [FEdge], _ length: CGFloat) -> Self
+    
+    func padding(_ percent: FlexPercent) -> Self
+    func padding(_ edge: FEdge, _ percent: FlexPercent) -> Self
+    func padding(_ edge: [FEdge], _ percent: FlexPercent) -> Self
+    
     func padding(_ insets: UIEdgeInsets) -> Self
     @available(iOS 11.0, *)
     func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Self
@@ -146,17 +151,40 @@ public extension FlexLayout {
         return self
     }
 
+    @discardableResult func padding(_ percent: FlexPercent) -> Self {
+        yoga.padding = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+    
+
     @discardableResult func padding(_ edge: FEdge = .all, _ length: CGFloat) -> Self {
+        let value = YGValue(length)
         switch edge {
-        case .all: yoga.padding = YGValue(length)
-        case .left: yoga.paddingLeft = YGValue(length)
-        case .leading: yoga.paddingStart = YGValue(length)
-        case .right: yoga.paddingRight = YGValue(length)
-        case .trailing: yoga.paddingEnd = YGValue(length)
-        case .bottom: yoga.paddingBottom = YGValue(length)
-        case .top: yoga.paddingTop = YGValue(length)
-        case .horizontal: yoga.paddingHorizontal = YGValue(length)
-        case .vertical: yoga.paddingVertical = YGValue(length)
+        case .all: yoga.padding = value
+        case .left: yoga.paddingLeft = value
+        case .leading: yoga.paddingStart = value
+        case .right: yoga.paddingRight = value
+        case .trailing: yoga.paddingEnd = value
+        case .bottom: yoga.paddingBottom = value
+        case .top: yoga.paddingTop = value
+        case .horizontal: yoga.paddingHorizontal = value
+        case .vertical: yoga.paddingVertical = value
+        }
+        return self
+    }
+    
+    @discardableResult func padding(_ edge: FEdge = .all, _ percent: FlexPercent) -> Self {
+        let value = YGValue(value:Float(percent.value),unit: .percent)
+        switch edge {
+        case .all: yoga.padding = value
+        case .left: yoga.paddingLeft = value
+        case .leading: yoga.paddingStart = value
+        case .right: yoga.paddingRight = value
+        case .trailing: yoga.paddingEnd = value
+        case .bottom: yoga.paddingBottom = value
+        case .top: yoga.paddingTop = value
+        case .horizontal: yoga.paddingHorizontal = value
+        case .vertical: yoga.paddingVertical = value
         }
         return self
     }
@@ -164,6 +192,13 @@ public extension FlexLayout {
     @discardableResult func padding(_ edge: [FEdge], _ length: CGFloat) -> Self {
         edge.forEach {
             _ = padding($0, length)
+        }
+        return self
+    }
+
+    @discardableResult func padding(_ edge: [FEdge], _ percent: FlexPercent) -> Self {
+        edge.forEach {
+            _ = padding($0, percent)
         }
         return self
     }
@@ -324,18 +359,6 @@ public extension FlexLayout {
         yoga.height(height)
         return self
     }
-
-    @discardableResult func size(_ size: CGFloat) -> Self {
-        yoga.width = YGValue(size)
-        yoga.height = YGValue(size)
-        return self
-    }
-
-    @discardableResult func size(_ size: CGSize) -> Self {
-        yoga.width = YGValue(size.width)
-        yoga.height = YGValue(size.height)
-        return self
-    }
     
     @discardableResult func size(width: FlexPercent?, height: FlexPercent?) -> Self {
         
@@ -349,6 +372,12 @@ public extension FlexLayout {
         
         return self
     }
+
+    @discardableResult func size(_ size: CGFloat) -> Self {
+        yoga.width = YGValue(size)
+        yoga.height = YGValue(size)
+        return self
+    }
     
     @discardableResult func size(_ percent: FlexPercent) -> Self {
         yoga.width(percent)
@@ -357,6 +386,11 @@ public extension FlexLayout {
         return self
     }
 
+    @discardableResult func size(_ size: CGSize) -> Self {
+        yoga.width = YGValue(size.width)
+        yoga.height = YGValue(size.height)
+        return self
+    }
 
     @discardableResult func size(minWidth: CGFloat? = nil, maxWidth: CGFloat? = nil, minHeight : CGFloat? = nil, maxHeight: CGFloat? = nil) -> Self {
         
