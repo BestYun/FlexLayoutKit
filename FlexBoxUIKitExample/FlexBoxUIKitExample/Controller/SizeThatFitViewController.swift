@@ -13,7 +13,7 @@ class SizeThatFitViewController: FlexBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         for i in 0...10 {
-            var text = "index = \(i) end"
+            let text = "index = \(i) end"
             data.append(text)
         }
 
@@ -79,6 +79,7 @@ private class CellItem: UITableViewCell {
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
+        
         let tempSize = contentView.flex.sizeThatFits(with: CGSize(width: size.width, height: CGFloat.nan))
         print(tempSize)
         return tempSize

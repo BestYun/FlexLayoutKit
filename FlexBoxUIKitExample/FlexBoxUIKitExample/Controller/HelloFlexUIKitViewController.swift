@@ -21,6 +21,7 @@ class HelloFlexUIKitViewController: FlexBaseViewController {
 }
 
 class Example: UIView {
+    
     lazy var body = HStackView {
         ZStackView {
             ImageView()

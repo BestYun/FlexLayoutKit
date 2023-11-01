@@ -4,8 +4,8 @@
 //  Created by yun on 2023/8/2.
 //
 
-import Foundation
 import FlexBoxYogaKit
+import Foundation
 
 public protocol FlexLayout {
     func isIncludedInLayout(_ isIncludedInLayout: Bool) -> Self
@@ -22,21 +22,21 @@ public protocol FlexLayout {
     func padding(_ directionalInsets: NSDirectionalEdgeInsets) -> Self
 
     func margin(_ margin: CGFloat) -> Self
-    
+
     func margin(_ edge: FEdge, _ length: CGFloat) -> Self
     func margin(_ edge: [FEdge], _ length: CGFloat) -> Self
     func margin(_ insets: UIEdgeInsets) -> Self
     @available(iOS 11.0, *)
     func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Self
-    
+
     func borderWidth(_ all: CGFloat) -> Self
     func borderWidth(_ edge: FEdge, _ length: CGFloat) -> Self
-        
-    ///gap 设置行和列之间的间隙（gutter）大小。它是 rowGap 和 columnGap 的简写形式。
+
+    /// gap 设置行和列之间的间隙（gutter）大小。它是 rowGap 和 columnGap 的简写形式。
     func gap(_ gap: CGFloat) -> Self
-    ///rowGap 设置元素行之间的间隙（gutter）大小。
+    /// rowGap 设置元素行之间的间隙（gutter）大小。
     func rowGap(_ gap: CGFloat) -> Self
-    ///columnGap 设置元素列之间的间隙（gutter）大小。
+    /// columnGap 设置元素列之间的间隙（gutter）大小。
     func columnGap(_ gap: CGFloat) -> Self
 
     // 结合position或者ZStack
@@ -47,8 +47,8 @@ public protocol FlexLayout {
     func leading(_ start: CGFloat) -> Self
     func trailing(_ end: CGFloat) -> Self
 
-    func width(_ width: CGFloat) -> Self
-    func height(_ height: CGFloat) -> Self
+    func width(_ width: CGFloat?) -> Self
+    func height(_ height: CGFloat?) -> Self
     func size(width: CGFloat?, height: CGFloat?) -> Self
     func size(_ size: CGFloat) -> Self
     func size(_ size: CGSize) -> Self
@@ -71,7 +71,7 @@ public protocol FlexLayout {
 
     func wrap(_ wrap: WrapType) -> Self
 
-    //func direction(_ direction: YGDirection) -> Self
+    // func direction(_ direction: YGDirection) -> Self
     func inherit() -> Self
     func ltr() -> Self
     func rtl() -> Self
@@ -84,16 +84,15 @@ public protocol FlexLayout {
     func shrink(_ shrink: CGFloat) -> Self
     func basis(_ basis: CGFloat) -> Self
     func expanded() -> Self
-    
 
     // 属性
     var yoga: YGLayout { get }
-    
+
     var direction: FlexDirection { get }
 
     func applyLayout(preservingOrigin: Bool)
     func applyLayout(mode: LayoutMode, preservingOrigin: Bool)
-    
+
     var intrinsicSize: CGSize { get }
     func sizeThatFits(with: CGSize) -> CGSize
 
@@ -226,15 +225,12 @@ public extension FlexLayout {
 
         return self
     }
-    
-  
-    
+
     @discardableResult func borderWidth(_ all: CGFloat) -> Self {
         yoga.borderWidth = all
         return self
     }
 
-    
     @discardableResult func borderWidth(_ edge: FEdge, _ length: CGFloat) -> Self {
         switch edge {
         case .all: yoga.borderWidth = length
@@ -244,19 +240,17 @@ public extension FlexLayout {
         case .bottom: yoga.borderBottomWidth = length
         case .right: yoga.borderRightWidth = length
         case .trailing: yoga.borderEndWidth = length
-            
+
         case .horizontal:
             yoga.borderLeftWidth = length
             yoga.borderRightWidth = length
-        
+
         case .vertical:
             yoga.borderTopWidth = length
             yoga.borderBottomWidth = length
-
         }
         return self
     }
-
 
     @discardableResult func left(_ left: CGFloat) -> Self {
         yoga.left = YGValue(left)
@@ -289,12 +283,14 @@ public extension FlexLayout {
     }
 
     @discardableResult func size(width: CGFloat? = nil, height: CGFloat? = nil) -> Self {
-        if let width = width {
-            yoga.width = YGValue(width)
-        }
-        if let height = height {
-            yoga.height = YGValue(height)
-        }
+//        if let width = width {
+//            yoga.width = YGValue(width)
+//        }
+//        if let height = height {
+//            yoga.height = YGValue(height)
+//        }
+        yoga.width(width)
+        yoga.height(height)
         return self
     }
 
@@ -310,22 +306,28 @@ public extension FlexLayout {
         return self
     }
 
-    @discardableResult func size(minWidth: CGFloat? = nil, maxWidth: CGFloat? = nil, minHeight _: CGFloat? = nil, maxHeight: CGFloat? = nil) -> Self {
-        if let minWidth = minWidth { yoga.minWidth = YGValue(minWidth) }
-        if let maxWidth = maxWidth { yoga.maxWidth = YGValue(maxWidth) }
-        if let minHeight = minWidth { yoga.minHeight = YGValue(minHeight) }
-        if let maxHeight = maxHeight { yoga.maxHeight = YGValue(maxHeight) }
+    @discardableResult func size(minWidth: CGFloat? = nil, maxWidth: CGFloat? = nil, minHeight : CGFloat? = nil, maxHeight: CGFloat? = nil) -> Self {
+        yoga.minWidth = valueOrUndefined(minWidth)
+        yoga.maxWidth = valueOrUndefined(maxWidth)
+        
+        yoga.minHeight = valueOrUndefined(minHeight)
+        yoga.maxHeight = valueOrUndefined(maxHeight)
+        
+//        if let minWidth = minWidth { yoga.minWidth = YGValue(minWidth) }
+//        if let maxWidth = maxWidth { yoga.maxWidth = YGValue(maxWidth) }
+//        if let minHeight = minWidth { yoga.minHeight = YGValue(minHeight) }
+//        if let maxHeight = maxHeight { yoga.maxHeight = YGValue(maxHeight) }
 
         return self
     }
 
-    @discardableResult func width(_ width: CGFloat) -> Self {
-        yoga.width = YGValue(width)
+    @discardableResult func width(_ width: CGFloat?) -> Self {
+        yoga.width = valueOrAuto(width)
         return self
     }
 
-    @discardableResult func height(_ height: CGFloat) -> Self {
-        yoga.height = YGValue(height)
+    @discardableResult func height(_ height: CGFloat?) -> Self {
+        yoga.height = valueOrAuto(height)
         return self
     }
 
@@ -368,7 +370,7 @@ public extension FlexLayout {
         yoga.flex = flex
         return self
     }
-    
+
     @discardableResult func expanded() -> Self {
         yoga.flex = 1
         return self
@@ -438,6 +440,9 @@ public extension FlexLayout {
         return yoga.intrinsicSize
     }
 
+    /*
+     * sizeThatFits(with: CGSize(width: size.width, height: CGFloat.nan))
+     */
     func sizeThatFits(with: CGSize) -> CGSize {
         return yoga.calculateLayout(with: with)
     }
@@ -457,26 +462,43 @@ public extension FlexLayout {
     func markDirty() {
         yoga.markDirty()
     }
-    
+
     @discardableResult
     func gap(_ gap: CGFloat) -> Self {
         yoga.gap = gap
         return self
     }
-    
+
     @discardableResult
     func rowGap(_ gap: CGFloat) -> Self {
         yoga.rowGap = gap
         return self
     }
-    
+
     @discardableResult
     func columnGap(_ gap: CGFloat) -> Self {
         yoga.columnGap = gap
         return self
     }
-
+    
 }
+
+func valueOrUndefined(_ value: CGFloat?) -> YGValue {
+    if let value = value {
+        return YGValue(value)
+    } else {
+        return YGValueUndefined
+    }
+}
+
+func valueOrAuto(_ value: CGFloat?) -> YGValue {
+    if let value = value {
+        return YGValue(value)
+    } else {
+        return YGValueAuto
+    }
+}
+
 
 public extension FlexLayout where Self: YGLayout {
     // 属性
@@ -488,7 +510,6 @@ public extension FlexLayout where Self: YGLayout {
 /// 实现协议
 /// YGLayout拥有链式功能
 extension YGLayout: FlexLayout {
-    
     public var yoga: YGLayout {
         return self
     }
@@ -508,7 +529,7 @@ public enum FEdge: Int8 {
     case vertical
 }
 
-/**主轴方向
+/** 主轴方向
  */
 public enum FlexDirection {
     /// Default value. The flexible items are displayed vertically, as a column.
@@ -588,7 +609,7 @@ public enum CrossAxisAlignment {
     }
 }
 
-/**次轴方向多行布局方式
+/** 次轴方向多行布局方式
  */
 public enum AlignContent {
     /// Default value. Lines stretch to take up the remaining space
@@ -686,14 +707,14 @@ public enum PositionType {
     case relative
     /// Positioned absolutely in regards to its container. The item is positionned using properties top, bottom, left, right, start, end.
     case absolute
-    
+
     case `static`
 
     var yogaValue: YGPositionType {
         switch self {
         case .relative: return YGPositionType.relative
         case .absolute: return YGPositionType.absolute
-        case .`static`: return YGPositionType.static
+        case .static: return YGPositionType.static
         }
     }
 }
