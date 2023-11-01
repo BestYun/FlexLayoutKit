@@ -27,6 +27,9 @@ public protocol FlexLayout {
     func margin(_ insets: UIEdgeInsets) -> Self
     @available(iOS 11.0, *)
     func margin(_ directionalInsets: NSDirectionalEdgeInsets) -> Self
+    func margin(_ percent: FlexPercent) -> Self
+    func margin(_ edge: FEdge, _ percent: FlexPercent) -> Self
+    func margin(_ edge: [FEdge], _ percent: FlexPercent) -> Self
 
     func borderWidth(_ all: CGFloat) -> Self
     func borderWidth(_ edge: FEdge, _ length: CGFloat) -> Self
@@ -189,17 +192,40 @@ public extension FlexLayout {
         return self
     }
 
-    @discardableResult func margin(_ edge: FEdge = .all, _ length: CGFloat) -> Self {
+    @discardableResult func margin(_ percent: FlexPercent) -> Self {
+        yoga.margin = YGValue(value: Float(percent.value), unit: .percent)
+        return self
+    }
+
+    @discardableResult func margin(_ edge: FEdge = .all, _ percent: FlexPercent) -> Self {
+        let value = YGValue(value:Float(percent.value),unit: .percent)
         switch edge {
-        case .all: yoga.margin = YGValue(length)
-        case .left: yoga.marginLeft = YGValue(length)
-        case .leading: yoga.marginStart = YGValue(length)
-        case .right: yoga.marginRight = YGValue(length)
-        case .trailing: yoga.marginEnd = YGValue(length)
-        case .bottom: yoga.marginBottom = YGValue(length)
-        case .top: yoga.marginTop = YGValue(length)
-        case .horizontal: yoga.marginHorizontal = YGValue(length)
-        case .vertical: yoga.marginVertical = YGValue(length)
+        case .all: yoga.margin = value
+        case .left: yoga.marginLeft = value
+        case .leading: yoga.marginStart = value
+        case .right: yoga.marginRight = value
+        case .trailing: yoga.marginEnd = value
+        case .bottom: yoga.marginBottom = value
+        case .top: yoga.marginTop = value
+        case .horizontal: yoga.marginHorizontal = value
+        case .vertical: yoga.marginVertical = value
+        }
+        return self
+
+    }
+        
+    @discardableResult func margin(_ edge: FEdge = .all, _ length: CGFloat) -> Self {
+        let value = YGValue(length)
+        switch edge {
+        case .all: yoga.margin = value
+        case .left: yoga.marginLeft = value
+        case .leading: yoga.marginStart = value
+        case .right: yoga.marginRight = value
+        case .trailing: yoga.marginEnd = value
+        case .bottom: yoga.marginBottom = value
+        case .top: yoga.marginTop = value
+        case .horizontal: yoga.marginHorizontal = value
+        case .vertical: yoga.marginVertical = value
         }
         return self
     }
@@ -207,6 +233,13 @@ public extension FlexLayout {
     @discardableResult func margin(_ edge: [FEdge], _ length: CGFloat) -> Self {
         edge.forEach {
             _ = margin($0, length)
+        }
+        return self
+    }
+    
+    @discardableResult func margin(_ edge: [FEdge], _ percent: FlexPercent) -> Self{
+        edge.forEach {
+            _ = margin($0, percent)
         }
         return self
     }
@@ -287,12 +320,6 @@ public extension FlexLayout {
     }
 
     @discardableResult func size(width: CGFloat? = nil, height: CGFloat? = nil) -> Self {
-//        if let width = width {
-//            yoga.width = YGValue(width)
-//        }
-//        if let height = height {
-//            yoga.height = YGValue(height)
-//        }
         yoga.width(width)
         yoga.height(height)
         return self
@@ -310,47 +337,43 @@ public extension FlexLayout {
         return self
     }
     
-    func size(width: FlexPercent?, height: FlexPercent?) -> Self {
+    @discardableResult func size(width: FlexPercent?, height: FlexPercent?) -> Self {
         
         if let width = width {
-            _ = yoga.width(width)
+            yoga.width(width)
         }
         
         if let height = height {
-            _ = yoga.height(height)
+            yoga.height(height)
         }
         
         return self
     }
     
-    func size(_ percent: FlexPercent) -> Self {
-        _ = yoga.width(percent)
-        _ = yoga.height(percent)
+    @discardableResult func size(_ percent: FlexPercent) -> Self {
+        yoga.width(percent)
+        yoga.height(percent)
 
         return self
     }
 
 
     @discardableResult func size(minWidth: CGFloat? = nil, maxWidth: CGFloat? = nil, minHeight : CGFloat? = nil, maxHeight: CGFloat? = nil) -> Self {
+        
         yoga.minWidth = valueOrUndefined(minWidth)
         yoga.maxWidth = valueOrUndefined(maxWidth)
         
         yoga.minHeight = valueOrUndefined(minHeight)
         yoga.maxHeight = valueOrUndefined(maxHeight)
         
-//        if let minWidth = minWidth { yoga.minWidth = YGValue(minWidth) }
-//        if let maxWidth = maxWidth { yoga.maxWidth = YGValue(maxWidth) }
-//        if let minHeight = minWidth { yoga.minHeight = YGValue(minHeight) }
-//        if let maxHeight = maxHeight { yoga.maxHeight = YGValue(maxHeight) }
-
         return self
     }
     
-    func width(_ percent: FlexPercent) -> Self {
+    @discardableResult func width(_ percent: FlexPercent) -> Self {
         yoga.width = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
-    func height(_ percent: FlexPercent) -> Self {
+    @discardableResult func height(_ percent: FlexPercent) -> Self {
         yoga.height = YGValue(value: Float(percent.value), unit: .percent)
         return self
     }
