@@ -21,7 +21,7 @@ class MainViewController: FlexBaseViewController {
                            ImageViewController.self,
                            HScrollViewController.self,
                            VScrollViewController.self,
-                           ZStackViewController.self,
+                           HVZStackViewController.self,
                            SizeThatFitViewController.self,
                            FlexPercentViewController.self,
     ]
@@ -36,7 +36,7 @@ class MainViewController: FlexBaseViewController {
                   "Image",
                   "HScrollView",
                   "VScrollView",
-                  "ZStackView",
+                  "HStackView ZStachView ZStackView",
                   "SizeThatFits",
                   "FlexPercent 百分比"
     ]

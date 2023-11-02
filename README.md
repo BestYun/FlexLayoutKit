@@ -5,7 +5,6 @@
 
 
 基于[facebook/yoga](https://github.com/facebook/yoga)实现一个类似swiftui和Flutter的声明式UI框架
-An iOS flex layout kit based on facebook's Yoga framework.
 
 ### Requirements
 * iOS 10.0+
@@ -17,15 +16,19 @@ An iOS flex layout kit based on facebook's Yoga framework.
 #### Cocoapods
 ```
 pod 'FlexBoxUIKit', '~> 0.0.2'
+以下可选
+pod 'FlexBoxUIKit/SDWebImage'
+pod 'FlexBoxUIKit/Kingfisher' #需要ios 12以上
+
 ```
 
 ### 特性
-- [x] FlexBox布局 
+- [x] FlexBox布局, 支持gap,rowGap,columnGap
 - [x] 声明式语法,类似SwiftUI,如HStackView、VStackView、ZStackView，类似Flutter中的Row、Column、Stack、Wrap
-- [x] 数据驱动UI，更新数据后自动会更新UI
+- [x] 数据驱动UI,更新数据后自动会更新UI
 - [x] 支持百分比
 - [x] 链式语法
-- [x] 自动计算UITableView cell 高度
+- [x] 自动计算UITableViewCell 高度
 - [x] 支持VScrollView、HScrollView，自动计算ContentSize
 - [x] forin和if else DSL支持
 
@@ -121,8 +124,63 @@ HStackView {
 
 ```
 
-### Documentation
-https://reactnative.cn/docs/flexbox
+#### HStackView使用
+```swift
+HStackView {
+    ImageView().size(40).cornerRadius(10).backgroundColor(.gray.withAlphaComponent(0.2))
+    Space(10)
+    Text("Leo").textColor(.orange).fontSize(16,weight: .medium)
+}
+```
+#### VStackView使用
+```swift
+VStackView(crossAxis: .center) {
+    ImageView().size(40).cornerRadius(10).backgroundColor(.gray.withAlphaComponent(0.2))
+    Space(10)
+    Text("Leo").textColor(.orange).fontSize(16,weight: .medium)
+}
+```
+#### ZStackView使用
+```swift
+ZStackView {
+    FlexContainerView(mainAxis: .center, crossAxis: .center){
+        Text("99")
+    }
+    .cornerRadius(15)
+    .backgroundColor(.red)
+    .top(0)
+    .right(0)
+    .size(30)
+}
+.size(100)
+.backgroundColor(.orange)
+```
+
+#### ForIn用法
+```swift
+VScrollView {
+    for i in 0...100 {
+        FlexContainerView(mainAxis: .center, crossAxis: .center) {
+            Text("\(i)")
+        }
+        .height(60)
+        .backgroundColor(.orange.withAlphaComponent(0.1))
+        .margin(.vertical,5)
+    }
+}
+```
+
+#### if else用法
+```swift
+let state = true
+HStackView {
+    if state {
+        Text("true")
+    }else{
+        Text("false")
+    }
+}
+```
 
 ### Modifier chain 链式语法
 ```swift
@@ -141,7 +199,8 @@ label.font = .systemFont(ofSize: 16)
 label.textColor = .orange
 ```
 
-### apply sugar 只在UIView有效
+### apply sugar 
+> 只在UIView有效
 ```swift
 UIView(frame: CGRect(x: 10, y: 100, width: 60, height: 60)).apply {
     $0.backgroundColor = .blue
@@ -169,6 +228,10 @@ label.text = "test apply"
 label.font = .systemFont(ofSize: 16)
 label.textColor = .orange
 ```
+
+### Documentation
+https://reactnative.cn/docs/flexbox
+
 
 ## Flex makeLayout
 ```swift
@@ -217,6 +280,8 @@ https://github.com/josercc/SwiftTableViewGroup
     * TextField
     * TextView
     * ScrollView
+        * VScrollView
+        * HScrollView
     * TabCell
     * TableDynamicCell
     * CollectionCell

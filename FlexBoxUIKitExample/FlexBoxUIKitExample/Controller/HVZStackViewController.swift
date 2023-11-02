@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import FlexBoxUIKit
 
-class ZStackViewController: FlexBaseViewController {
+class HVZStackViewController: FlexBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,21 @@ class ZStackViewController: FlexBaseViewController {
     
     override func bodyView() -> UIView {
         return VStackView(mainAxis: .center, crossAxis: .center) {
+            
+            HStackView {
+                ImageView().size(40).cornerRadius(10).backgroundColor(.gray.withAlphaComponent(0.2))
+                Space(10)
+                Text("Leo").textColor(.orange).fontSize(16,weight: .medium)
+            }
+            .margin(.bottom,10)
+            
+            VStackView(crossAxis: .center) {
+                ImageView().size(40).cornerRadius(10).backgroundColor(.gray.withAlphaComponent(0.2))
+                Space(10)
+                Text("Leo").textColor(.orange).fontSize(16,weight: .medium)
+            }
+            .margin(.bottom,10)
+
             
             ZStackView {
                 FlexContainerView(mainAxis: .center, crossAxis: .center){
