@@ -303,6 +303,7 @@ label.textColor = .orange
 * https://reactnative.cn/docs/flexbox
 * https://tbfungeek.github.io/2019/11/05/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8Yoga-%E5%B8%83%E5%B1%80%E5%BC%95%E6%93%8E/
 * https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+* https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
 ### FlexBox布局
 <img src="https://github.com/BestYun/FlexBoxUIKit/blob/main/doc_imgs/flex_terms.png" />
@@ -323,6 +324,18 @@ label.textColor = .orange
     * direction
     * flexWrap
     * position
+    
+### API
+* margin padding left right top bottom 
+* size width height minWidth
+* flex 属性
+* applyLayout
+* markDirty
+* sizeThatFits
+* numberOfChildren
+* isIncludedInLayout
+* enabled
+* display
 
 ### UI
 * HStackView = Row
@@ -341,17 +354,7 @@ label.textColor = .orange
 * TableDynamicCell
 * CollectionCell
 
-### API
-* margin padding left right top bottom 
-* size width height minWidth
-* flex 属性
-* applyLayout
-* markDirty
-* sizeThatFits
-* numberOfChildren
-* isIncludedInLayout
-* enabled
-* display
+
 
 ## Flex makeLayout
 > 对于没有第二次封装的UIVIew,可以使用以下方法进行布局
@@ -397,6 +400,7 @@ VStackView(mainAxis: .center, crossAxis: .center) {
 * UITableView封装
     * 参考 https://github.com/josercc/SwiftTableViewGroup
 * UICollection封装
+* 测试
 
 ## 鸣谢
 * https://github.com/MihaelIsaev/UIKitPlus

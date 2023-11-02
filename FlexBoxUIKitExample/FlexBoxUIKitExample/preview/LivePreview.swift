@@ -43,13 +43,15 @@ class CustomView:UIView{
             HStackView {
                 ZStackView {
                     ImageView()
-                        .size(width: 60, height: 60)
                         .backgroundColor(.orange)
                         .cornerRadius(16)
-                        .margin(.right, 15)
                         .left(0)
                         .top(0)
+                        .right(0)
+                        .bottom(0)
                 }
+                .margin(.right, 12)
+                .size(width: 60, height: 60)
                 
                 VStackView(mainAxis: .spaceAround) {
                     HStackView (crossAxis: .center){
