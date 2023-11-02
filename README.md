@@ -228,6 +228,30 @@ Text("FlexPercent").backgroundColor(.orange).width(20%).height(20%)
 
 ```
 
+#### 自动计算UITableViewCell 动态高度
+```swift
+1)cell继承TableDynamicCell
+2)UITableView的rowHeight设置为UITableView.automaticDimension
+
+class CellItem: TableDynamicCell {
+    override func bodyView() -> UIView {
+        return VStackView {
+            ...
+        }
+    }
+}
+
+UITableView().flex.expanded().apply {
+    $0.delegate = self
+    $0.dataSource = self
+    $0.register(CellItem.self, forCellReuseIdentifier: "cellID")
+    $0.estimatedRowHeight = 80
+    $0.rowHeight = UITableView.automaticDimension
+}
+
+```
+
+
 #### Modifier chain 链式语法
 ```swift
 UILabel()
