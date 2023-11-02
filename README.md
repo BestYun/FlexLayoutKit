@@ -15,7 +15,7 @@
 ---
 #### Cocoapods
 ```
-pod 'FlexBoxUIKit', '~> 0.0.2'
+pod 'FlexBoxUIKit', '~> 0.3'
 以下可选
 pod 'FlexBoxUIKit/SDWebImage'
 pod 'FlexBoxUIKit/Kingfisher' #需要ios 12以上
