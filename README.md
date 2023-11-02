@@ -300,10 +300,11 @@ label.textColor = .orange
 ```
 ---
 ### flexbox布局参考资料
-* https://reactnative.cn/docs/flexbox
-* https://tbfungeek.github.io/2019/11/05/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8Yoga-%E5%B8%83%E5%B1%80%E5%BC%95%E6%93%8E/
-* https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-* https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+* [reactnative文档中的flexbox](https://reactnative.cn/docs/flexbox)
+* [yoga-布局引擎]( https://tbfungeek.github.io/2019/11/05/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8Yoga-%E5%B8%83%E5%B1%80%E5%BC%95%E6%93%8E/)
+* [mozilla CSS_flexible_box_layout](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+* [阮一峰 Flex 布局教程：语法篇
+](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
 ### FlexBox布局
 <img src="https://github.com/BestYun/FlexBoxUIKit/blob/main/doc_imgs/flex_terms.png" />
