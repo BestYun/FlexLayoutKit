@@ -8,7 +8,7 @@
 An iOS flex layout kit based on facebook's Yoga framework.
 
 ### Requirements
-* iOS 9.0+
+* iOS 10.0+
 * Xcode 12.5
 * Swift 5.4
 
@@ -18,6 +18,16 @@ An iOS flex layout kit based on facebook's Yoga framework.
 ```
 pod 'FlexBoxUIKit', '~> 0.0.2'
 ```
+
+### 特性
+- [x] FlexBox布局 
+- [x] 声明式语法,类似SwiftUI,如HStackView、VStackView、ZStackView，类似Flutter中的Row、Column、Stack、Wrap
+- [x] 数据驱动UI，更新数据后自动会更新UI
+- [x] 支持百分比
+- [x] 链式语法
+- [x] 自动计算UITableView cell 高度
+- [x] 支持VScrollView、HScrollView，自动计算ContentSize
+- [x] forin和if else DSL支持
 
 ### Usage 用法
 #### Quick Start 快速开始
@@ -65,7 +75,7 @@ class ViewController: UIViewController{
 ```
 
 #### example1
-<img src="doc_imgs/example1.png" />
+<img src="https://github.com/BestYun/FlexBoxUIKit/blob/main/doc_imgs/example1.png" />
 
 ```swift
 HStackView {
@@ -184,8 +194,7 @@ TableView
 https://github.com/josercc/SwiftTableViewGroup
 
 ### Todo
-* 百分比
-* ImageView 网络加载图片
+
 * flexbox文档
     * justifyContent
     * alignContent
@@ -226,15 +235,14 @@ https://github.com/josercc/SwiftTableViewGroup
 
     * 状态State
 
-
-
+* 测试
 * demo
     * 请求接口后更新数据
 
-## 可参考的
+## 鸣谢
 * https://github.com/MihaelIsaev/UIKitPlus
 * https://blog.eppz.eu/declarative-uikit-with-10-lines-of-code/
-* https://github.com/hmlongco/RxSwiftWidgets 可以参考它的State实现
+* https://github.com/hmlongco/RxSwiftWidgets
 * https://tech.youzan.com/-sheng-ming-shi-uikitzai-you-zan-mei-ye-de-shi-jian/
 * https://github.com/sakiyamaK/DeclarativeUIKit
 * https://github.com/hmlongco/Builder/tree/main
@@ -244,6 +252,7 @@ https://github.com/josercc/SwiftTableViewGroup
 * https://github.com/KazaiMazai/SwiftyUIKit
 * https://github.com/zhenglibao/FlexLib
 * https://github.com/layoutBox/FlexLayout
+* https://github.com/pujiaxin33/StackUI
 
 ## License
 **FlexBoxUIKit** is under MIT license. See the [LICENSE](LICENSE) file for more info.
