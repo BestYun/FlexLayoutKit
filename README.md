@@ -157,6 +157,26 @@ ZStackView {
 .backgroundColor(.orange)
 ```
 
+#### Wrap用法
+```swift
+let tags = ["tag1","tag2","tag3","tag4","tag5","tag6","tag7","tag8","tag9"]
+//gap 是行间距和列间距简写
+Wrap(gap: 10){
+    for tag in tags {
+        Text(tag)
+            .backgroundColor(.gray.withAlphaComponent(0.5))
+            .textAlignment(.center)
+            .cornerRadius(15)
+            .padding(.horizontal,10)
+            .height(30)
+            .onTap {
+                print(tag)
+            }
+    }
+}
+
+```
+
 #### ForIn用法
 ```swift
 VScrollView {
@@ -232,7 +252,7 @@ label.textColor = .orange
 
 ### Documentation
 https://reactnative.cn/docs/flexbox
-
+### 布局
 
 ## Flex makeLayout
 ```swift

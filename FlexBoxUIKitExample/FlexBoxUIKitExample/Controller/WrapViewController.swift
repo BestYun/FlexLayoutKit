@@ -34,7 +34,6 @@ class WrapViewController: FlexBaseViewController {
         super.viewDidLoad()
     }
     
-
     override func bodyView() -> UIView {
         return Wrap(gap: 10){
             for tag in tagNames {
