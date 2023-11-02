@@ -18,7 +18,7 @@ open class FlexBaseViewController: UIViewController {
 
     override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        view.flex.applyLayout(preservingOrigin:false)
+        updateFlexLayout()
     }
 
     override open func viewWillTransition(
@@ -32,5 +32,9 @@ open class FlexBaseViewController: UIViewController {
 
     open func bodyView() -> UIView {
         fatalError("bodyView has not been implemented")
+    }
+    
+    open func updateFlexLayout() {
+        view.flex.applyLayout()
     }
 }

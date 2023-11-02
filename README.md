@@ -202,8 +202,29 @@ HStackView {
     }
 }
 ```
----
-### Modifier chain 链式语法
+
+#### @UState使用
+```swift
+@UState var count: String = "count"
+var step: Int = 0 {
+    didSet{
+        count = "count = \(step)"
+    }
+}
+
+VStackView(mainAxis: .center, crossAxis: .center) {
+    Text($count).textColor(.black)
+    Button("add").margin(.top,10).backgroundColor(.blue).onTap { [unowned self] in
+        self.step = self.step + 1
+        //修改内容后,要重新布局
+        self.updateFlexLayout()
+    }
+}
+
+```
+
+
+#### Modifier chain 链式语法
 ```swift
 UILabel()
     .modifier
@@ -220,7 +241,7 @@ label.font = .systemFont(ofSize: 16)
 label.textColor = .orange
 ```
 
-### apply sugar 
+#### apply sugar 
 > 只在UIView有效
 ```swift
 UIView(frame: CGRect(x: 10, y: 100, width: 60, height: 60)).apply {
@@ -249,7 +270,7 @@ label.text = "test apply"
 label.font = .systemFont(ofSize: 16)
 label.textColor = .orange
 ```
-
+---
 ### Documentation
 https://reactnative.cn/docs/flexbox
 ### 布局
