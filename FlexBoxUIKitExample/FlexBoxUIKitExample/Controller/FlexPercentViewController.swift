@@ -31,9 +31,6 @@ class FlexPercentViewController: FlexBaseViewController {
             .size(width: 50%, height: 20%)
             .margin(.top,10%)
             .padding(10%)
-//            .padding(.left,10%)
-//            .padding(.top,10%)
-
         }.expanded()
     }
 }

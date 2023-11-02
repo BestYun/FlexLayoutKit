@@ -29,5 +29,12 @@ Pod::Spec.new do |spec|
   # spec.subspec 'Kingfisher' do |ss|
   #   ss.dependency 'Kingfisher', '~> 6.3.1'
   # end
+  
+   spec.subspec 'SDWebImage' do |ss|
+     ss.source_files = "Sources/SDWebImage/*.swift"
+     ss.dependency 'SDWebImage' #, '~> 6.3.1'
+     ss.dependency 'FlexBoxUIKit/Core'
+     
+   end
 
 end

@@ -6,7 +6,10 @@
 //
 
 import UIKit
-import SDWebImage
+//import SDWebImage
+import FlexBoxUIKit
+
+
 
 //import Kingfisher
 
@@ -22,24 +25,26 @@ class ImageViewController: FlexBaseViewController {
     }
     
     override func bodyView() -> UIView {
-//        return FlexContainerView()
+        
+        
+        
+        let url = "https://cdn.pixabay.com/photo/2023/09/29/10/21/nuts-8283540_1280.jpg"
+        
+        return VStackView {
+            Text("SDWebImage")
+            ImageView(url: url).size(100).backgroundColor(.orange).margin(.vertical,10)
+            Text("SDWebImage apply")
+            ImageView().size(100).backgroundColor(.orange).margin(.vertical,10).apply { imageView in
+                imageView.sd_setImage(with: URL(string: url))
+            }
+        }
+        
         
 //        return ImageView().size(100).apply { imageView in
 //            let url = URL(string: "https://cdn.pixabay.com/photo/2023/09/29/10/21/nuts-8283540_1280.jpg")
-////            imageView.kf.setImage(with: url)
-////            imageView.kf.setImage(with: url,placeholder: Placeholder?)
+//            imageView.kf.setImage(with: url)
+//            imageView.kf.setImage(with: url,placeholder: Placeholder?)
 //        }.backgroundColor(.orange)
-        
-            return ImageView().size(100).apply { imageView in
-                let url = URL(string: "https://cdn.pixabay.com/photo/2023/09/29/10/21/nuts-8283540_1280.jpg")
-    //            imageView.kf.setImage(with: url)
-    //            imageView.kf.setImage(with: url,placeholder: Placeholder?)
-                
-                imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
-
-                
-            }.backgroundColor(.orange)
-        
         
     }
     
