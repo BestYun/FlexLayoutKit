@@ -222,7 +222,11 @@ VStackView(mainAxis: .center, crossAxis: .center) {
 }
 
 ```
+#### 百分比
+```swift
+Text("FlexPercent").backgroundColor(.orange).width(20%).height(20%)
 
+```
 
 #### Modifier chain 链式语法
 ```swift
