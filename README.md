@@ -299,11 +299,63 @@ label.font = .systemFont(ofSize: 16)
 label.textColor = .orange
 ```
 ---
-### Documentation
-https://reactnative.cn/docs/flexbox
-### 布局
+### flexbox布局参考资料
+* https://reactnative.cn/docs/flexbox
+* https://tbfungeek.github.io/2019/11/05/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8Yoga-%E5%B8%83%E5%B1%80%E5%BC%95%E6%93%8E/
+* https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
+
+### FlexBox布局
+<img src="https://github.com/BestYun/FlexBoxUIKit/blob/main/doc_imgs/flex_terms.png" />
+
+* 主轴方向
+* 布局方向 ltr,rtl
+* 主轴方向子项分布 mainAxis
+* 次轴方向子项分布 crossAxis
+* 次轴方向多行子项分布 
+* 子项自身分布
+
+* flexbox文档
+    * justifyContent
+    * alignContent
+    * alignItems
+    * alignSelf
+    * flexDirection
+    * direction
+    * flexWrap
+    * position
+
+### UI
+* HStackView = Row
+* VStackView = Column
+* ZStackView = Stack 与Flutter和SwiftUI有差异,需要自己定义好size才有效果
+* Wrap
+* Text
+* ImageView
+* Space
+* TextField
+* TextView
+* ScrollView
+    * VScrollView
+    * HScrollView
+* TabCell
+* TableDynamicCell
+* CollectionCell
+
+### API
+* margin padding left right top bottom 
+* size width height minWidth
+* flex 属性
+* applyLayout
+* markDirty
+* sizeThatFits
+* numberOfChildren
+* isIncludedInLayout
+* enabled
+* display
 
 ## Flex makeLayout
+> 对于没有第二次封装的UIVIew,可以使用以下方法进行布局
+
 ```swift
 UILabel().flex.makeLayout {
     $0.margin(.left, 10).margin(.top, 100)
@@ -339,60 +391,12 @@ VStackView(mainAxis: .center, crossAxis: .center) {
 ## 更新内容
 
 
-## 资料
-https://tbfungeek.github.io/2019/11/05/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8Yoga-%E5%B8%83%E5%B1%80%E5%BC%95%E6%93%8E/
 
-
-TableView
-https://github.com/josercc/SwiftTableViewGroup
 
 ### Todo
-
-* flexbox文档
-    * justifyContent
-    * alignContent
-    * alignItems
-    * alignSelf
-    * flexDirection
-    * direction
-    * flexWrap
-    * position
-
-* 文档
-    - UI
-    * HStackView = Row
-    * VStackView = Column
-    * ZStackView = Stack 与Flutter和SwiftUI有差异,需要自己定义好size才有效果
-    * Wrap
-    * Text
-    * ImageView
-    * Space
-    * TextField
-    * TextView
-    * ScrollView
-        * VScrollView
-        * HScrollView
-    * TabCell
-    * TableDynamicCell
-    * CollectionCell
-
-    * margin padding left right top bottom 
-    * size width height minWidth
-    * flex 属性
-
-    * applyLayout
-    * markDirty
-    * sizeThatFits
-    * numberOfChildren
-    * isIncludedInLayout
-    * enabled
-    * display
-
-    * 状态State
-
-* 测试
-* demo
-    * 请求接口后更新数据
+* UITableView封装
+    * 参考 https://github.com/josercc/SwiftTableViewGroup
+* UICollection封装
 
 ## 鸣谢
 * https://github.com/MihaelIsaev/UIKitPlus
