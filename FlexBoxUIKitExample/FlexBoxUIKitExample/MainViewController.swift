@@ -25,6 +25,7 @@ class MainViewController: FlexBaseViewController {
                            SizeThatFitViewController.self,
                            FlexPercentViewController.self,
                            CountViewController.self,
+                           FlexBoxAnimateViewController.self,
     ]
     
     let titles = ["Hello FlexBoxUIKit",
@@ -41,6 +42,7 @@ class MainViewController: FlexBaseViewController {
                   "SizeThatFits",
                   "FlexPercent 百分比",
                   "UState",
+                  "动画",
     ]
     
     override func viewDidLoad() {

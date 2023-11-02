@@ -17,7 +17,7 @@ class FlexPercentViewController: FlexBaseViewController {
     
 
     override func bodyView() -> UIView {
-        
+
         return VStackView (mainAxis: .center, crossAxis: .center){
             
             Text("FlexPercent").backgroundColor(.orange).width(20%).height(20%)

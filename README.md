@@ -23,7 +23,7 @@ pod 'FlexBoxUIKit/Kingfisher' #需要ios 12以上
 ```
 
 ### 特性
-- [x] FlexBox布局, 支持gap,rowGap,columnGap
+- [x] FlexBox布局, 支持**gap**,**rowGap**,**columnGap**
 - [x] 声明式语法,类似**SwiftUI**,如**HStackView**、**VStackView**、**ZStackView**，类似Flutter中的**Row**、**Column**、**Stack**、**Wrap**
 - [x] 自动计算**UITableViewCell** 高度
 - [x] 支持**VScrollView**、**HScrollView**,自动计算**contentSize**
@@ -315,9 +315,29 @@ UILabel().flex.makeLayout {
 }
 ```
 
-## 更新
-* 网络请求完数据后更新
-* 动画
+#### 动画
+```
+var blowUp = false
+let boxView = FlexContainerView()
+
+VStackView(mainAxis: .center, crossAxis: .center) {
+    boxView.flex.size(100).modifier.backgroundColor(.blue).view
+    
+    Button("动画").size(width: 100, height: 30)
+        .backgroundColor(.orange).margin(.top,10)
+        .onTap { [unowned self] in
+            UIView.animate(withDuration: 0.25, delay: 0) {
+                self.boxView.flex.size(self.blowUp ? 200 : 100)
+                self.updateFlexLayout()
+                self.blowUp = !self.blowUp
+            }
+        }
+    
+}
+```
+
+## 更新内容
+
 
 ## 资料
 https://tbfungeek.github.io/2019/11/05/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8Yoga-%E5%B8%83%E5%B1%80%E5%BC%95%E6%93%8E/

@@ -10,6 +10,7 @@
 		A5C2DB31163995C0E5466493 /* Pods_FlexBoxUIKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD12A572B7BA0FDAAF39B15 /* Pods_FlexBoxUIKitExample.framework */; };
 		AE1BA79E2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1BA79D2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift */; };
 		AE3357962AF384D1002D8D4B /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3357952AF384D1002D8D4B /* CountViewController.swift */; };
+		AE3357982AF392C8002D8D4B /* FlexBoxAnimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3357972AF392C8002D8D4B /* FlexBoxAnimateViewController.swift */; };
 		AE4217792AF2195C0011BCCC /* SizeThatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4217782AF2195C0011BCCC /* SizeThatFitViewController.swift */; };
 		AE42177B2AF24B800011BCCC /* FlexPercentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE42177A2AF24B800011BCCC /* FlexPercentViewController.swift */; };
 		AE4792D92ACD5E5900127366 /* TableFixedHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */; };
@@ -39,6 +40,7 @@
 		3DD12A572B7BA0FDAAF39B15 /* Pods_FlexBoxUIKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexBoxUIKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1BA79D2ACC17190025A3CA /* CollectionFixedHeightViewControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionFixedHeightViewControllerDemo.swift; sourceTree = "<group>"; };
 		AE3357952AF384D1002D8D4B /* CountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		AE3357972AF392C8002D8D4B /* FlexBoxAnimateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexBoxAnimateViewController.swift; sourceTree = "<group>"; };
 		AE4217782AF2195C0011BCCC /* SizeThatFitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeThatFitViewController.swift; sourceTree = "<group>"; };
 		AE42177A2AF24B800011BCCC /* FlexPercentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexPercentViewController.swift; sourceTree = "<group>"; };
 		AE4792D82ACD5E5900127366 /* TableFixedHeightCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				AE4217782AF2195C0011BCCC /* SizeThatFitViewController.swift */,
 				AE42177A2AF24B800011BCCC /* FlexPercentViewController.swift */,
 				AE3357952AF384D1002D8D4B /* CountViewController.swift */,
+				AE3357972AF392C8002D8D4B /* FlexBoxAnimateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				AEE670352AC52BA7009622DE /* LivePreview.swift in Sources */,
 				AE4792D92ACD5E5900127366 /* TableFixedHeightCellViewController.swift in Sources */,
 				AE7DE1822AC2CF8100FE6170 /* SceneDelegate.swift in Sources */,
+				AE3357982AF392C8002D8D4B /* FlexBoxAnimateViewController.swift in Sources */,
 				AE4792E12ACFED1200127366 /* WrapViewController.swift in Sources */,
 				AE9FFF992ACD4CC300DBCB9B /* MainViewController.swift in Sources */,
 			);
