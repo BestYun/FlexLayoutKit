@@ -24,13 +24,14 @@ pod 'FlexBoxUIKit/Kingfisher' #需要ios 12以上
 
 ### 特性
 - [x] FlexBox布局, 支持gap,rowGap,columnGap
-- [x] 声明式语法,类似SwiftUI,如HStackView、VStackView、ZStackView，类似Flutter中的Row、Column、Stack、Wrap
+- [x] 声明式语法,类似**SwiftUI**,如**HStackView**、**VStackView**、**ZStackView**，类似Flutter中的**Row**、**Column**、**Stack**、**Wrap**
+- [x] 自动计算**UITableViewCell** 高度
+- [x] 支持**VScrollView**、**HScrollView**,自动计算**contentSize**
+- [x] 使用**Wrap**轻松实现流式布局,超过屏幕时会自动换行
+- [x] **Forin**和**if else** DSL支持
 - [x] 数据驱动UI,更新数据后自动会更新UI
 - [x] 支持百分比
 - [x] 链式语法
-- [x] 自动计算UITableViewCell 高度
-- [x] 支持VScrollView、HScrollView，自动计算ContentSize
-- [x] forin和if else DSL支持
 
 ### Usage 用法
 #### Quick Start 快速开始
@@ -181,7 +182,7 @@ HStackView {
     }
 }
 ```
-
+---
 ### Modifier chain 链式语法
 ```swift
 UILabel()
