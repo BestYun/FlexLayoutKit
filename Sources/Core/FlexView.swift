@@ -51,9 +51,11 @@ public class FlexContainerView: UIView {
 public class Row: FlexContainerView {
     public init(mainAxis: MainAxisAlignment = .start,
                 crossAxis: CrossAxisAlignment = .stretch,
+                space: CGFloat = 0,
                 @FlexViewBuilder subviews: () -> [UIView])
     {
         super.init(direction: .row, mainAxis: mainAxis, crossAxis: crossAxis, subviews: subviews)
+        self.flex.columnGap(space)
     }
 
     @available(*, unavailable)
@@ -65,9 +67,11 @@ public class Row: FlexContainerView {
 public class Column: FlexContainerView {
     public init(mainAxis: MainAxisAlignment = .start,
                 crossAxis: CrossAxisAlignment = .stretch,
+                space: CGFloat = 0,
                 @FlexViewBuilder subviews: () -> [UIView])
     {
         super.init(direction: .column, mainAxis: mainAxis, crossAxis: crossAxis, subviews: subviews)
+        self.flex.rowGap(space)
     }
 
     @available(*, unavailable)
@@ -133,10 +137,10 @@ public class Stack: FlexContainerView {
 }
 
 // MARK: - 类似SwiftUI和Flutter
+
 public typealias HStackView = Row
 public typealias VStackView = Column
 public typealias ZStackView = Stack
-
 
 extension FlexContainerView: FlexViewChain {}
 extension FlexContainerView: FlexLayout {}

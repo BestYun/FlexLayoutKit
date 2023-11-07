@@ -10,7 +10,7 @@ import UIKit
 public class ScrollView: UIScrollView {
     public var contentView = UIView()
 
-    public init(direction: FlexDirection = .column, mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, @FlexViewBuilder subviews: () -> [UIView]) {
+    public init(direction: FlexDirection = .column, mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, space: CGFloat = 0, @FlexViewBuilder subviews: () -> [UIView]) {
         super.init(frame: .zero)
 //        if #available(iOS 11.0, *) {
 //            self.contentInsetAdjustmentBehavior = .never
@@ -29,6 +29,7 @@ public class ScrollView: UIScrollView {
             .direction(direction)
             .mainAxis(mainAxis)
             .crossAxis(crossAxis)
+            .gap(space)
             .addItems(subviews: subviews)
 
         if direction == FlexDirection.row || direction == FlexDirection.rowReverse {
@@ -71,8 +72,8 @@ public class ScrollView: UIScrollView {
 }
 
 public class HScrollView: ScrollView {
-    public init(mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, @FlexViewBuilder subviews: () -> [UIView]) {
-        super.init(direction: .row, mainAxis: mainAxis, crossAxis: crossAxis, subviews: subviews)
+    public init(mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, space: CGFloat = 0, @FlexViewBuilder subviews: () -> [UIView]) {
+        super.init(direction: .row, mainAxis: mainAxis, crossAxis: crossAxis, space: space, subviews: subviews)
     }
 
     @available(*, unavailable)
@@ -82,8 +83,8 @@ public class HScrollView: ScrollView {
 }
 
 public class VScrollView: ScrollView {
-    public init(mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, @FlexViewBuilder subviews: () -> [UIView]) {
-        super.init(direction: .column, mainAxis: mainAxis, crossAxis: crossAxis, subviews: subviews)
+    public init(mainAxis: MainAxisAlignment = .start, crossAxis: CrossAxisAlignment = .stretch, space: CGFloat = 0, @FlexViewBuilder subviews: () -> [UIView]) {
+        super.init(direction: .column, mainAxis: mainAxis, crossAxis: crossAxis, space: space, subviews: subviews)
     }
 
     @available(*, unavailable)

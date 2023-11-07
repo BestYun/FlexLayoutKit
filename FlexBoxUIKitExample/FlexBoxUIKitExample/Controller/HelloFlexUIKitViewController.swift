@@ -68,6 +68,18 @@ class Example: UIView {
         
         flex.addItems {
             body
+            
+            HStackView(space: 10) {
+                for _ in 0...50 {
+                    FlexContainerView().size(50).backgroundColor(.orange)
+                }
+            }
+            Space(10)
+            VStackView(space: 10) {
+                for _ in 0...5 {
+                    FlexContainerView().size(50).backgroundColor(.blue)
+                }
+            }
         }
     }
     

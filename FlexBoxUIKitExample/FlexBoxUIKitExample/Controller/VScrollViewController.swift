@@ -17,7 +17,7 @@ class VScrollViewController: FlexBaseViewController {
     
     override func bodyView() -> UIView {
 
-        return VScrollView {
+        return VScrollView(space:5) {
 
             for i in 0...100 {
                 FlexContainerView(mainAxis: .center, crossAxis: .center) {
@@ -25,7 +25,6 @@ class VScrollViewController: FlexBaseViewController {
                 }
                 .height(60)
                 .backgroundColor(.orange.withAlphaComponent(0.1))
-                .margin(.vertical,5)
             }
         }.expanded()
     }

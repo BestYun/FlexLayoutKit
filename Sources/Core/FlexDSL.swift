@@ -44,6 +44,13 @@ public extension FlexDSL {
     @discardableResult
     func addItems(@FlexViewBuilder subviews: () -> [UIView])-> BaseView  {
         subviews().forEach { item in
+            if let spacer = item as? Space {
+                if direction == .column || direction == .columnReverse {
+                    spacer.flex.height(spacer.space)
+                } else {
+                    spacer.flex.width(spacer.space)
+                }
+            }
             item.flex.enabled(true)
             self.view.addSubview(item)
         }

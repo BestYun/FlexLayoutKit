@@ -15,14 +15,14 @@ class HScrollViewController: FlexBaseViewController {
 
     }
     override func bodyView() -> UIView {
-        return HScrollView {
+        return HScrollView (space:10){
             for i in 0...100 {
                 FlexContainerView(mainAxis: .center, crossAxis: .center) {
                     Text("\(i)")
                 }
                 .width(320)
                 .backgroundColor(.orange.withAlphaComponent(0.1))
-                .margin(.horizontal,10)
+
             }
 
         }
