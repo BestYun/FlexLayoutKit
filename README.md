@@ -398,10 +398,13 @@ VStackView(mainAxis: .center, crossAxis: .center) {
 
 
 ### Todo
+* 双向绑定
 * UITableView封装
     * 参考 https://github.com/josercc/SwiftTableViewGroup
 * UICollection封装
+* 瀑布流
 * 测试
+* 支持SPM
 
 ## 鸣谢
 * https://github.com/MihaelIsaev/UIKitPlus
