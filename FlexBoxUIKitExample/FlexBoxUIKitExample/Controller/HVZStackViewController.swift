@@ -23,6 +23,7 @@ class HVZStackViewController: FlexBaseViewController {
                 ImageView().size(40).cornerRadius(10).backgroundColor(.gray.withAlphaComponent(0.2))
                 Space(10)
                 Text("Leo").textColor(.orange).fontSize(16,weight: .medium)
+//                Text("").modifier.textColor(.red).
             }
             .margin(.bottom,10)
             

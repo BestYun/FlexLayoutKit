@@ -11,7 +11,6 @@ public class Text: UILabel {
     override public init(frame: CGRect) {
         super.init(frame: frame)
         flex.enabled(true)
-//        flex.markDirty()
     }
 
     public convenience init(_ text: String?) {
@@ -50,8 +49,10 @@ extension Text: FlexViewChain {}
 public extension Text {
     @discardableResult
     func text(_ text: String?) -> Self {
-        self.text = text
-        flex.markDirty()
+        if self.text != text {
+            self.text = text
+            flex.markDirty()
+        }
         return self
     }
 
@@ -61,37 +62,13 @@ public extension Text {
         flex.markDirty()
         return self
     }
-
-    @discardableResult
-    func numberOfLines(_ line: Int) -> Self {
-        numberOfLines = line
-        return self
-    }
-
+    
     @discardableResult
     func textColor(_ textColor: UIColor) -> Self {
         self.textColor = textColor
         return self
     }
-
-    @discardableResult
-    func font(_ font: UIFont) -> Self {
-        self.font = font
-        return self
-    }
-
-    @discardableResult
-    func bold(_ fontSize: CGFloat) -> Self {
-        font = UIFont.boldSystemFont(ofSize: fontSize)
-        return self
-    }
     
-    @discardableResult
-    func medium(_ fontSize: CGFloat) -> Self {
-        font = .systemFont(ofSize: fontSize, weight: .medium)
-        return self
-    }
-
     @discardableResult
     func fontSize(_ fontSize: CGFloat, weight: UIFont.Weight? = nil) -> Self {
         if let weight = weight {
@@ -100,6 +77,40 @@ public extension Text {
         } else {
             font = .systemFont(ofSize: fontSize)
         }
+        flex.markDirty()
+
+        return self
+    }
+
+    @discardableResult
+    func font(_ font: UIFont) -> Self {
+        self.font = font
+        flex.markDirty()
+
+        return self
+    }
+
+    @discardableResult
+    func bold(_ fontSize: CGFloat) -> Self {
+        font = UIFont.boldSystemFont(ofSize: fontSize)
+        flex.markDirty()
+
+        return self
+    }
+    
+    @discardableResult
+    func medium(_ fontSize: CGFloat) -> Self {
+        font = .systemFont(ofSize: fontSize, weight: .medium)
+        flex.markDirty()
+
+        return self
+    }
+
+
+    @discardableResult
+    func numberOfLines(_ line: Int) -> Self {
+        numberOfLines = line
+        flex.markDirty()
 
         return self
     }
@@ -110,3 +121,5 @@ public extension Text {
         return self
     }
 }
+
+

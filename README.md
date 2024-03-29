@@ -406,7 +406,7 @@ VStackView(mainAxis: .center, crossAxis: .center) {
 * 测试
 * 支持SPM
 
-## 鸣谢
+## 参考
 * https://github.com/MihaelIsaev/UIKitPlus
 * https://blog.eppz.eu/declarative-uikit-with-10-lines-of-code/
 * https://github.com/hmlongco/RxSwiftWidgets
