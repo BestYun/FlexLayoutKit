@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'FlexLayoutKitExample' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for FlexLayoutKitExample
+  pod 'FlexLayoutKit', :path => '../'
+  pod 'FlexLayoutKit/Kingfisher', :path => '../'
+#  pod 'Kingfisher'
+  pod 'Then'
+
+  target 'FlexLayoutKitExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'FlexLayoutKitExampleUITests' do
+    # Pods for testing
+  end
+
+end

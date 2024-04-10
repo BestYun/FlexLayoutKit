@@ -15,15 +15,15 @@
 ---
 #### Cocoapods
 ```
-pod 'FlexBoxUIKit', '~> 0.3'
+pod 'FlexLayoutKit', '~> 0.4'
 以下可选
-pod 'FlexBoxUIKit/SDWebImage'
-pod 'FlexBoxUIKit/Kingfisher' #需要ios 12以上
+pod 'FlexLayoutKit/SDWebImage'
+pod 'FlexLayoutKit/Kingfisher' #需要ios 12以上
 
 ```
 
 ### 特性
-- [x] FlexBox布局, 支持**gap**,**rowGap**,**columnGap**
+- [x] FlexBox布局
 - [x] 声明式语法,类似**SwiftUI**,如**HStackView**、**VStackView**、**ZStackView**，类似Flutter中的**Row**、**Column**、**Stack**、**Wrap**
 - [x] 自动计算**UITableViewCell** 高度
 - [x] 支持**VScrollView**、**HScrollView**,自动计算**contentSize**
@@ -36,17 +36,17 @@ pod 'FlexBoxUIKit/Kingfisher' #需要ios 12以上
 ### Usage 用法
 #### Quick Start 快速开始
 ```swift
-import FlexBoxUIKit  //1.导入FlexBoxUIKit
+import FlexLayoutKit  //1.导入FlexBoxUIKit
 import UIKit
 
-//2.继承FlexBaseViewController
-class ViewController: FlexBaseViewController 
+//2.继承FlexboxBaseViewController
+class ViewController: FlexboxBaseViewController 
 {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     //3.重写bodyView
-    override func bodyView() -> UIView {
+    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
         return HStackView(mainAxis: .center, crossAxis: .center) {
             Text("Hello FlexBoxUIKit")
         }
@@ -58,7 +58,7 @@ class ViewController: FlexBaseViewController
 
 or
 ```swift
-import FlexBoxUIKit
+import FlexLayoutKit
 
 class ViewController: UIViewController{
     override func viewDidLoad() {
@@ -129,7 +129,7 @@ HStackView {
 ```swift
 HStackView {
     ImageView().size(40).cornerRadius(10).backgroundColor(.gray.withAlphaComponent(0.2))
-    Space(10)
+    Spacer(10)
     Text("Leo").textColor(.orange).fontSize(16,weight: .medium)
 }
 ```
@@ -137,14 +137,14 @@ HStackView {
 ```swift
 VStackView(crossAxis: .center) {
     ImageView().size(40).cornerRadius(10).backgroundColor(.gray.withAlphaComponent(0.2))
-    Space(10)
+    Spacer(10)
     Text("Leo").textColor(.orange).fontSize(16,weight: .medium)
 }
 ```
 #### ZStackView使用
 ```swift
 ZStackView {
-    FlexContainerView(mainAxis: .center, crossAxis: .center){
+    FlexContainer(mainAxis: .center, crossAxis: .center){
         Text("99")
     }
     .cornerRadius(15)
@@ -181,7 +181,7 @@ Wrap(gap: 10){
 ```swift
 VScrollView {
     for i in 0...100 {
-        FlexContainerView(mainAxis: .center, crossAxis: .center) {
+        FlexContainer(mainAxis: .center, crossAxis: .center) {
             Text("\(i)")
         }
         .height(60)
@@ -234,7 +234,7 @@ Text("FlexPercent").backgroundColor(.orange).width(20%).height(20%)
 2)UITableView的rowHeight设置为UITableView.automaticDimension
 
 class CellItem: TableDynamicCell {
-    override func bodyView() -> UIView {
+    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
         return VStackView {
             ...
         }
@@ -259,7 +259,7 @@ UILabel()
     .text("链式语法")
     .textColor(.orange)
     .font(.systemFont(ofSize: 16))
-    .view
+    
 ```
 等同于
 ```swift
@@ -355,6 +355,16 @@ label.textColor = .orange
 * TableDynamicCell
 * CollectionCell
 
+## UICollectionView
+* https://juejin.cn/post/6944994974614323213?searchId=20240405171041254EDFB1442A61513BDF
+* https://linxunfeng.top/2017/09/12/ios-swift-uicollectionview%E6%A8%AA%E5%90%91%E5%88%86%E9%A1%B5%E6%BB%9A%E5%8A%A8%EF%BC%8Ccell%E5%B7%A6%E5%8F%B3%E6%8E%92%E7%89%88/
+* https://www.jianshu.com/p/28711ff1338b
+
+## UICollectionViewFlowLayout 分页效果
+*  prepareLayout
+* func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint // return a point at which to rest after scrolling - for layouts that want snap-to-point scrolling behavior
+
+
 
 
 ## Flex makeLayout
@@ -374,10 +384,10 @@ UILabel().flex.makeLayout {
 #### 动画
 ```
 var blowUp = false
-let boxView = FlexContainerView()
+let boxView = FlexContainer()
 
 VStackView(mainAxis: .center, crossAxis: .center) {
-    boxView.flex.size(100).modifier.backgroundColor(.blue).view
+    boxView.flex.size(100).modifier.backgroundColor(.blue)
     
     Button("动画").size(width: 100, height: 30)
         .backgroundColor(.orange).margin(.top,10)
@@ -399,9 +409,9 @@ VStackView(mainAxis: .center, crossAxis: .center) {
 
 ### Todo
 * 双向绑定
-* UITableView封装
+* UITableView封装 ListView ListItem
     * 参考 https://github.com/josercc/SwiftTableViewGroup
-* UICollection封装
+* UICollection封装 GridView H V
 * 瀑布流
 * 测试
 * 支持SPM

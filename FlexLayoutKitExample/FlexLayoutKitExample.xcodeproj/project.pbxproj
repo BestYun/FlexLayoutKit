@@ -1,0 +1,882 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77DC4CAB45F7CCAACF7BFF49 /* Pods_FlexLayoutKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0086A774C68D43E52B7BA2C5 /* Pods_FlexLayoutKitExample.framework */; };
+		9A539494782EADC513961512 /* Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64830A070D91BC8F9310625 /* Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework */; };
+		AE7447082BB9A38A0096AAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7447072BB9A38A0096AAA0 /* AppDelegate.swift */; };
+		AE74470A2BB9A38A0096AAA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7447092BB9A38A0096AAA0 /* SceneDelegate.swift */; };
+		AE74470F2BB9A38A0096AAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE74470D2BB9A38A0096AAA0 /* Main.storyboard */; };
+		AE7447112BB9A38C0096AAA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE7447102BB9A38C0096AAA0 /* Assets.xcassets */; };
+		AE7447142BB9A38C0096AAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE7447122BB9A38C0096AAA0 /* LaunchScreen.storyboard */; };
+		AE74471F2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74471E2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests.swift */; };
+		AE7447292BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7447282BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests.swift */; };
+		AE74472B2BB9A38C0096AAA0 /* FlexLayoutKitExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE74472A2BB9A38C0096AAA0 /* FlexLayoutKitExampleUITestsLaunchTests.swift */; };
+		AE87AE972BBECEEA006829D4 /* HVZStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE852BBECEEA006829D4 /* HVZStackViewController.swift */; };
+		AE87AE982BBECEEA006829D4 /* TableFixedHeightCellViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE862BBECEEA006829D4 /* TableFixedHeightCellViewController2.swift */; };
+		AE87AE992BBECEEA006829D4 /* CollectionFixedHeightViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE872BBECEEA006829D4 /* CollectionFixedHeightViewControllerDemo.swift */; };
+		AE87AE9A2BBECEEA006829D4 /* WrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE882BBECEEA006829D4 /* WrapViewController.swift */; };
+		AE87AE9B2BBECEEA006829D4 /* SizeThatFitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE892BBECEEA006829D4 /* SizeThatFitViewController.swift */; };
+		AE87AE9C2BBECEEA006829D4 /* TableFixedHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE8A2BBECEEA006829D4 /* TableFixedHeightCellViewController.swift */; };
+		AE87AE9D2BBECEEA006829D4 /* FlexPercentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE8B2BBECEEA006829D4 /* FlexPercentViewController.swift */; };
+		AE87AE9E2BBECEEA006829D4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE8C2BBECEEA006829D4 /* ImageViewController.swift */; };
+		AE87AE9F2BBECEEA006829D4 /* HelloFlexUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE8D2BBECEEA006829D4 /* HelloFlexUIKitViewController.swift */; };
+		AE87AEA02BBECEEA006829D4 /* CollectionDynamicHeightViewControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE8E2BBECEEA006829D4 /* CollectionDynamicHeightViewControllerDemo.swift */; };
+		AE87AEA12BBECEEA006829D4 /* VScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE8F2BBECEEA006829D4 /* VScrollViewController.swift */; };
+		AE87AEA22BBECEEA006829D4 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE902BBECEEA006829D4 /* CountViewController.swift */; };
+		AE87AEA32BBECEEA006829D4 /* FlexBoxAnimateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE912BBECEEA006829D4 /* FlexBoxAnimateViewController.swift */; };
+		AE87AEA42BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE922BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift */; };
+		AE87AEA52BBECEEA006829D4 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE932BBECEEA006829D4 /* HScrollViewController.swift */; };
+		AE87AEA62BBECEEA006829D4 /* LivePreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE952BBECEEA006829D4 /* LivePreViewController.swift */; };
+		AE87AEA72BBECEEA006829D4 /* LivePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AE962BBECEEA006829D4 /* LivePreview.swift */; };
+		AE87AEA92BBECF18006829D4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AEA82BBECF18006829D4 /* MainViewController.swift */; };
+		AE87AEAB2BBEDA71006829D4 /* FlexLayotUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87AEAA2BBEDA71006829D4 /* FlexLayotUIKitViewController.swift */; };
+		AEA94E342BB9C49C00871E39 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA94E332BB9C49C00871E39 /* ViewController2.swift */; };
+		AEBF1DAC2BBFD2E70031F808 /* HGridDynamicWidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF1DAB2BBFD2E70031F808 /* HGridDynamicWidthViewController.swift */; };
+		AEBF1DAE2BBFD8B30031F808 /* HGridFiexdedWidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF1DAD2BBFD8B30031F808 /* HGridFiexdedWidthViewController.swift */; };
+		AEBF1DB02BC03F410031F808 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF1DAF2BC03F410031F808 /* WaterFallViewController.swift */; };
+		AEBF1DB22BC046B00031F808 /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF1DB12BC046B00031F808 /* WaterFallFlowLayout.swift */; };
+		F9E0616C893EF06765C8E511 /* Pods_FlexLayoutKitExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65DD5A913D078AA241485CF /* Pods_FlexLayoutKitExampleTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE74471B2BB9A38C0096AAA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE7446FC2BB9A38A0096AAA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE7447032BB9A38A0096AAA0;
+			remoteInfo = FlexLayoutKitExample;
+		};
+		AE7447252BB9A38C0096AAA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE7446FC2BB9A38A0096AAA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE7447032BB9A38A0096AAA0;
+			remoteInfo = FlexLayoutKitExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0086A774C68D43E52B7BA2C5 /* Pods_FlexLayoutKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		973A0F50E29F45C4F03C879E /* Pods-FlexLayoutKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExample.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExample/Pods-FlexLayoutKitExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A64830A070D91BC8F9310625 /* Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7447042BB9A38A0096AAA0 /* FlexLayoutKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7447072BB9A38A0096AAA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE7447092BB9A38A0096AAA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AE74470E2BB9A38A0096AAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE7447102BB9A38C0096AAA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE7447132BB9A38C0096AAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE7447152BB9A38C0096AAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE74471A2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutKitExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE74471E2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutKitExampleTests.swift; sourceTree = "<group>"; };
+		AE7447242BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlexLayoutKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE7447282BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutKitExampleUITests.swift; sourceTree = "<group>"; };
+		AE74472A2BB9A38C0096AAA0 /* FlexLayoutKitExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayoutKitExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AE87AE852BBECEEA006829D4 /* HVZStackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HVZStackViewController.swift; sourceTree = "<group>"; };
+		AE87AE862BBECEEA006829D4 /* TableFixedHeightCellViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController2.swift; sourceTree = "<group>"; };
+		AE87AE872BBECEEA006829D4 /* CollectionFixedHeightViewControllerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionFixedHeightViewControllerDemo.swift; sourceTree = "<group>"; };
+		AE87AE882BBECEEA006829D4 /* WrapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrapViewController.swift; sourceTree = "<group>"; };
+		AE87AE892BBECEEA006829D4 /* SizeThatFitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeThatFitViewController.swift; sourceTree = "<group>"; };
+		AE87AE8A2BBECEEA006829D4 /* TableFixedHeightCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableFixedHeightCellViewController.swift; sourceTree = "<group>"; };
+		AE87AE8B2BBECEEA006829D4 /* FlexPercentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexPercentViewController.swift; sourceTree = "<group>"; };
+		AE87AE8C2BBECEEA006829D4 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		AE87AE8D2BBECEEA006829D4 /* HelloFlexUIKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloFlexUIKitViewController.swift; sourceTree = "<group>"; };
+		AE87AE8E2BBECEEA006829D4 /* CollectionDynamicHeightViewControllerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDynamicHeightViewControllerDemo.swift; sourceTree = "<group>"; };
+		AE87AE8F2BBECEEA006829D4 /* VScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VScrollViewController.swift; sourceTree = "<group>"; };
+		AE87AE902BBECEEA006829D4 /* CountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
+		AE87AE912BBECEEA006829D4 /* FlexBoxAnimateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexBoxAnimateViewController.swift; sourceTree = "<group>"; };
+		AE87AE922BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDynamicHeightCellViewController.swift; sourceTree = "<group>"; };
+		AE87AE932BBECEEA006829D4 /* HScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
+		AE87AE952BBECEEA006829D4 /* LivePreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePreViewController.swift; sourceTree = "<group>"; };
+		AE87AE962BBECEEA006829D4 /* LivePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LivePreview.swift; sourceTree = "<group>"; };
+		AE87AEA82BBECF18006829D4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AE87AEAA2BBEDA71006829D4 /* FlexLayotUIKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexLayotUIKitViewController.swift; sourceTree = "<group>"; };
+		AEA94E332BB9C49C00871E39 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		AEBF1DAB2BBFD2E70031F808 /* HGridDynamicWidthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGridDynamicWidthViewController.swift; sourceTree = "<group>"; };
+		AEBF1DAD2BBFD8B30031F808 /* HGridFiexdedWidthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGridFiexdedWidthViewController.swift; sourceTree = "<group>"; };
+		AEBF1DAF2BC03F410031F808 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
+		AEBF1DB12BC046B00031F808 /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
+		AFD9A0F03D6C571D9951811F /* Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DCA92E93B7A8BDD81D2AA572 /* Pods-FlexLayoutKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExampleTests/Pods-FlexLayoutKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F65DD5A913D078AA241485CF /* Pods_FlexLayoutKitExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8D98266F179BC4C692E463A /* Pods-FlexLayoutKitExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExampleTests.release.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExampleTests/Pods-FlexLayoutKitExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB67904602B0464A531FA40C /* Pods-FlexLayoutKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExample.release.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExample/Pods-FlexLayoutKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		FE20DB440D9870C176D46336 /* Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE7447012BB9A38A0096AAA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DC4CAB45F7CCAACF7BFF49 /* Pods_FlexLayoutKitExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7447172BB9A38C0096AAA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E0616C893EF06765C8E511 /* Pods_FlexLayoutKitExampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7447212BB9A38C0096AAA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A539494782EADC513961512 /* Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E5917BD6EE3BBEE7303E44E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0086A774C68D43E52B7BA2C5 /* Pods_FlexLayoutKitExample.framework */,
+				A64830A070D91BC8F9310625 /* Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework */,
+				F65DD5A913D078AA241485CF /* Pods_FlexLayoutKitExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E052B68338C935892032933 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				973A0F50E29F45C4F03C879E /* Pods-FlexLayoutKitExample.debug.xcconfig */,
+				FB67904602B0464A531FA40C /* Pods-FlexLayoutKitExample.release.xcconfig */,
+				FE20DB440D9870C176D46336 /* Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.debug.xcconfig */,
+				AFD9A0F03D6C571D9951811F /* Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.release.xcconfig */,
+				DCA92E93B7A8BDD81D2AA572 /* Pods-FlexLayoutKitExampleTests.debug.xcconfig */,
+				F8D98266F179BC4C692E463A /* Pods-FlexLayoutKitExampleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AE7446FB2BB9A38A0096AAA0 = {
+			isa = PBXGroup;
+			children = (
+				AE7447062BB9A38A0096AAA0 /* FlexLayoutKitExample */,
+				AE74471D2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests */,
+				AE7447272BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests */,
+				AE7447052BB9A38A0096AAA0 /* Products */,
+				9E052B68338C935892032933 /* Pods */,
+				3E5917BD6EE3BBEE7303E44E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE7447052BB9A38A0096AAA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE7447042BB9A38A0096AAA0 /* FlexLayoutKitExample.app */,
+				AE74471A2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests.xctest */,
+				AE7447242BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE7447062BB9A38A0096AAA0 /* FlexLayoutKitExample */ = {
+			isa = PBXGroup;
+			children = (
+				AE87AE842BBECEEA006829D4 /* Controller */,
+				AE87AE942BBECEEA006829D4 /* preview */,
+				AE7447072BB9A38A0096AAA0 /* AppDelegate.swift */,
+				AE7447092BB9A38A0096AAA0 /* SceneDelegate.swift */,
+				AE87AEA82BBECF18006829D4 /* MainViewController.swift */,
+				AE74470D2BB9A38A0096AAA0 /* Main.storyboard */,
+				AE7447102BB9A38C0096AAA0 /* Assets.xcassets */,
+				AE7447122BB9A38C0096AAA0 /* LaunchScreen.storyboard */,
+				AE7447152BB9A38C0096AAA0 /* Info.plist */,
+				AEA94E332BB9C49C00871E39 /* ViewController2.swift */,
+			);
+			path = FlexLayoutKitExample;
+			sourceTree = "<group>";
+		};
+		AE74471D2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE74471E2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests.swift */,
+			);
+			path = FlexLayoutKitExampleTests;
+			sourceTree = "<group>";
+		};
+		AE7447272BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AE7447282BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests.swift */,
+				AE74472A2BB9A38C0096AAA0 /* FlexLayoutKitExampleUITestsLaunchTests.swift */,
+			);
+			path = FlexLayoutKitExampleUITests;
+			sourceTree = "<group>";
+		};
+		AE87AE842BBECEEA006829D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF1DAA2BBFD2A80031F808 /* GridView */,
+				AE87AE852BBECEEA006829D4 /* HVZStackViewController.swift */,
+				AE87AEAA2BBEDA71006829D4 /* FlexLayotUIKitViewController.swift */,
+				AE87AE862BBECEEA006829D4 /* TableFixedHeightCellViewController2.swift */,
+				AE87AE882BBECEEA006829D4 /* WrapViewController.swift */,
+				AE87AE892BBECEEA006829D4 /* SizeThatFitViewController.swift */,
+				AE87AE8A2BBECEEA006829D4 /* TableFixedHeightCellViewController.swift */,
+				AE87AE8B2BBECEEA006829D4 /* FlexPercentViewController.swift */,
+				AE87AE8C2BBECEEA006829D4 /* ImageViewController.swift */,
+				AE87AE8D2BBECEEA006829D4 /* HelloFlexUIKitViewController.swift */,
+				AE87AE8F2BBECEEA006829D4 /* VScrollViewController.swift */,
+				AE87AE902BBECEEA006829D4 /* CountViewController.swift */,
+				AE87AE912BBECEEA006829D4 /* FlexBoxAnimateViewController.swift */,
+				AE87AE922BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift */,
+				AE87AE932BBECEEA006829D4 /* HScrollViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE87AE942BBECEEA006829D4 /* preview */ = {
+			isa = PBXGroup;
+			children = (
+				AE87AE952BBECEEA006829D4 /* LivePreViewController.swift */,
+				AE87AE962BBECEEA006829D4 /* LivePreview.swift */,
+			);
+			path = preview;
+			sourceTree = "<group>";
+		};
+		AEBF1DAA2BBFD2A80031F808 /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				AE87AE872BBECEEA006829D4 /* CollectionFixedHeightViewControllerDemo.swift */,
+				AE87AE8E2BBECEEA006829D4 /* CollectionDynamicHeightViewControllerDemo.swift */,
+				AEBF1DAB2BBFD2E70031F808 /* HGridDynamicWidthViewController.swift */,
+				AEBF1DAD2BBFD8B30031F808 /* HGridFiexdedWidthViewController.swift */,
+				AEBF1DAF2BC03F410031F808 /* WaterFallViewController.swift */,
+				AEBF1DB12BC046B00031F808 /* WaterFallFlowLayout.swift */,
+			);
+			path = GridView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE7447032BB9A38A0096AAA0 /* FlexLayoutKitExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE74472E2BB9A38C0096AAA0 /* Build configuration list for PBXNativeTarget "FlexLayoutKitExample" */;
+			buildPhases = (
+				97151467C661CEDAFAA438B6 /* [CP] Check Pods Manifest.lock */,
+				AE7447002BB9A38A0096AAA0 /* Sources */,
+				AE7447012BB9A38A0096AAA0 /* Frameworks */,
+				AE7447022BB9A38A0096AAA0 /* Resources */,
+				CE64835A0DD91C9273DE5755 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlexLayoutKitExample;
+			productName = FlexLayoutKitExample;
+			productReference = AE7447042BB9A38A0096AAA0 /* FlexLayoutKitExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE7447192BB9A38C0096AAA0 /* FlexLayoutKitExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE7447312BB9A38C0096AAA0 /* Build configuration list for PBXNativeTarget "FlexLayoutKitExampleTests" */;
+			buildPhases = (
+				129D26EBF436B4A7AB26321D /* [CP] Check Pods Manifest.lock */,
+				AE7447162BB9A38C0096AAA0 /* Sources */,
+				AE7447172BB9A38C0096AAA0 /* Frameworks */,
+				AE7447182BB9A38C0096AAA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE74471C2BB9A38C0096AAA0 /* PBXTargetDependency */,
+			);
+			name = FlexLayoutKitExampleTests;
+			productName = FlexLayoutKitExampleTests;
+			productReference = AE74471A2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE7447232BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE7447342BB9A38C0096AAA0 /* Build configuration list for PBXNativeTarget "FlexLayoutKitExampleUITests" */;
+			buildPhases = (
+				CDB525A87B0FC81701F00B45 /* [CP] Check Pods Manifest.lock */,
+				AE7447202BB9A38C0096AAA0 /* Sources */,
+				AE7447212BB9A38C0096AAA0 /* Frameworks */,
+				AE7447222BB9A38C0096AAA0 /* Resources */,
+				6B811A2F5B3894A642F9BAE3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE7447262BB9A38C0096AAA0 /* PBXTargetDependency */,
+			);
+			name = FlexLayoutKitExampleUITests;
+			productName = FlexLayoutKitExampleUITests;
+			productReference = AE7447242BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE7446FC2BB9A38A0096AAA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					AE7447032BB9A38A0096AAA0 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					AE7447192BB9A38C0096AAA0 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = AE7447032BB9A38A0096AAA0;
+					};
+					AE7447232BB9A38C0096AAA0 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = AE7447032BB9A38A0096AAA0;
+					};
+				};
+			};
+			buildConfigurationList = AE7446FF2BB9A38A0096AAA0 /* Build configuration list for PBXProject "FlexLayoutKitExample" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE7446FB2BB9A38A0096AAA0;
+			productRefGroup = AE7447052BB9A38A0096AAA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE7447032BB9A38A0096AAA0 /* FlexLayoutKitExample */,
+				AE7447192BB9A38C0096AAA0 /* FlexLayoutKitExampleTests */,
+				AE7447232BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE7447022BB9A38A0096AAA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE7447142BB9A38C0096AAA0 /* LaunchScreen.storyboard in Resources */,
+				AE7447112BB9A38C0096AAA0 /* Assets.xcassets in Resources */,
+				AE74470F2BB9A38A0096AAA0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7447182BB9A38C0096AAA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7447222BB9A38C0096AAA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		129D26EBF436B4A7AB26321D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlexLayoutKitExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B811A2F5B3894A642F9BAE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97151467C661CEDAFAA438B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlexLayoutKitExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDB525A87B0FC81701F00B45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE64835A0DD91C9273DE5755 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutKitExample/Pods-FlexLayoutKitExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutKitExample/Pods-FlexLayoutKitExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlexLayoutKitExample/Pods-FlexLayoutKitExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE7447002BB9A38A0096AAA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBF1DB22BC046B00031F808 /* WaterFallFlowLayout.swift in Sources */,
+				AE87AEAB2BBEDA71006829D4 /* FlexLayotUIKitViewController.swift in Sources */,
+				AE87AEA92BBECF18006829D4 /* MainViewController.swift in Sources */,
+				AEBF1DAE2BBFD8B30031F808 /* HGridFiexdedWidthViewController.swift in Sources */,
+				AE87AE972BBECEEA006829D4 /* HVZStackViewController.swift in Sources */,
+				AE87AEA32BBECEEA006829D4 /* FlexBoxAnimateViewController.swift in Sources */,
+				AE87AE9D2BBECEEA006829D4 /* FlexPercentViewController.swift in Sources */,
+				AE87AEA62BBECEEA006829D4 /* LivePreViewController.swift in Sources */,
+				AE87AE982BBECEEA006829D4 /* TableFixedHeightCellViewController2.swift in Sources */,
+				AEBF1DAC2BBFD2E70031F808 /* HGridDynamicWidthViewController.swift in Sources */,
+				AE87AEA12BBECEEA006829D4 /* VScrollViewController.swift in Sources */,
+				AE87AEA42BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift in Sources */,
+				AE87AE9F2BBECEEA006829D4 /* HelloFlexUIKitViewController.swift in Sources */,
+				AEA94E342BB9C49C00871E39 /* ViewController2.swift in Sources */,
+				AE87AE9B2BBECEEA006829D4 /* SizeThatFitViewController.swift in Sources */,
+				AE87AE9A2BBECEEA006829D4 /* WrapViewController.swift in Sources */,
+				AE87AE992BBECEEA006829D4 /* CollectionFixedHeightViewControllerDemo.swift in Sources */,
+				AE87AEA52BBECEEA006829D4 /* HScrollViewController.swift in Sources */,
+				AE7447082BB9A38A0096AAA0 /* AppDelegate.swift in Sources */,
+				AE87AEA02BBECEEA006829D4 /* CollectionDynamicHeightViewControllerDemo.swift in Sources */,
+				AE87AEA22BBECEEA006829D4 /* CountViewController.swift in Sources */,
+				AE74470A2BB9A38A0096AAA0 /* SceneDelegate.swift in Sources */,
+				AE87AE9E2BBECEEA006829D4 /* ImageViewController.swift in Sources */,
+				AEBF1DB02BC03F410031F808 /* WaterFallViewController.swift in Sources */,
+				AE87AE9C2BBECEEA006829D4 /* TableFixedHeightCellViewController.swift in Sources */,
+				AE87AEA72BBECEEA006829D4 /* LivePreview.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7447162BB9A38C0096AAA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE74471F2BB9A38C0096AAA0 /* FlexLayoutKitExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE7447202BB9A38C0096AAA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE7447292BB9A38C0096AAA0 /* FlexLayoutKitExampleUITests.swift in Sources */,
+				AE74472B2BB9A38C0096AAA0 /* FlexLayoutKitExampleUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE74471C2BB9A38C0096AAA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE7447032BB9A38A0096AAA0 /* FlexLayoutKitExample */;
+			targetProxy = AE74471B2BB9A38C0096AAA0 /* PBXContainerItemProxy */;
+		};
+		AE7447262BB9A38C0096AAA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE7447032BB9A38A0096AAA0 /* FlexLayoutKitExample */;
+			targetProxy = AE7447252BB9A38C0096AAA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE74470D2BB9A38A0096AAA0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE74470E2BB9A38A0096AAA0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE7447122BB9A38C0096AAA0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE7447132BB9A38C0096AAA0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE74472C2BB9A38C0096AAA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE74472D2BB9A38C0096AAA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE74472F2BB9A38C0096AAA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973A0F50E29F45C4F03C879E /* Pods-FlexLayoutKitExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlexLayoutKitExample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FlexboxLayoutKit;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.readchen.FlexLayoutKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE7447302BB9A38C0096AAA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB67904602B0464A531FA40C /* Pods-FlexLayoutKitExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlexLayoutKitExample/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FlexboxLayoutKit;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.readchen.FlexLayoutKitExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE7447322BB9A38C0096AAA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCA92E93B7A8BDD81D2AA572 /* Pods-FlexLayoutKitExampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.readchen.FlexLayoutKitExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexLayoutKitExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlexLayoutKitExample";
+			};
+			name = Debug;
+		};
+		AE7447332BB9A38C0096AAA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8D98266F179BC4C692E463A /* Pods-FlexLayoutKitExampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.readchen.FlexLayoutKitExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlexLayoutKitExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlexLayoutKitExample";
+			};
+			name = Release;
+		};
+		AE7447352BB9A38C0096AAA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE20DB440D9870C176D46336 /* Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.readchen.FlexLayoutKitExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlexLayoutKitExample;
+			};
+			name = Debug;
+		};
+		AE7447362BB9A38C0096AAA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFD9A0F03D6C571D9951811F /* Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.readchen.FlexLayoutKitExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlexLayoutKitExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE7446FF2BB9A38A0096AAA0 /* Build configuration list for PBXProject "FlexLayoutKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE74472C2BB9A38C0096AAA0 /* Debug */,
+				AE74472D2BB9A38C0096AAA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE74472E2BB9A38C0096AAA0 /* Build configuration list for PBXNativeTarget "FlexLayoutKitExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE74472F2BB9A38C0096AAA0 /* Debug */,
+				AE7447302BB9A38C0096AAA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7447312BB9A38C0096AAA0 /* Build configuration list for PBXNativeTarget "FlexLayoutKitExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7447322BB9A38C0096AAA0 /* Debug */,
+				AE7447332BB9A38C0096AAA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7447342BB9A38C0096AAA0 /* Build configuration list for PBXNativeTarget "FlexLayoutKitExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE7447352BB9A38C0096AAA0 /* Debug */,
+				AE7447362BB9A38C0096AAA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE7446FC2BB9A38A0096AAA0 /* Project object */;
+}
