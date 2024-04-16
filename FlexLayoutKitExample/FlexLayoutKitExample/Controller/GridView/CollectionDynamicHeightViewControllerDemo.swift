@@ -17,7 +17,7 @@ class CollectionDynamicHeightViewControllerDemo: FlexboxBaseViewController,
     UICollectionViewDelegateFlowLayout
 {
     
-    lazy var  layout = UICollectionViewFlowLayout().then { layout in
+    lazy var layout = UICollectionViewFlowLayout().then { layout in
 //        
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
@@ -28,7 +28,7 @@ class CollectionDynamicHeightViewControllerDemo: FlexboxBaseViewController,
     }
     
     
-    lazy var collectionView: UICollectionView =     UICollectionView(frame: .zero, collectionViewLayout: layout).then { collectionView in
+    lazy var collectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout).then { collectionView in
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(FCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -104,8 +104,6 @@ class CollectionDynamicHeightViewControllerDemo: FlexboxBaseViewController,
 private class FCollectionCell: GridCell {
     override var isDynamicHeight: Bool { true }
    @UState  var text: String?
-    
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)

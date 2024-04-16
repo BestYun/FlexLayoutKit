@@ -255,6 +255,47 @@ UITableView().flex.expanded().apply {
 ```
 
 
+#### 自动计算UICollectionViewCell 动态高度
+```swift
+1)cell继承GridCell，并设置isDynamicHeight值为true
+
+private class FCollectionCell: GridCell {
+    override var isDynamicHeight: Bool { true }
+   @UState  var text: String?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.backgroundColor = .darkGray
+        
+    }
+
+    override func bodyView() -> FlexboxView {
+        Text($text)
+            .fontSize(18)
+            .textColor(.orange)
+            .backgroundColor(.gray)
+            .numberOfLines(0)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+
+2)UICollectionViewFlowLayout设置estimatdItemSize设置一个非0值开启自动计算高度
+    lazy var layout = UICollectionViewFlowLayout().then { layout in
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        //estimatdItemSize设置一个非0值开启自动计算高度
+        layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width - 10*2, height: 100)
+        layout.itemSize = UICollectionViewFlowLayout.automaticSize 
+    }
+
+```
+
+
 #### Modifier chain 链式语法
 ```swift
 UILabel()
