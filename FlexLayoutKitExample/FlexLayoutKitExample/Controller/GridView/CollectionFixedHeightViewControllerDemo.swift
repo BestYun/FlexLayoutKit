@@ -88,7 +88,7 @@ class CollectionFixedHeightViewControllerDemo: FlexboxBaseViewController,
 }
 
 
-private class FCollectionCell: CollectionCell {
+private class FCollectionCell: GridCell {
     @UState var text: String?
  
     

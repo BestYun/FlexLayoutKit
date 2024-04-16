@@ -101,7 +101,8 @@ class CollectionDynamicHeightViewControllerDemo: FlexboxBaseViewController,
 //    }
 }
 
-private class FCollectionCell: CollectionDynamicCell {
+private class FCollectionCell: GridCell {
+    override var isDynamicHeight: Bool { true }
    @UState  var text: String?
     
 
@@ -116,7 +117,7 @@ private class FCollectionCell: CollectionDynamicCell {
         Text($text)
             .fontSize(18)
             .textColor(.orange)
-            .backgroundColor(.blue)
+            .backgroundColor(.gray)
             .numberOfLines(0)
     }
     

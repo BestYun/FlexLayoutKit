@@ -354,9 +354,8 @@ label.textColor = .orange
 * ScrollView
     * VScrollView
     * HScrollView
-* TabCell
-* TableDynamicCell
-* CollectionCell
+* ListCell = UITableViewCell
+* GridCell = UICollectionViewCell
 
 
 

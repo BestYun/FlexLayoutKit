@@ -17,7 +17,7 @@ class HGridDynamicWidthViewController: FlexboxBaseViewController,
     
 {
     lazy var layout = UICollectionViewFlowLayout().then { layout in
-        //动态计算高度
+        //动态计算高度,需要配置estimatedItemSize
         layout.estimatedItemSize = CGSize(width: 10, height: 80)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10 // 水平方向间距
@@ -45,8 +45,6 @@ class HGridDynamicWidthViewController: FlexboxBaseViewController,
         collectionView
             .flex
             .expanded()
-//            .height(100)
-//            .margin(.top,200)
             .modifier
             .backgroundColor(.gray.withAlphaComponent(0.5))
     }
@@ -58,13 +56,13 @@ class HGridDynamicWidthViewController: FlexboxBaseViewController,
     }
                                       
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return 30
     }
                                       
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! FCollectionCell
                                           
-        cell.text = "index \(indexPath.row)"
+        cell.text = "index \(indexPath.row) \(Array(repeating: "dynamic", count: indexPath.row/10).joined(separator: "-")) "
                                                   
         return cell
     }
@@ -78,7 +76,9 @@ class HGridDynamicWidthViewController: FlexboxBaseViewController,
     
 }
 
-private class FCollectionCell: HCollectionDynamicCell {
+private class FCollectionCell: GridCell {
+    override var isDynamicHeight: Bool { true }
+    override var scrollDirection: UICollectionView.ScrollDirection { .horizontal }
     @UState var text: String?
                                    
     override init(frame: CGRect) {
