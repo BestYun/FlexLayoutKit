@@ -12,10 +12,11 @@ class HScrollViewController: FlexboxBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.flex
+            .addItems(subviews: bodyView())
 
     }
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         HScrollView (spacing:10){
             for i in 0...100 {
                 FlexContainer(mainAxis: .center, crossAxis: .center) {

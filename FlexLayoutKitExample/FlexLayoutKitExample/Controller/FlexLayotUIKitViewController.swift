@@ -24,9 +24,11 @@ class FlexLayotUIKitViewController: FlexboxBaseViewController {
         orangeView.backgroundColor = .orange
         
         topView.flexBaseView.addSubview(orangeView)
+        view.flex.addItems(subviews: bodyView())
+
     }
     
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         
         topView
         

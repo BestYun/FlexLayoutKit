@@ -14,14 +14,12 @@ class ImageViewController: FlexboxBaseViewController {
     
     override func viewDidLoad() {
         
-        view.flex.mainAxis(.center).crossAxis(.center)
-        
         super.viewDidLoad()
-        
+        view.flex.addItems(subviews: bodyView()).mainAxis(.center).crossAxis(.center)
 
     }
     
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
             
         VStackView {
             Text("SDWebImage")

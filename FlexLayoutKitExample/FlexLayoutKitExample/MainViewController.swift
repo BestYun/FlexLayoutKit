@@ -58,9 +58,10 @@ class MainViewController: FlexboxBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Main"
+        view.flex.addItems(subviews: bodyView())
     }
 
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         UITableView().flex.expanded().apply {
             $0.delegate = self
             $0.dataSource = self

@@ -33,10 +33,12 @@ class WrapViewController: FlexboxBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.flex.addItems(subviews: bodyView())
+
     }
     
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
-        HWrap(spacing: 10){
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
+        HWrap(spacing: 10,spacingVertical: 10){
             for tag in tagNames {
                 Text(tag)
                     .backgroundColor(.gray.withAlphaComponent(0.5))

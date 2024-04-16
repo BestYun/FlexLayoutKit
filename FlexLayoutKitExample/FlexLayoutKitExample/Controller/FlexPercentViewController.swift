@@ -12,10 +12,12 @@ class FlexPercentViewController: FlexboxBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.flex.addItems(subviews: bodyView())
+
     }
     
 
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
 
         VStackView (mainAxis: .center, crossAxis: .center){
             

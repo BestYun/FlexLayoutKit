@@ -35,11 +35,12 @@ class TableDynamicHeightCellViewController: FlexboxBaseViewController {
             item.imgCount = Int.random(in: 0 ... 9)
             data.append(item)
         }
-
+        view.flex
+            .addItems(subviews: bodyView())
         
     }
     
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         UITableView().flex.expanded().apply {
             
             $0.delegate = self

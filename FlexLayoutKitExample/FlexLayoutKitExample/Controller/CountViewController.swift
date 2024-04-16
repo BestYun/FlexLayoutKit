@@ -18,9 +18,11 @@ class CountViewController: FlexboxBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.flex
+            .addItems(subviews: bodyView())
     }
 
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         VStackView(mainAxis: .center, crossAxis: .center,spacing: 10) {
             Text($count).textColor(.black)
             Button("add").margin(.top,10).backgroundColor(.blue).onTap { [unowned self] in

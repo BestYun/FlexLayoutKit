@@ -36,9 +36,12 @@ class HGridDynamicWidthViewController: FlexboxBaseViewController,
         super.viewDidLoad()
                                           
         collectionView.backgroundColor = UIColor.gray.withAlphaComponent(0.2)
+        
+        view.flex
+            .addItems(subviews: bodyView())
     }
                                       
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         collectionView
             .flex
             .expanded()

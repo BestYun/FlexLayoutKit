@@ -21,11 +21,12 @@ class DisplayViewController: FlexboxBaseViewController {
         title = "display"
         //修改margin padding size,display之类的只能通过命令式修改text1.margin(10),再调用applyLayout,才会有效果
         
+        view.flex.addItems(subviews: bodyView())
 
     }
     
 
-    @FlexboxViewBuilder open override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder func bodyView() -> [FlexboxView] {
         Column {
             text1.alignSelf(.center)
             

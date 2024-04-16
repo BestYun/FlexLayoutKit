@@ -17,9 +17,10 @@ class SizeThatFitViewController: FlexboxBaseViewController {
             let text = "index = \(i) \(Array(repeating: "content ", count: i).joined())  end"
             data.append(text)
         }
+        view.flex.addItems(subviews: bodyView())
 
     }
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         
         UITableView().flex.expanded().apply {
             

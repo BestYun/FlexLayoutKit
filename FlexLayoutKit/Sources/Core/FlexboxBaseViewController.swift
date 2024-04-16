@@ -8,14 +8,7 @@
 import UIKit
 
 open class FlexboxBaseViewController: UIViewController {
-    
-    public lazy var rootView = Column(mainAxis: .start, crossAxis: .stretch) {
-        for item in bodyView() {
-            item
-        }
-    }
-    .expanded()
-    
+        
     override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -24,9 +17,7 @@ open class FlexboxBaseViewController: UIViewController {
             .direction(.column)
             .crossAxis(.stretch)
             .mainAxis(.start)
-            .addItems {
-                rootView
-            }
+
     }
 
     override open func viewDidLayoutSubviews() {
@@ -42,12 +33,7 @@ open class FlexboxBaseViewController: UIViewController {
         // 屏幕旋转
         view.flex.size(size).applyLayout()
     }
-    
-    ///Column
-    @FlexboxViewBuilder open func bodyView() -> [FlexboxView] {
-        fatalError("bodyView has not been implemented") as! FlexboxView
-    }
-    
+
     open func updateFlexLayout() {
         view.flex.applyLayout()
     }

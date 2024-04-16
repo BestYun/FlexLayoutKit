@@ -17,7 +17,7 @@ class ViewController2: FlexboxBaseViewController {
          
     }
     
-    @FlexboxViewBuilder open override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
             
             UIButton()
                 .flex

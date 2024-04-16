@@ -53,10 +53,11 @@ class CollectionDynamicHeightViewControllerDemo: FlexboxBaseViewController,
             data.append(content)
         }
     
-        
+        view.flex
+            .addItems(subviews: bodyView())
     }
     
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
      
         collectionView
             .flex

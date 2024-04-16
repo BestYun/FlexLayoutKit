@@ -12,11 +12,10 @@ class HVZStackViewController: FlexboxBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        view.flex.addItems(subviews: bodyView())
     }
     
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         VStackView(mainAxis: .center, crossAxis: .center) {
             HStackView {
                 ImageView().size(40).cornerRadius(10).backgroundColor(.gray.withAlphaComponent(0.2))

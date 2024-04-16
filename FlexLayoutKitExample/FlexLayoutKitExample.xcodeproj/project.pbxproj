@@ -196,7 +196,6 @@
 				AE7447102BB9A38C0096AAA0 /* Assets.xcassets */,
 				AE7447122BB9A38C0096AAA0 /* LaunchScreen.storyboard */,
 				AE7447152BB9A38C0096AAA0 /* Info.plist */,
-				AEA94E332BB9C49C00871E39 /* ViewController2.swift */,
 			);
 			path = FlexLayoutKitExample;
 			sourceTree = "<group>";
@@ -234,9 +233,10 @@
 				AE87AE8F2BBECEEA006829D4 /* VScrollViewController.swift */,
 				AE87AE902BBECEEA006829D4 /* CountViewController.swift */,
 				AE87AE912BBECEEA006829D4 /* FlexBoxAnimateViewController.swift */,
+				AE4548042BCE50580064E8B4 /* DisplayViewController.swift */,
 				AE87AE922BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift */,
 				AE87AE932BBECEEA006829D4 /* HScrollViewController.swift */,
-				AE4548042BCE50580064E8B4 /* DisplayViewController.swift */,
+				AEA94E332BB9C49C00871E39 /* ViewController2.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

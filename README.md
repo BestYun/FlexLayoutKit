@@ -44,13 +44,15 @@ class ViewController: FlexboxBaseViewController
 {
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.flex
+            .addItems(subviews: bodyView())
+            .mainAxis(.center)
+            .crossAxis(.center)
     }
-    //3.重写bodyView
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
-        return HStackView(mainAxis: .center, crossAxis: .center) {
-            Text("Hello FlexLayoutKit")
-        }
-        .flex(1)
+
+    @FlexboxViewBuilder func bodyView() -> [FlexboxView] {
+        Text("Hello FlexLayoutKit")
     }
 }
 
@@ -234,7 +236,7 @@ Text("FlexPercent").backgroundColor(.orange).width(20%).height(20%)
 2)UITableView的rowHeight设置为UITableView.automaticDimension
 
 class CellItem: TableDynamicCell {
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
         return VStackView {
             ...
         }

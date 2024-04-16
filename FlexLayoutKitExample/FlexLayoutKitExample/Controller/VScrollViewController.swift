@@ -13,10 +13,11 @@ class VScrollViewController: FlexboxBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        view.flex
+            .addItems(subviews: bodyView())
     }
     
-    @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
+    @FlexboxViewBuilder  func bodyView() -> [FlexboxView] {
 
         VScrollView(spacing:5) {
             for i in 0...100 {
