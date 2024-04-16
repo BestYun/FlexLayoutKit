@@ -1,7 +1,7 @@
-# FlexBoxUIKit
+# FlexLayoutKit
 
 ![Swift](https://img.shields.io/badge/Swift-5.4-orange.svg)
-[![CocoaPods](http://img.shields.io/cocoapods/v/FlexBoxUIKit.svg)](https://cocoapods.org/pods/FlexBoxUIKit)
+[![CocoaPods](http://img.shields.io/cocoapods/v/FlexLayoutKit.svg)](https://cocoapods.org/pods/FlexLayoutKit)
 
 
 基于[facebook/yoga](https://github.com/facebook/yoga)实现一个类似swiftui和Flutter的声明式UI框架
@@ -36,7 +36,7 @@ pod 'FlexLayoutKit/Kingfisher' #需要ios 12以上
 ### Usage 用法
 #### Quick Start 快速开始
 ```swift
-import FlexLayoutKit  //1.导入FlexBoxUIKit
+import FlexLayoutKit  //1.导入FlexLayoutKit
 import UIKit
 
 //2.继承FlexboxBaseViewController
@@ -48,7 +48,7 @@ class ViewController: FlexboxBaseViewController
     //3.重写bodyView
     @FlexboxViewBuilder override func bodyView() -> [FlexboxView] {
         return HStackView(mainAxis: .center, crossAxis: .center) {
-            Text("Hello FlexBoxUIKit")
+            Text("Hello FlexLayoutKit")
         }
         .flex(1)
     }
@@ -65,7 +65,7 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         view.flex.mainAxis(.center).crossAxis(.center).addItems {
             HStackView(mainAxis: .center, crossAxis: .center) {
-                Text("Hello FlexBoxUIKit")
+                Text("Hello FlexLayoutKit")
             }
         }
     }
@@ -79,7 +79,7 @@ class ViewController: UIViewController{
 ```
 
 #### example1
-<img src="https://github.com/BestYun/FlexBoxUIKit/blob/main/doc_imgs/example1.png" />
+<img src="https://github.com/BestYun/FlexLayoutKit/blob/main/doc_imgs/example1.png" />
 
 ```swift
 HStackView {
@@ -307,7 +307,7 @@ label.textColor = .orange
 ](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
 ### FlexBox布局
-<img src="https://github.com/BestYun/FlexBoxUIKit/blob/main/doc_imgs/flex_terms.png" />
+<img src="https://github.com/BestYun/FlexLayoutKit/blob/main/doc_imgs/flex_terms.png" />
 
 * 主轴方向
 * 布局方向 ltr,rtl
@@ -432,4 +432,4 @@ VStackView(mainAxis: .center, crossAxis: .center) {
 * https://github.com/pujiaxin33/StackUI
 
 ## License
-**FlexBoxUIKit** is under MIT license. See the [LICENSE](LICENSE) file for more info.
+**FlexLayoutKit** is under MIT license. See the [LICENSE](LICENSE) file for more info.

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		77DC4CAB45F7CCAACF7BFF49 /* Pods_FlexLayoutKitExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0086A774C68D43E52B7BA2C5 /* Pods_FlexLayoutKitExample.framework */; };
 		9A539494782EADC513961512 /* Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64830A070D91BC8F9310625 /* Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework */; };
+		AE4548052BCE50580064E8B4 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4548042BCE50580064E8B4 /* DisplayViewController.swift */; };
 		AE7447082BB9A38A0096AAA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7447072BB9A38A0096AAA0 /* AppDelegate.swift */; };
 		AE74470A2BB9A38A0096AAA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7447092BB9A38A0096AAA0 /* SceneDelegate.swift */; };
 		AE74470F2BB9A38A0096AAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE74470D2BB9A38A0096AAA0 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		0086A774C68D43E52B7BA2C5 /* Pods_FlexLayoutKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		973A0F50E29F45C4F03C879E /* Pods-FlexLayoutKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExample.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExample/Pods-FlexLayoutKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		A64830A070D91BC8F9310625 /* Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutKitExample_FlexLayoutKitExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE4548042BCE50580064E8B4 /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		AE7447042BB9A38A0096AAA0 /* FlexLayoutKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE7447072BB9A38A0096AAA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE7447092BB9A38A0096AAA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				AE87AE912BBECEEA006829D4 /* FlexBoxAnimateViewController.swift */,
 				AE87AE922BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift */,
 				AE87AE932BBECEEA006829D4 /* HScrollViewController.swift */,
+				AE4548042BCE50580064E8B4 /* DisplayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				AE87AE972BBECEEA006829D4 /* HVZStackViewController.swift in Sources */,
 				AE87AEA32BBECEEA006829D4 /* FlexBoxAnimateViewController.swift in Sources */,
 				AE87AE9D2BBECEEA006829D4 /* FlexPercentViewController.swift in Sources */,
+				AE4548052BCE50580064E8B4 /* DisplayViewController.swift in Sources */,
 				AE87AEA62BBECEEA006829D4 /* LivePreViewController.swift in Sources */,
 				AE87AE982BBECEEA006829D4 /* TableFixedHeightCellViewController2.swift in Sources */,
 				AEBF1DAC2BBFD2E70031F808 /* HGridDynamicWidthViewController.swift in Sources */,

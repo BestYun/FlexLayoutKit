@@ -29,6 +29,7 @@ class MainViewController: FlexboxBaseViewController {
         FlexPercentViewController.self,
         CountViewController.self,
         FlexBoxAnimateViewController.self,
+        DisplayViewController.self,
     ]
     
     let titles = [
@@ -51,6 +52,7 @@ class MainViewController: FlexboxBaseViewController {
         "FlexPercent 百分比",
         "UState",
         "动画",
+        "display",
     ]
     
     override func viewDidLoad() {
