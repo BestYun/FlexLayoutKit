@@ -10,6 +10,19 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+
+// ## UICollectionView
+// * https://juejin.cn/post/6944994974614323213?searchId=20240405171041254EDFB1442A61513BDF
+// * https://linxunfeng.top/2017/09/12/ios-swift-uicollectionview%E6%A8%AA%E5%90%91%E5%88%86%E9%A1%B5%E6%BB%9A%E5%8A%A8%EF%BC%8Ccell%E5%B7%A6%E5%8F%B3%E6%8E%92%E7%89%88/
+// * https://www.jianshu.com/p/28711ff1338b
+
+// ## UICollectionViewFlowLayout 分页效果
+// *  prepareLayout
+// * func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint // return a point at which to rest after scrolling - for layouts that want snap-to-point scrolling behavior
+
+
+
+
 /// 瀑布流
 class WaterFallViewController: FlexboxBaseViewController, UICollectionViewDelegate,
     UICollectionViewDataSource,
