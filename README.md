@@ -288,7 +288,7 @@ private class FCollectionCell: GridCell {
     lazy var layout = UICollectionViewFlowLayout().then { layout in
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10
-        //estimatdItemSize设置一个非0值开启自动计算高度
+        //estimatdItemSize设置一个非0值开启自动计算高度，宽度要固定一个值，高度设置预估值
         layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.width - 10*2, height: 100)
         layout.itemSize = UICollectionViewFlowLayout.automaticSize 
     }
