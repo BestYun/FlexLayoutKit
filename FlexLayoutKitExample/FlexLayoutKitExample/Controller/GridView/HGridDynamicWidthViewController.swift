@@ -17,7 +17,7 @@ class HGridDynamicWidthViewController: FlexboxBaseViewController,
     
 {
     lazy var layout = UICollectionViewFlowLayout().then { layout in
-        //动态计算高度,需要配置estimatedItemSize
+        //动态计算宽度,需要配置estimatedItemSize
         layout.estimatedItemSize = CGSize(width: 10, height: 80)
         layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 10 // 水平方向间距

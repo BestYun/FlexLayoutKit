@@ -296,6 +296,44 @@ private class FCollectionCell: GridCell {
 ```
 
 
+
+#### 自动计算UICollectionViewCell 动态宽度
+```swift
+1)cell继承GridCell，并设置isDynamicHeight值为true，同时将scrollDirection设置为.horizontal
+
+private class FCollectionCell: GridCell {
+    override var isDynamicHeight: Bool { true }
+    override var scrollDirection: UICollectionView.ScrollDirection { .horizontal }
+    @UState var text: String?
+                                   
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    override func bodyView() -> FlexboxView {
+        Text($text).expanded().backgroundColor(.orange).cornerRadius(10).padding(.horizontal,20)
+    }
+                                      
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+
+
+2)UICollectionViewFlowLayout设置estimatdItemSize设置一个非0值开启自动计算宽度
+    lazy var layout = UICollectionViewFlowLayout().then { layout in
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
+        //estimatdItemSize设置一个非0值开启自动计算宽度，高度要固定一个值，宽度设置预估值
+        layout.estimatedItemSize = CGSize(width: 10, height: 80)
+        layout.itemSize = UICollectionViewFlowLayout.automaticSize 
+    }
+
+```
+
+
 #### Modifier chain 链式语法
 ```swift
 UILabel()
