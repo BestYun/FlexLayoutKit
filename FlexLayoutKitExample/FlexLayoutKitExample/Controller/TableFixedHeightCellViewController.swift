@@ -45,7 +45,7 @@ extension TableFixedHeightCellViewController: UITableViewDataSource, UITableView
 }
 
 
-private class CellItem: TableFixedCell {
+private class CellItem: ListCell {
     
    @UState var title: String?
      

@@ -93,7 +93,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 ///
-private class CellItem: TableFixedCell {
+private class CellItem: ListCell {
     @UState var title: String?
      
     override func bodyView() -> FlexboxView {

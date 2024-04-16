@@ -46,7 +46,6 @@ class TableDynamicHeightCellViewController: FlexboxBaseViewController {
             $0.delegate = self
             $0.dataSource = self
             $0.register(CellItem.self, forCellReuseIdentifier: "cellID")
-            $0.estimatedRowHeight = 80
             $0.rowHeight = UITableView.automaticDimension
         }
     }

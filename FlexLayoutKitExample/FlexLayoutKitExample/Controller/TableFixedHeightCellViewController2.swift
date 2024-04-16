@@ -78,7 +78,7 @@ private class CellItem: ListCell {
     
 }
 
-private class CellItemTemp: TableFixedCell {
+private class CellItemTemp: ListCell {
     
    @UState var title: String?
     override func bodyView() -> FlexboxView {
@@ -91,7 +91,7 @@ private class CellItemTemp: TableFixedCell {
     
 }
 
-private class CellItem2: TableFixedCell {
+private class CellItem2: ListCell {
     
    @UState var title: String?
      
