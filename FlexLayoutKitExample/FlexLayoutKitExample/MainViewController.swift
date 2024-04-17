@@ -30,6 +30,7 @@ class MainViewController: FlexboxBaseViewController {
         CountViewController.self,
         FlexBoxAnimateViewController.self,
         DisplayViewController.self,
+        UpdateLayoutAndDataViewController.self,
     ]
     
     let titles = [
@@ -53,6 +54,7 @@ class MainViewController: FlexboxBaseViewController {
         "UState",
         "动画",
         "display",
+        "更新数据和布局",
     ]
     
     override func viewDidLoad() {

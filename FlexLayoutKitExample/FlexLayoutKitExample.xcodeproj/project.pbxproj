@@ -42,6 +42,7 @@
 		AEBF1DAE2BBFD8B30031F808 /* HGridFiexdedWidthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF1DAD2BBFD8B30031F808 /* HGridFiexdedWidthViewController.swift */; };
 		AEBF1DB02BC03F410031F808 /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF1DAF2BC03F410031F808 /* WaterFallViewController.swift */; };
 		AEBF1DB22BC046B00031F808 /* WaterFallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF1DB12BC046B00031F808 /* WaterFallFlowLayout.swift */; };
+		AED8FFC62BCFD22A008592FE /* UpdateLayoutAndDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8FFC52BCFD22A008592FE /* UpdateLayoutAndDataViewController.swift */; };
 		F9E0616C893EF06765C8E511 /* Pods_FlexLayoutKitExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65DD5A913D078AA241485CF /* Pods_FlexLayoutKitExampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		AEBF1DAD2BBFD8B30031F808 /* HGridFiexdedWidthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HGridFiexdedWidthViewController.swift; sourceTree = "<group>"; };
 		AEBF1DAF2BC03F410031F808 /* WaterFallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
 		AEBF1DB12BC046B00031F808 /* WaterFallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallFlowLayout.swift; sourceTree = "<group>"; };
+		AED8FFC52BCFD22A008592FE /* UpdateLayoutAndDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLayoutAndDataViewController.swift; sourceTree = "<group>"; };
 		AFD9A0F03D6C571D9951811F /* Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests/Pods-FlexLayoutKitExample-FlexLayoutKitExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DCA92E93B7A8BDD81D2AA572 /* Pods-FlexLayoutKitExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexLayoutKitExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-FlexLayoutKitExampleTests/Pods-FlexLayoutKitExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F65DD5A913D078AA241485CF /* Pods_FlexLayoutKitExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexLayoutKitExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +239,7 @@
 				AE87AE922BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift */,
 				AE87AE932BBECEEA006829D4 /* HScrollViewController.swift */,
 				AEA94E332BB9C49C00871E39 /* ViewController2.swift */,
+				AED8FFC52BCFD22A008592FE /* UpdateLayoutAndDataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				AE87AEA42BBECEEA006829D4 /* TableDynamicHeightCellViewController.swift in Sources */,
 				AE87AE9F2BBECEEA006829D4 /* HelloFlexUIKitViewController.swift in Sources */,
 				AEA94E342BB9C49C00871E39 /* ViewController2.swift in Sources */,
+				AED8FFC62BCFD22A008592FE /* UpdateLayoutAndDataViewController.swift in Sources */,
 				AE87AE9B2BBECEEA006829D4 /* SizeThatFitViewController.swift in Sources */,
 				AE87AE9A2BBECEEA006829D4 /* WrapViewController.swift in Sources */,
 				AE87AE992BBECEEA006829D4 /* CollectionFixedHeightViewControllerDemo.swift in Sources */,
