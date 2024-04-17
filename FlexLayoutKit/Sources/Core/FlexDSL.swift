@@ -14,12 +14,19 @@ public extension FlexDSLProtocol where Self: UIView {
     var flex: FlexDSL<Self> {
         return FlexDSL(view: self)
     }
+    
+    @discardableResult
+    func bindTo(_ view: inout Self?) -> Self {
+        view = self
+        return self
+    }
+    
 }
 
 extension UIView: FlexDSLProtocol {}
 
 public struct FlexDSL<BaseView: UIView>: FlexboxView {
-    private let view: BaseView
+    public let view: BaseView
     init(view: BaseView) {
         self.view = view
         view.yoga.isEnabled = true
@@ -80,6 +87,65 @@ public extension FlexDSL {
         view.addSubview(itemView.flexBaseView)
         return self
     }
+    
+    @discardableResult
+    func insertItems(at: Int,@FlexboxViewBuilder subviews: () -> [FlexboxView])-> Self  {
+        var index = at
+        subviews().forEach { item in
+            let view = item.flexBaseView
+            if let spacer = view as? Spacer {
+                if direction == .column || direction == .columnReverse {
+                    spacer.flex.height(spacer.spacing)
+                } else {
+                    spacer.flex.width(spacer.spacing)
+                }
+            }
+            self.view.insertSubview(view, at: index)
+            index = index + 1
+        }
+        return self
+    }
+    
+    @discardableResult
+    ///添加subview在belowSubview的下面
+    func insertItems(belowSubview: UIView, @FlexboxViewBuilder subviews: () -> [FlexboxView])-> Self  {
+        var firstView: UIView = belowSubview
+        
+        subviews().forEach { item in
+            let view = item.flexBaseView
+            if let spacer = view as? Spacer {
+                if direction == .column || direction == .columnReverse {
+                    spacer.flex.height(spacer.spacing)
+                } else {
+                    spacer.flex.width(spacer.spacing)
+                }
+            }
+            self.view.insertSubview(view, aboveSubview: firstView)
+
+            firstView = view
+
+        }
+        return self
+    }    
+    
+    @discardableResult
+    //insertSubview(view:UIView,belowSubview siblingSubview:UIView)：会导致subview在subviews中排在belowSubview前面,在yoga中
+    ///添加subview在aboveSubview上面
+    func insertItems(aboveSubview: UIView, @FlexboxViewBuilder subviews: () -> [FlexboxView])-> Self  {
+        subviews().forEach { item in
+            let view = item.flexBaseView
+            if let spacer = view as? Spacer {
+                if direction == .column || direction == .columnReverse {
+                    spacer.flex.height(spacer.spacing)
+                } else {
+                    spacer.flex.width(spacer.spacing)
+                }
+            }
+            self.view.insertSubview(view, belowSubview: aboveSubview)
+        }
+        return self
+    }
+
     
 }
 

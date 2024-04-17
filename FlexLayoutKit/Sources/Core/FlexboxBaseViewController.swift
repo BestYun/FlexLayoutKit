@@ -37,4 +37,8 @@ open class FlexboxBaseViewController: UIViewController {
     open func updateFlexLayout() {
         view.flex.applyLayout()
     }
+    
+    deinit {
+        print("\(self) deinit")
+    }
 }

@@ -206,6 +206,7 @@ public class TapActionHandler: NSObject, UIGestureRecognizerDelegate {
 public extension UIGestureRecognizer {
     static var tapActionHandlerAssociatedKey = "TapActionHandlerAssociatedKey"
     var tapActionHandler: TapActionHandler? {
+//    https://github.com/atrick/swift-evolution/blob/diagnose-implicit-raw-bitwise/proposals/nnnn-implicit-raw-bitwise-conversion.md#workarounds-for-common-cases
         get {
 #if swift(>=5.9)
             withUnsafePointer(to: &Self.tapActionHandlerAssociatedKey) {
