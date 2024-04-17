@@ -15,7 +15,7 @@
 ---
 #### Cocoapods
 ```
-pod 'FlexLayoutKit', '~> 0.4'
+pod 'FlexLayoutKit', '~> 0.5'
 以下可选
 pod 'FlexLayoutKit/SDWebImage'
 pod 'FlexLayoutKit/Kingfisher' #需要ios 12以上
@@ -46,9 +46,9 @@ class ViewController: FlexboxBaseViewController
         super.viewDidLoad()
 
         view.flex
-            .addItems(subviews: bodyView())
             .mainAxis(.center)
             .crossAxis(.center)
+            .addItems(subviews: bodyView())
     }
 
     @FlexboxViewBuilder func bodyView() -> [FlexboxView] {

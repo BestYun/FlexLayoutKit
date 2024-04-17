@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FlexLayoutKit'
-  s.version          = '0.4'
+  s.version          = '0.5'
   s.summary      = "flex layout for iOS powered by yoga"
 
   s.description = <<-DESC
