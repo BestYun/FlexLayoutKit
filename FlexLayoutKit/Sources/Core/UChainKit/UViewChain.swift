@@ -19,7 +19,7 @@ public protocol UViewChain {
 
     func borderWidth(_ borderWidth: CGFloat) -> Self
     func borderColor(_ borderColor: UIColor?) -> Self
-    func border(color: UIColor ,width: CGFloat) -> Self
+    func border(color: UIColor, width: CGFloat) -> Self
     func shadowColor(_ shadowColor: UIColor?) -> Self
     func shadowOpacity(_ shadowOpacity: Float) -> Self
     func shadowOffset(_ shadowOffset: CGSize) -> Self
@@ -36,11 +36,9 @@ public protocol UViewChain {
     func contentMode(_ contentMode: UIView.ContentMode) -> Self
     func mask(_ mask: UIView?) -> Self
     func onTap(_ click: @escaping () -> Void) -> Self
-
 }
 
 public extension UViewChain where Self: UIView {
-    
     @discardableResult
     func backgroundColor(_ color: UIColor) -> Self {
         backgroundColor = color
@@ -85,10 +83,9 @@ public extension UViewChain where Self: UIView {
         layer.borderColor = borderColor?.cgColor
         return self
     }
-    
 
     @discardableResult
-    func border(color: UIColor ,width: CGFloat) -> Self {
+    func border(color: UIColor, width: CGFloat) -> Self {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
         return self
@@ -210,10 +207,23 @@ public extension UIGestureRecognizer {
     static var tapActionHandlerAssociatedKey = "TapActionHandlerAssociatedKey"
     var tapActionHandler: TapActionHandler? {
         get {
+#if swift(>=5.9)
+            withUnsafePointer(to: &Self.tapActionHandlerAssociatedKey) {
+               return objc_getAssociatedObject(self, $0)
+            } as? TapActionHandler
+#else
             objc_getAssociatedObject(self, &Self.tapActionHandlerAssociatedKey) as? TapActionHandler
+#endif
         }
         set {
+#if swift(>=5.9)
+
+            withUnsafePointer(to: &Self.tapActionHandlerAssociatedKey) {
+                objc_setAssociatedObject(self, $0, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            }
+#else
             objc_setAssociatedObject(self, &Self.tapActionHandlerAssociatedKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+#endif
         }
     }
 }

@@ -104,7 +104,7 @@ extension WaterFallViewController: WaterFallLayoutDelegate, SelfSizingFlowLayout
 }
 
 
-private class FCollectionCell: CollectionDynamicCell {
+private class FCollectionCell: GridCell {
     @UState var text: String?
                                
     override init(frame: CGRect) {

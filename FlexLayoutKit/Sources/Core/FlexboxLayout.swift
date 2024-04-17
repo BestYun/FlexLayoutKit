@@ -568,7 +568,7 @@ public extension FlexboxLayout where Self: YGLayout {
 
 /// 实现协议
 /// YGLayout拥有链式功能
-extension YGLayout: FlexboxLayout {
+extension YGLayout: FlexboxLayout {    
     public var yoga: YGLayout {
         return self
     }
